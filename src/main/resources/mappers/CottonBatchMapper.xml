@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tay.futures.dao.CottonBatchMapper" >
+  <resultMap id="BaseResultMap" type="com.tay.futures.entity.CottonBatch" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="production_code" property="productionCode" jdbcType="BIGINT" />
+    <result column="type" property="type" jdbcType="VARCHAR" />
+    <result column="production_area" property="productionArea" jdbcType="VARCHAR" />
+    <result column="count" property="count" jdbcType="INTEGER" />
+    <result column="price" property="price" jdbcType="VARCHAR" />
+    <result column="weight" property="weight" jdbcType="INTEGER" />
+    <result column="colour_level" property="colourLevel" jdbcType="VARCHAR" />
+    <result column="avg_length" property="avgLength" jdbcType="INTEGER" />
+    <result column="strength" property="strength" jdbcType="INTEGER" />
+    <result column="avg_micronaire" property="avgMicronaire" jdbcType="INTEGER" />
+    <result column="moisture" property="moisture" jdbcType="INTEGER" />
+    <result column="miscellaneous" property="miscellaneous" jdbcType="INTEGER" />
+    <result column="avg_evenness" property="avgEvenness" jdbcType="INTEGER" />
+    <result column="ginning_quality" property="ginningQuality" jdbcType="VARCHAR" />
+    <result column="warehouse" property="warehouse" jdbcType="VARCHAR" />
+    <result column="weight_number" property="weightNumber" jdbcType="VARCHAR" />
+    <result column="standard" property="standard" jdbcType="VARCHAR" />
+    <result column="gross_weight" property="grossWeight" jdbcType="INTEGER" />
+    <result column="net_weight" property="netWeight" jdbcType="INTEGER" />
+    <result column="tare_weight" property="tareWeight" jdbcType="INTEGER" />
+    <result column="quality_number" property="qualityNumber" jdbcType="VARCHAR" />
+    <result column="core_length" property="coreLength" jdbcType="INTEGER" />
+    <result column="core_micronaire" property="coreMicronaire" jdbcType="VARCHAR" />
+    <result column="max_evenness" property="maxEvenness" jdbcType="INTEGER" />
+    <result column="min_evenness" property="minEvenness" jdbcType="INTEGER" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, production_code, `type`, production_area, `count`, price, weight, colour_level, 
+    avg_length, strength, avg_micronaire, moisture, miscellaneous, avg_evenness, ginning_quality, 
+    warehouse, weight_number, `standard`, gross_weight, net_weight, tare_weight, quality_number, 
+    core_length, core_micronaire, max_evenness, min_evenness, remark
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.tay.futures.entity.CottonBatchExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from cotton_batch
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from cotton_batch
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from cotton_batch
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.tay.futures.entity.CottonBatchExample" >
+    delete from cotton_batch
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.tay.futures.entity.CottonBatch" >
+    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into cotton_batch (production_code, `type`, production_area, 
+      `count`, price, weight, 
+      colour_level, avg_length, strength, 
+      avg_micronaire, moisture, miscellaneous, 
+      avg_evenness, ginning_quality, warehouse, 
+      weight_number, `standard`, gross_weight, 
+      net_weight, tare_weight, quality_number, 
+      core_length, core_micronaire, max_evenness, 
+      min_evenness, remark)
+    values (#{productionCode,jdbcType=BIGINT}, #{type,jdbcType=VARCHAR}, #{productionArea,jdbcType=VARCHAR}, 
+      #{count,jdbcType=INTEGER}, #{price,jdbcType=VARCHAR}, #{weight,jdbcType=INTEGER}, 
+      #{colourLevel,jdbcType=VARCHAR}, #{avgLength,jdbcType=INTEGER}, #{strength,jdbcType=INTEGER}, 
+      #{avgMicronaire,jdbcType=INTEGER}, #{moisture,jdbcType=INTEGER}, #{miscellaneous,jdbcType=INTEGER}, 
+      #{avgEvenness,jdbcType=INTEGER}, #{ginningQuality,jdbcType=VARCHAR}, #{warehouse,jdbcType=VARCHAR}, 
+      #{weightNumber,jdbcType=VARCHAR}, #{standard,jdbcType=VARCHAR}, #{grossWeight,jdbcType=INTEGER}, 
+      #{netWeight,jdbcType=INTEGER}, #{tareWeight,jdbcType=INTEGER}, #{qualityNumber,jdbcType=VARCHAR}, 
+      #{coreLength,jdbcType=INTEGER}, #{coreMicronaire,jdbcType=VARCHAR}, #{maxEvenness,jdbcType=INTEGER}, 
+      #{minEvenness,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.tay.futures.entity.CottonBatch" >
+    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into cotton_batch
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="productionCode != null" >
+        production_code,
+      </if>
+      <if test="type != null" >
+        `type`,
+      </if>
+      <if test="productionArea != null" >
+        production_area,
+      </if>
+      <if test="count != null" >
+        `count`,
+      </if>
+      <if test="price != null" >
+        price,
+      </if>
+      <if test="weight != null" >
+        weight,
+      </if>
+      <if test="colourLevel != null" >
+        colour_level,
+      </if>
+      <if test="avgLength != null" >
+        avg_length,
+      </if>
+      <if test="strength != null" >
+        strength,
+      </if>
+      <if test="avgMicronaire != null" >
+        avg_micronaire,
+      </if>
+      <if test="moisture != null" >
+        moisture,
+      </if>
+      <if test="miscellaneous != null" >
+        miscellaneous,
+      </if>
+      <if test="avgEvenness != null" >
+        avg_evenness,
+      </if>
+      <if test="ginningQuality != null" >
+        ginning_quality,
+      </if>
+      <if test="warehouse != null" >
+        warehouse,
+      </if>
+      <if test="weightNumber != null" >
+        weight_number,
+      </if>
+      <if test="standard != null" >
+        `standard`,
+      </if>
+      <if test="grossWeight != null" >
+        gross_weight,
+      </if>
+      <if test="netWeight != null" >
+        net_weight,
+      </if>
+      <if test="tareWeight != null" >
+        tare_weight,
+      </if>
+      <if test="qualityNumber != null" >
+        quality_number,
+      </if>
+      <if test="coreLength != null" >
+        core_length,
+      </if>
+      <if test="coreMicronaire != null" >
+        core_micronaire,
+      </if>
+      <if test="maxEvenness != null" >
+        max_evenness,
+      </if>
+      <if test="minEvenness != null" >
+        min_evenness,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="productionCode != null" >
+        #{productionCode,jdbcType=BIGINT},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="productionArea != null" >
+        #{productionArea,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null" >
+        #{count,jdbcType=INTEGER},
+      </if>
+      <if test="price != null" >
+        #{price,jdbcType=VARCHAR},
+      </if>
+      <if test="weight != null" >
+        #{weight,jdbcType=INTEGER},
+      </if>
+      <if test="colourLevel != null" >
+        #{colourLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="avgLength != null" >
+        #{avgLength,jdbcType=INTEGER},
+      </if>
+      <if test="strength != null" >
+        #{strength,jdbcType=INTEGER},
+      </if>
+      <if test="avgMicronaire != null" >
+        #{avgMicronaire,jdbcType=INTEGER},
+      </if>
+      <if test="moisture != null" >
+        #{moisture,jdbcType=INTEGER},
+      </if>
+      <if test="miscellaneous != null" >
+        #{miscellaneous,jdbcType=INTEGER},
+      </if>
+      <if test="avgEvenness != null" >
+        #{avgEvenness,jdbcType=INTEGER},
+      </if>
+      <if test="ginningQuality != null" >
+        #{ginningQuality,jdbcType=VARCHAR},
+      </if>
+      <if test="warehouse != null" >
+        #{warehouse,jdbcType=VARCHAR},
+      </if>
+      <if test="weightNumber != null" >
+        #{weightNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="standard != null" >
+        #{standard,jdbcType=VARCHAR},
+      </if>
+      <if test="grossWeight != null" >
+        #{grossWeight,jdbcType=INTEGER},
+      </if>
+      <if test="netWeight != null" >
+        #{netWeight,jdbcType=INTEGER},
+      </if>
+      <if test="tareWeight != null" >
+        #{tareWeight,jdbcType=INTEGER},
+      </if>
+      <if test="qualityNumber != null" >
+        #{qualityNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="coreLength != null" >
+        #{coreLength,jdbcType=INTEGER},
+      </if>
+      <if test="coreMicronaire != null" >
+        #{coreMicronaire,jdbcType=VARCHAR},
+      </if>
+      <if test="maxEvenness != null" >
+        #{maxEvenness,jdbcType=INTEGER},
+      </if>
+      <if test="minEvenness != null" >
+        #{minEvenness,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.tay.futures.entity.CottonBatchExample" resultType="java.lang.Integer" >
+    select count(*) from cotton_batch
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update cotton_batch
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.productionCode != null" >
+        production_code = #{record.productionCode,jdbcType=BIGINT},
+      </if>
+      <if test="record.type != null" >
+        `type` = #{record.type,jdbcType=VARCHAR},
+      </if>
+      <if test="record.productionArea != null" >
+        production_area = #{record.productionArea,jdbcType=VARCHAR},
+      </if>
+      <if test="record.count != null" >
+        `count` = #{record.count,jdbcType=INTEGER},
+      </if>
+      <if test="record.price != null" >
+        price = #{record.price,jdbcType=VARCHAR},
+      </if>
+      <if test="record.weight != null" >
+        weight = #{record.weight,jdbcType=INTEGER},
+      </if>
+      <if test="record.colourLevel != null" >
+        colour_level = #{record.colourLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="record.avgLength != null" >
+        avg_length = #{record.avgLength,jdbcType=INTEGER},
+      </if>
+      <if test="record.strength != null" >
+        strength = #{record.strength,jdbcType=INTEGER},
+      </if>
+      <if test="record.avgMicronaire != null" >
+        avg_micronaire = #{record.avgMicronaire,jdbcType=INTEGER},
+      </if>
+      <if test="record.moisture != null" >
+        moisture = #{record.moisture,jdbcType=INTEGER},
+      </if>
+      <if test="record.miscellaneous != null" >
+        miscellaneous = #{record.miscellaneous,jdbcType=INTEGER},
+      </if>
+      <if test="record.avgEvenness != null" >
+        avg_evenness = #{record.avgEvenness,jdbcType=INTEGER},
+      </if>
+      <if test="record.ginningQuality != null" >
+        ginning_quality = #{record.ginningQuality,jdbcType=VARCHAR},
+      </if>
+      <if test="record.warehouse != null" >
+        warehouse = #{record.warehouse,jdbcType=VARCHAR},
+      </if>
+      <if test="record.weightNumber != null" >
+        weight_number = #{record.weightNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.standard != null" >
+        `standard` = #{record.standard,jdbcType=VARCHAR},
+      </if>
+      <if test="record.grossWeight != null" >
+        gross_weight = #{record.grossWeight,jdbcType=INTEGER},
+      </if>
+      <if test="record.netWeight != null" >
+        net_weight = #{record.netWeight,jdbcType=INTEGER},
+      </if>
+      <if test="record.tareWeight != null" >
+        tare_weight = #{record.tareWeight,jdbcType=INTEGER},
+      </if>
+      <if test="record.qualityNumber != null" >
+        quality_number = #{record.qualityNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.coreLength != null" >
+        core_length = #{record.coreLength,jdbcType=INTEGER},
+      </if>
+      <if test="record.coreMicronaire != null" >
+        core_micronaire = #{record.coreMicronaire,jdbcType=VARCHAR},
+      </if>
+      <if test="record.maxEvenness != null" >
+        max_evenness = #{record.maxEvenness,jdbcType=INTEGER},
+      </if>
+      <if test="record.minEvenness != null" >
+        min_evenness = #{record.minEvenness,jdbcType=INTEGER},
+      </if>
+      <if test="record.remark != null" >
+        remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update cotton_batch
+    set id = #{record.id,jdbcType=BIGINT},
+      production_code = #{record.productionCode,jdbcType=BIGINT},
+      `type` = #{record.type,jdbcType=VARCHAR},
+      production_area = #{record.productionArea,jdbcType=VARCHAR},
+      `count` = #{record.count,jdbcType=INTEGER},
+      price = #{record.price,jdbcType=VARCHAR},
+      weight = #{record.weight,jdbcType=INTEGER},
+      colour_level = #{record.colourLevel,jdbcType=VARCHAR},
+      avg_length = #{record.avgLength,jdbcType=INTEGER},
+      strength = #{record.strength,jdbcType=INTEGER},
+      avg_micronaire = #{record.avgMicronaire,jdbcType=INTEGER},
+      moisture = #{record.moisture,jdbcType=INTEGER},
+      miscellaneous = #{record.miscellaneous,jdbcType=INTEGER},
+      avg_evenness = #{record.avgEvenness,jdbcType=INTEGER},
+      ginning_quality = #{record.ginningQuality,jdbcType=VARCHAR},
+      warehouse = #{record.warehouse,jdbcType=VARCHAR},
+      weight_number = #{record.weightNumber,jdbcType=VARCHAR},
+      `standard` = #{record.standard,jdbcType=VARCHAR},
+      gross_weight = #{record.grossWeight,jdbcType=INTEGER},
+      net_weight = #{record.netWeight,jdbcType=INTEGER},
+      tare_weight = #{record.tareWeight,jdbcType=INTEGER},
+      quality_number = #{record.qualityNumber,jdbcType=VARCHAR},
+      core_length = #{record.coreLength,jdbcType=INTEGER},
+      core_micronaire = #{record.coreMicronaire,jdbcType=VARCHAR},
+      max_evenness = #{record.maxEvenness,jdbcType=INTEGER},
+      min_evenness = #{record.minEvenness,jdbcType=INTEGER},
+      remark = #{record.remark,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tay.futures.entity.CottonBatch" >
+    update cotton_batch
+    <set >
+      <if test="productionCode != null" >
+        production_code = #{productionCode,jdbcType=BIGINT},
+      </if>
+      <if test="type != null" >
+        `type` = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="productionArea != null" >
+        production_area = #{productionArea,jdbcType=VARCHAR},
+      </if>
+      <if test="count != null" >
+        `count` = #{count,jdbcType=INTEGER},
+      </if>
+      <if test="price != null" >
+        price = #{price,jdbcType=VARCHAR},
+      </if>
+      <if test="weight != null" >
+        weight = #{weight,jdbcType=INTEGER},
+      </if>
+      <if test="colourLevel != null" >
+        colour_level = #{colourLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="avgLength != null" >
+        avg_length = #{avgLength,jdbcType=INTEGER},
+      </if>
+      <if test="strength != null" >
+        strength = #{strength,jdbcType=INTEGER},
+      </if>
+      <if test="avgMicronaire != null" >
+        avg_micronaire = #{avgMicronaire,jdbcType=INTEGER},
+      </if>
+      <if test="moisture != null" >
+        moisture = #{moisture,jdbcType=INTEGER},
+      </if>
+      <if test="miscellaneous != null" >
+        miscellaneous = #{miscellaneous,jdbcType=INTEGER},
+      </if>
+      <if test="avgEvenness != null" >
+        avg_evenness = #{avgEvenness,jdbcType=INTEGER},
+      </if>
+      <if test="ginningQuality != null" >
+        ginning_quality = #{ginningQuality,jdbcType=VARCHAR},
+      </if>
+      <if test="warehouse != null" >
+        warehouse = #{warehouse,jdbcType=VARCHAR},
+      </if>
+      <if test="weightNumber != null" >
+        weight_number = #{weightNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="standard != null" >
+        `standard` = #{standard,jdbcType=VARCHAR},
+      </if>
+      <if test="grossWeight != null" >
+        gross_weight = #{grossWeight,jdbcType=INTEGER},
+      </if>
+      <if test="netWeight != null" >
+        net_weight = #{netWeight,jdbcType=INTEGER},
+      </if>
+      <if test="tareWeight != null" >
+        tare_weight = #{tareWeight,jdbcType=INTEGER},
+      </if>
+      <if test="qualityNumber != null" >
+        quality_number = #{qualityNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="coreLength != null" >
+        core_length = #{coreLength,jdbcType=INTEGER},
+      </if>
+      <if test="coreMicronaire != null" >
+        core_micronaire = #{coreMicronaire,jdbcType=VARCHAR},
+      </if>
+      <if test="maxEvenness != null" >
+        max_evenness = #{maxEvenness,jdbcType=INTEGER},
+      </if>
+      <if test="minEvenness != null" >
+        min_evenness = #{minEvenness,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tay.futures.entity.CottonBatch" >
+    update cotton_batch
+    set production_code = #{productionCode,jdbcType=BIGINT},
+      `type` = #{type,jdbcType=VARCHAR},
+      production_area = #{productionArea,jdbcType=VARCHAR},
+      `count` = #{count,jdbcType=INTEGER},
+      price = #{price,jdbcType=VARCHAR},
+      weight = #{weight,jdbcType=INTEGER},
+      colour_level = #{colourLevel,jdbcType=VARCHAR},
+      avg_length = #{avgLength,jdbcType=INTEGER},
+      strength = #{strength,jdbcType=INTEGER},
+      avg_micronaire = #{avgMicronaire,jdbcType=INTEGER},
+      moisture = #{moisture,jdbcType=INTEGER},
+      miscellaneous = #{miscellaneous,jdbcType=INTEGER},
+      avg_evenness = #{avgEvenness,jdbcType=INTEGER},
+      ginning_quality = #{ginningQuality,jdbcType=VARCHAR},
+      warehouse = #{warehouse,jdbcType=VARCHAR},
+      weight_number = #{weightNumber,jdbcType=VARCHAR},
+      `standard` = #{standard,jdbcType=VARCHAR},
+      gross_weight = #{grossWeight,jdbcType=INTEGER},
+      net_weight = #{netWeight,jdbcType=INTEGER},
+      tare_weight = #{tareWeight,jdbcType=INTEGER},
+      quality_number = #{qualityNumber,jdbcType=VARCHAR},
+      core_length = #{coreLength,jdbcType=INTEGER},
+      core_micronaire = #{coreMicronaire,jdbcType=VARCHAR},
+      max_evenness = #{maxEvenness,jdbcType=INTEGER},
+      min_evenness = #{minEvenness,jdbcType=INTEGER},
+      remark = #{remark,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

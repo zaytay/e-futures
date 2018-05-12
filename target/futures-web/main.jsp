@@ -64,6 +64,9 @@
         </tr>
     </table>
 </div>
+test: ${test}
+<%@include file="/WEB-INF/jsp/index/center.jsp" %>
+<%--
 <div region="center">
     <div class="easyui-tabs" fit="true" border="false" id="tabs">
         <div title="首页" data-options="iconCls:'icon-home'">
@@ -146,10 +149,11 @@
         </div>
     </div>
 </div>
+--%>
 <div region="west" style="width: 200px;height:500px;" title="导航菜单"
      split="true">
     <div class="easyui-accordion">
-        <div title="文章管理"
+        <%--<div title="文章管理"
              data-options="selected:true,iconCls:'icon-wenzhangs'"
              style="padding: 10px;height:10px;">
             <a
@@ -173,8 +177,8 @@
                     class="easyui-linkbutton"
                     data-options="plain:true,iconCls:'icon-shuben'"
                     style="width: 150px;">全部书籍</a>
-        </div>
-        <div title="系统管理" data-options="iconCls:'icon-item'"
+        </div>--%>
+        <div title="用户管理" data-options="iconCls:'icon-item'"
              style="padding:10px;border:none;">
             <a href="javascript:openTab(' 管理员列表','userManage.jsp','icon-lxr')"
                class="easyui-linkbutton"

@@ -44,6 +44,7 @@
           <element id="library" level="project" name="Maven: org.json:json:20160810" />
           <element id="library" level="project" name="Maven: cn.songxinqiang:com.baidu.ueditor:1.1.2-edit-1.0" />
           <element id="library" level="project" name="Maven: com.alibaba:druid:1.0.24" />
+          <element id="library" level="project" name="Maven: com.google.guava:guava:19.0" />
         </element>
       </element>
       <element id="directory" name="META-INF">

@@ -11,7 +11,6 @@
 <%@ page language="java" contentType="text/html;charset=UTF-8" pageEncoding="UTF-8" %>
 --%>
 <div class="pageBox clearfix mt20">
-  <h1> 页码</h1>
   <p class="page tc">
     <c:if test="${fn:length(page.slider) >= 1}">
       <c:if test="${page.pageNo > 1 }">
