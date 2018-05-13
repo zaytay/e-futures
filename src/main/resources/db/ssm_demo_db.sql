@@ -7,6 +7,64 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
+#棉花期货  批量
+DROP TABLE IF EXISTS `futures_batch`;
+CREATE TABLE `futures_batch` (
+  `id` bigint(10) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `production_code` bigint(10) unsigned NOT NULL COMMENT '产品批号',
+  `type` varchar(16) CHARACTER SET utf8 COLLATE utf8_bin default '' COMMENT '类型  手摘 机采',
+  `production_area` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '产地',
+  `count` int(11) not null  default '0' COMMENT '件数',
+  `price` varchar(10) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '价格',
+  `weight` int(11) not null  default '0' COMMENT '重量',
+  `colour_level` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '颜色级',
+  `avg_length` int(11) not null  default '0' COMMENT '长度均值',
+  `strength` int(11) not null  default '0' COMMENT '强度',
+  `avg_micronaire` int(11) not null  default '0' COMMENT '马克隆平均值',
+  `moisture` int(11) not null  default '0' COMMENT '回潮',
+  `miscellaneous` int(11) not null  default '0' COMMENT '含杂',
+  `avg_evenness` int(11) not null  default '0' COMMENT '长整均值',
+  `ginning_quality` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '轧工  P2...',
+  `warehouse` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '存放仓库',
+
+  `weight_number` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '重量证书编号',
+  `standard` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '执行标准',
+  `gross_weight` int(11) not null  default '0' COMMENT '毛重',
+  `net_weight` int(11) not null  default '0' COMMENT '净重',
+  `tare_weight` int(11) not null  default '0' COMMENT '皮重',
+  `quality_number` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT'质量证书编号',
+  `core_length` int(11) not null  default '0' COMMENT '主度长度级',
+  `core_micronaire`  varchar(10) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT'马克隆主体级别',
+  `max_evenness` int(11) not null  default '0' COMMENT '长整最大',
+  `min_evenness` int(11) not null  default '0' COMMENT '长整最小',
+  `remark`  varchar(200) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '备注',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+
+
+#棉花期货  单条
+DROP TABLE IF EXISTS `cotton_item`;
+CREATE TABLE `cotton_item` (
+  `id` bigint(10) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `batch_id` bigint(10) unsigned NOT NULL COMMENT '批量ID',
+  `barcod` bigint(10) unsigned NOT NULL COMMENT '条码',
+  `colour_level` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '颜色级',
+  `length` int(11) not null  default '0' COMMENT '长度',
+  `strength` int(11) not null  default '0' COMMENT '强度',
+  `micronaire` int(11) not null  default '0' COMMENT '马克隆值',
+  `evenness` int(11) not null  default '0' COMMENT '长整',
+  `ginning_quality` int(11) not null  default '0' COMMENT '轧工  P2...',
+  `create_date` timestamp not null default CURRENT_TIMESTAMP comment '公检日期',
+  `yellow_level` int(11) not null  default '0' COMMENT '黄度',
+  `reflectivity` int(11) not null  default '0' COMMENT '反射率',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+
+
 # Dump of table ssm_article
 # ------------------------------------------------------------
 
