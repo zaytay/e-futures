@@ -20,7 +20,7 @@ public class CottonBatchServiceImpl implements CottonBatchService {
             .getLogger(CottonBatchServiceImpl.class);// 日志文件
 
     @Autowired
-    CottonBatchMapper cottonBatchMapper;
+    private CottonBatchMapper cottonBatchMapper;
 
 
     public PageInfo<CottonBatch>  getCottonBatchByPage(Integer pageNo,Integer pageSize){
@@ -37,9 +37,9 @@ public class CottonBatchServiceImpl implements CottonBatchService {
 
     }
 
-
-
-
-
-
+    @Override
+    public List<CottonBatch> getAllCottonBatch() {
+        CottonBatchExample cottonBatchExample=new CottonBatchExample();
+        return cottonBatchMapper.selectByExample(cottonBatchExample);
+    }
 }

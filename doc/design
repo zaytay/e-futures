@@ -1,0 +1,29 @@
+比例： 颜色  轧工质量
+区间： 平均值    长度  马克龙  长整  强度  含杂
+
+
+batchId
+
+
+CREATE TABLE `cotton_template` (
+  `id` bigint(10) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `name` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '模板名称',
+  `creator_id` bigint(10) unsigned NOT NULL COMMENT '创建者ID',
+  `create_date` timestamp not null default CURRENT_TIMESTAMP comment '创建时间',
+  `chg_date` timestamp not null default CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP comment '更新时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+CREATE TABLE `range_strategy` (
+  `id` bigint(10) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `template_id` bigint(10) unsigned NOT NULL COMMENT '所属模板ID',
+  `name` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '模板名称',
+  `creator_id` bigint(10) unsigned NOT NULL COMMENT '创建者ID',
+  `create_date` timestamp not null default CURRENT_TIMESTAMP comment '创建时间',
+  `chg_date` timestamp not null default CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP comment '更新时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+
+
