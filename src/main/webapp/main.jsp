@@ -65,7 +65,7 @@
     </table>
 </div>
 test: ${test}
-<%@include file="/WEB-INF/jsp/index/center.jsp" %>
+<%@include file="/WEB-INF/jsp/compute/compute.jsp" %>
 <%--
 <div region="center">
     <div class="easyui-tabs" fit="true" border="false" id="tabs">
