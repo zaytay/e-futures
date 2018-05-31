@@ -2,16 +2,46 @@
 区间： 平均值    长度  马克龙  长整  强度  含杂
 
 
-batchId
+CREATE TABLE `cotton_batch` (
+  `id` bigint(10) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `production_code` bigint(10) unsigned NOT NULL COMMENT '产品批号',
+  `colour_w1` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '白棉1',
+  `colour_w2` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '白棉2',
+  `colour_w3` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '白棉3',
+  `colour_w4` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '白棉4',
+  `colour_w5` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '白棉5',
+  `colour_l1` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '淡棉1',
+  `colour_l2` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '淡棉2',
+  `colour_l3` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '淡棉3',
+  `colour_ly1` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '淡黄1',
+  `colour_ly2` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '淡黄2',
+  `colour_ly3` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '淡黄3',
+  `colour_y1` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '黄染1',
+  `colour_y2` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '黄染2',
+  `ginning_p1` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '轧工  P1',
+  `ginning_p2` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '轧工  P2',
+  `ginning_p3` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '轧工  P3',
+  `avg_length` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '长度均值',
+  `avg_micronaire` double(12,5) NOT NULL DEFAULT '0.00000' COMMENT '马克隆平均值',
+  `avg_evenness` double(12,5) NOT NULL DEFAULT '0.00000' COMMENT '长整均值',
+  `strength` double(12,5) NOT NULL DEFAULT '0.00000' COMMENT '强度',
+  `miscellaneous` double(12,5) NOT NULL DEFAULT '0.00000' COMMENT '含杂',
+  `factory` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '加工厂',
+  `production_area` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '产地',
+  `warehouse` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '存放仓库',
+  `remark` varchar(200) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '备注',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8 COLLATE=utf8_bin ;
 
 
-CREATE TABLE `cotton_template` (
+
+ CREATE TABLE `cotton_template` (
   `id` bigint(10) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `name` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '模板名称',
   `creator_id` bigint(10) unsigned NOT NULL COMMENT '创建者ID',
-  `create_date` timestamp not null default CURRENT_TIMESTAMP comment '创建时间',
+  `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 
 CREATE TABLE `range_strategy` (
@@ -20,9 +50,10 @@ CREATE TABLE `range_strategy` (
   `min` double(12,5) unsigned NOT NULL COMMENT '最小值',
   `max` double(12,5) unsigned NOT NULL COMMENT '最大值',
   `type` tinyint(4) unsigned NOT NULL COMMENT '策略类别',
-  `create_date` timestamp not null default CURRENT_TIMESTAMP comment '创建时间',
+  `create_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `price` double(12,5) NOT NULL DEFAULT '0.00000' COMMENT '升贴价格',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COLLATE=utf8_bin ;
 
 
 
