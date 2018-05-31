@@ -17,26 +17,19 @@ public class DaoTest {
 
     @Test
     public void insertCottonBatch() {
-        for(int i=0;i<30;i++){
+        for(int i=0;i<1;i++){
             CottonBatch record=new CottonBatch();
-            record.setProductionCode(12343124L);
-            record.setType("测试类别");
-            record.setCount(168);
+            record.setProductionCode(123456L);
             record.setProductionArea("测试场地");
-            record.setPrice("11");
             record.setWarehouse("仓库");
-            record.setWeight(14);
-            record.setColourLevel("颜色");
-            record.setAvgLength(11);
-            record.setStrength(80);
-            record.setAvgMicronaire(66);
-            record.setMoisture(5434);
-            record.setMiscellaneous(343433);
-            record.setAvgEvenness(434);
-            record.setGinningQuality("P2");
-            record.setWeightNumber("13243434343");
-            record.setStandard("biaozhun");
-            record.setGrossWeight(3434);
+            record.setColourW1(100.0);
+            record.setGinningP1(100.0);
+
+            record.setAvgLength(10d);
+            record.setStrength(10d);
+            record.setAvgMicronaire(10d);
+            record.setMiscellaneous(10d);
+            record.setAvgEvenness(10d);
             cottonBatchMapper.insertSelective(record);
         }
 

@@ -10,7 +10,6 @@ CREATE TABLE `cotton_template` (
   `name` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '模板名称',
   `creator_id` bigint(10) unsigned NOT NULL COMMENT '创建者ID',
   `create_date` timestamp not null default CURRENT_TIMESTAMP comment '创建时间',
-  `chg_date` timestamp not null default CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP comment '更新时间',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
@@ -18,10 +17,10 @@ CREATE TABLE `cotton_template` (
 CREATE TABLE `range_strategy` (
   `id` bigint(10) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `template_id` bigint(10) unsigned NOT NULL COMMENT '所属模板ID',
-  `name` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '模板名称',
-  `creator_id` bigint(10) unsigned NOT NULL COMMENT '创建者ID',
+  `min` double(12,5) unsigned NOT NULL COMMENT '最小值',
+  `max` double(12,5) unsigned NOT NULL COMMENT '最大值',
+  `type` tinyint(4) unsigned NOT NULL COMMENT '策略类别',
   `create_date` timestamp not null default CURRENT_TIMESTAMP comment '创建时间',
-  `chg_date` timestamp not null default CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP comment '更新时间',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 

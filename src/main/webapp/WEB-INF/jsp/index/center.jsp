@@ -50,20 +50,6 @@
                     <tr>
                         <th>ID</th>
                         <th>批号</th>
-                        <th>类型</th>
-                        <th>加工单位</th>
-                        <th>件数</th>
-                        <th>价格</th>
-                        <th>重量</th>
-                        <th>颜色级</th>
-                        <th>长度</th>
-                        <th>比强</th>
-                        <th>马值</th>
-                        <th>回潮</th>
-                        <th>含杂</th>
-                        <th>长整</th>
-                        <th>轧工</th>
-                        <th>存放仓库</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -72,20 +58,6 @@
                         <tr>
                             <th>${result.id}</th>
                             <th>${result.productionCode}</th>
-                            <th>${result.type}</th>
-                            <th>${result.productionArea}</th>
-                            <th>${result.count}</th>
-                            <th>${result.price}</th>
-                            <th>${result.weight}</th>
-                            <th>${result.colourLevel}</th>
-                            <th>${result.avgLength}</th>
-                            <th>${result.strength}</th>
-                            <th>${result.avgMicronaire}</th>
-                            <th>${result.moisture}</th>
-                            <th>${result.miscellaneous}</th>
-                            <th>${result.avgEvenness}</th>
-                            <th>${result.ginningQuality}</th>
-                            <th>${result.warehouse}</th>
                         </tr>
                     </c:forEach>
                     </tbody>

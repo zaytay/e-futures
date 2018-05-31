@@ -5,9 +5,11 @@ import com.tay.futures.entity.CottonItem;
 import com.tay.futures.entity.CottonItemExample;
 import com.tay.futures.service.CottonItmeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service("cottonItemService")
 public class CottonItemServiceImpl implements CottonItmeService{
 
 

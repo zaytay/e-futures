@@ -6,15 +6,142 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="38c9796c-ba4f-4033-ac23-8ed2badb0a03" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tay/futures/dao/mapper/ArticleDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tay/futures/dao/mapper/ArticleMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tay/futures/dao/mapper/BookDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tay/futures/dao/mapper/BookMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tay/futures/dao/mapper/PictureDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tay/futures/dao/mapper/PictureMapper.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tay/futures/dao/mapper/UserDao.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/tay/futures/dao/mapper/UserMapper.xml" afterPath="" />
+    <list default="true" id="38c9796c-ba4f-4033-ac23-8ed2badb0a03" name="Default" comment="add design">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/constants/ColourLevelPrice.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/constants/RangeStrategyType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/dao/CottonBatchMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/dao/CottonItemMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/dao/CottonTemplateMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/dao/RangeStrategyMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/entity/CottonBatch.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/entity/CottonBatchExample$Criteria.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/entity/CottonBatchExample$Criterion.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/entity/CottonBatchExample$GeneratedCriteria.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/entity/CottonBatchExample.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/entity/CottonItem.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/entity/CottonItemExample$Criteria.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/entity/CottonItemExample$Criterion.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/entity/CottonItemExample$GeneratedCriteria.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/entity/CottonItemExample.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/entity/CottonTemplate.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/entity/CottonTemplateExample$Criteria.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/entity/CottonTemplateExample$Criterion.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/entity/CottonTemplateExample$GeneratedCriteria.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/entity/CottonTemplateExample.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/entity/RangeStrategy.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/entity/RangeStrategyExample$Criteria.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/entity/RangeStrategyExample$Criterion.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/entity/RangeStrategyExample$GeneratedCriteria.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/entity/RangeStrategyExample.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/exception/ServiceException.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/service/CottonBatchService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/service/CottonItmeService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/service/CottonPriceService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/service/CottonTemplateService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/service/RangeStrategyService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/service/impl/CottonBatchServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/service/impl/CottonItemServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/service/impl/CottonPriceServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/service/impl/CottonTemplateServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/service/impl/RangeStrategyServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/util/MoneyUtil.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/util/PageInfo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/util/PageUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/util/PriceUtil$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/util/PriceUtil$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/util/PriceUtil.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/vo/RangeStrategyVo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/constants/ColourLevelPrice.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/constants/RangeStrategyType.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/dao/CottonBatchMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/dao/CottonItemMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/dao/CottonTemplateMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/dao/RangeStrategyMapper.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/entity/CottonBatch.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/entity/CottonBatchExample$Criteria.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/entity/CottonBatchExample$Criterion.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/entity/CottonBatchExample$GeneratedCriteria.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/entity/CottonBatchExample.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/entity/CottonItem.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/entity/CottonItemExample$Criteria.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/entity/CottonItemExample$Criterion.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/entity/CottonItemExample$GeneratedCriteria.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/entity/CottonItemExample.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/entity/CottonTemplate.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/entity/CottonTemplateExample$Criteria.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/entity/CottonTemplateExample$Criterion.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/entity/CottonTemplateExample$GeneratedCriteria.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/entity/CottonTemplateExample.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/entity/RangeStrategy.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/entity/RangeStrategyExample$Criteria.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/entity/RangeStrategyExample$Criterion.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/entity/RangeStrategyExample$GeneratedCriteria.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/entity/RangeStrategyExample.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/exception/ServiceException.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/service/CottonBatchService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/service/CottonItmeService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/service/CottonPriceService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/service/CottonTemplateService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/service/RangeStrategyService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/service/impl/CottonBatchServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/service/impl/CottonItemServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/service/impl/CottonPriceServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/service/impl/CottonTemplateServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/service/impl/RangeStrategyServiceImpl.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/util/MoneyUtil.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/util/PageInfo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/util/PageUtils.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/util/PriceUtil$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/util/PriceUtil$2.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/util/PriceUtil.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/vo/RangeStrategyVo.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/lib/guava-19.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/Test.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/dao/DaoTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/service/ServiceTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/constants/ColourLevelPrice.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/constants/RangeStrategyType.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/dao/CottonTemplateMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/dao/RangeStrategyMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/entity/CottonTemplate.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/entity/CottonTemplateExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/entity/RangeStrategy.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/entity/RangeStrategyExample.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/exception/ServiceException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/service/CottonPriceService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/service/CottonTemplateService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/service/RangeStrategyService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/CottonPriceServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/CottonTemplateServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/RangeStrategyServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/util/PriceUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/vo/RangeStrategyVo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mappers/CottonTemplateMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mappers/RangeStrategyMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/Test.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/mappers/CottonBatchMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/mappers/CottonItemMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/mappers/CottonTemplateMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/mappers/RangeStrategyMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/myBatisGeneratorConfig.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/mappers/CottonBatchMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/mappers/CottonItemMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/mappers/CottonTemplateMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/mappers/RangeStrategyMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/myBatisGeneratorConfig.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/jsp/index/center.jsp" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/futures-web/WEB-INF/work/_jsp/_login_0chk__jsp$TagState.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/futures-web/WEB-INF/work/_jsp/_login_0chk__jsp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/futures-web/WEB-INF/work/_jsp/_login_0chk__jsp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/futures-web/WEB-INF/work/_jsp/_login_0chk__jsp.java.smap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/futures-web/WEB-INF/work/_jsp/_login__jsp$TagState.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/futures-web/WEB-INF/work/_jsp/_login__jsp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/futures-web/WEB-INF/work/_jsp/_login__jsp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/futures-web/WEB-INF/work/_jsp/_login__jsp.java.smap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/futures-web/WEB-INF/work/_jsp/_main__jsp$TagState.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/futures-web/WEB-INF/work/_jsp/_main__jsp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/futures-web/WEB-INF/work/_jsp/_main__jsp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/futures-web/WEB-INF/work/_jsp/_main__jsp.java.smap" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/futures-web/WEB-INF/work/_jsp/_views/_allBooksManage__jsp$TagState.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/futures-web/WEB-INF/work/_jsp/_views/_allBooksManage__jsp.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/futures-web/WEB-INF/work/_jsp/_views/_allBooksManage__jsp.java" afterPath="" />
@@ -27,7 +154,33 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/futures-web/WEB-INF/work/_jsp/_views/_pictureManage__jsp.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/futures-web/WEB-INF/work/_jsp/_views/_pictureManage__jsp.java" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/futures-web/WEB-INF/work/_jsp/_views/_pictureManage__jsp.java.smap" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/futures-web/WEB-INF/work/_jsp/_views/_userManage__jsp$TagState.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/futures-web/WEB-INF/work/_jsp/_views/_userManage__jsp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/futures-web/WEB-INF/work/_jsp/_views/_userManage__jsp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/futures-web/WEB-INF/work/_jsp/_views/_userManage__jsp.java.smap" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/tay/futures/controller/UserController.class" afterPath="$PROJECT_DIR$/target/classes/com/tay/futures/controller/UserController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/futures-web.war" afterPath="$PROJECT_DIR$/target/futures-web.war" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/controller/UserController.class" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/com/tay/futures/controller/UserController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/design" afterPath="$PROJECT_DIR$/doc/design" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tay/futures/entity/CottonBatch.java" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/entity/CottonBatch.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tay/futures/entity/CottonBatchExample.java" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/entity/CottonBatchExample.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tay/futures/service/CottonBatchService.java" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/service/CottonBatchService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/CottonBatchServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/CottonBatchServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/CottonItemServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/CottonItemServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/db/ssm_demo_db.sql" afterPath="$PROJECT_DIR$/src/main/resources/db/ssm_demo_db.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappers/CottonBatchMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappers/CottonBatchMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/myBatisGeneratorConfig.xml" afterPath="$PROJECT_DIR$/src/main/resources/myBatisGeneratorConfig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index/center.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index/center.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/dao/DaoTest.java" afterPath="$PROJECT_DIR$/src/test/java/dao/DaoTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/service/ServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/service/ServiceTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/db/ssm_demo_db.sql" afterPath="$PROJECT_DIR$/target/classes/db/ssm_demo_db.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/futures-web/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/futures-web/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/db/ssm_demo_db.sql" afterPath="$PROJECT_DIR$/target/futures-web/WEB-INF/classes/db/ssm_demo_db.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/futures-web/main.jsp" afterPath="$PROJECT_DIR$/target/futures-web/main.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,111 +193,96 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="CottonTemplateServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/CottonTemplateServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="678">
+              <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PriceUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/util/PriceUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="177">
+              <caret line="45" column="25" lean-forward="false" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="CottonBatch.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/entity/CottonBatch.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CottonBatchExample.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/entity/CottonBatchExample.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/controller/UserController.java">
+      <file leaf-file-name="CottonPriceServiceImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/CottonPriceServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="140" column="36" lean-forward="false" selection-start-line="140" selection-start-column="27" selection-end-line="140" selection-end-column="36" />
+            <state relative-caret-position="420">
+              <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CottonBatchMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/dao/CottonBatchMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CottonBatchMapper.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/CottonBatchMapper.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="8" column="71" lean-forward="false" selection-start-line="8" selection-start-column="71" selection-end-line="8" selection-end-column="71" />
+              <folding>
+                <marker date="1527781968535" expanded="true" signature="5504:5611" ph="select from cotton_batch" />
+                <marker date="1527781968535" expanded="true" signature="5695:5756" ph="delete from " />
+                <marker date="1527781968535" expanded="true" signature="5864:5888" ph="delete from " />
+                <marker date="1527781968535" expanded="true" signature="12040:12073" ph="select count... cotton_batch" />
+                <marker date="1527781968535" expanded="true" signature="15526:17050" ph="update cotto... " />
+                <marker date="1527781968535" expanded="true" signature="17266:19955" ph="update cotto... " />
+                <marker date="1527781968535" expanded="true" signature="20059:21397" ph="update cotto... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServiceTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/service/ServiceTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="158">
+              <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CottonBatchServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/CottonBatchServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="22" column="38" lean-forward="false" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/main.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="182" column="64" lean-forward="false" selection-start-line="182" selection-start-column="50" selection-end-line="182" selection-end-column="64" />
-              <folding>
-                <marker date="1526140211118" expanded="false" signature="4053:4070" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userManage.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/views/userManage.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="108" column="28" lean-forward="false" selection-start-line="108" selection-start-column="28" selection-end-line="108" selection-end-column="28" />
-              <folding>
-                <element signature="n#script#3;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ssm_demo_db.sql" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/db/ssm_demo_db.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1950">
-              <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="索引测试-ssm_picture.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/db/索引测试-ssm_picture.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="center.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index/center.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="130" column="53" lean-forward="false" selection-start-line="130" selection-start-column="53" selection-end-line="130" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/page.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="16" column="54" lean-forward="false" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CottonItemExample.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/entity/CottonItemExample.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-600">
-              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -156,6 +294,7 @@
       <list>
         <option value="Jsp File" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -177,6 +316,8 @@
       <find>deleteUser</find>
       <find>dlg</find>
       <find>dg</find>
+      <find>insert</find>
+      <find>CottonItemMapper</find>
     </findStrings>
     <replaceStrings>
       <replace>com.tay.futures</replace>
@@ -209,21 +350,40 @@
         <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/spring-context-mybatis.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/entity/CottonItem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/dao/CottonBatchMapper.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mappers/CottonItemMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/mappers/CottonBatchMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/myBatisGeneratorConfig.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/dao/CottonItemMapper.java" />
-        <option value="$PROJECT_DIR$/src/test/java/dao/DaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/util/PageUtils.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/service/CottonBatchService.java" />
-        <option value="$PROJECT_DIR$/src/test/java/service/ServiceTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index/center.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/CottonBatchServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/main.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/service/CottonItmeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/util/MoneyUtil.java" />
+        <option value="$PROJECT_DIR$/doc/design" />
+        <option value="$PROJECT_DIR$/src/main/resources/myBatisGeneratorConfig.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/db/ssm_demo_db.sql" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index/center.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/dao/CottonTemplateMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/constants/ColourLevelPrice.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/CottonItemServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/dao/RangeStrategyMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/entity/CottonBatch.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/exception/ServiceException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/service/CottonPriceService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/CottonBatchServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/service/CottonBatchService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/dao/DaoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/service/CottonTemplateService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/vo/RangeStrategyVo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/service/RangeStrategyService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/RangeStrategyServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/CottonTemplateServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/constants/RangeStrategyType.java" />
+        <option value="$PROJECT_DIR$/src/test/java/service/ServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/dao/CottonBatchMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/util/PriceUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/CottonPriceServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -262,8 +422,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -271,6 +432,11 @@
             <path>
               <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
               <item name="futures-web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="futures-web" type="462c0819:PsiDirectoryNode" />
+              <item name="doc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
@@ -297,6 +463,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="futures" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="futures-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="futures" type="462c0819:PsiDirectoryNode" />
+              <item name="constants" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
@@ -358,6 +533,15 @@
               <item name="futures-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="futures" type="462c0819:PsiDirectoryNode" />
+              <item name="vo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="futures-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -375,58 +559,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="mappers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="futures-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="futures-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="futures-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="futures-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="futures-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="futures-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="jsp" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
@@ -464,167 +596,6 @@
             <path>
               <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.7 &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.7 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.7 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; 1.7 &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="lang" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: aopalliance:aopalliance:1.0" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: aopalliance:aopalliance:1.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="aopalliance-1.0.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: aopalliance:aopalliance:1.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="aopalliance-1.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="aopalliance" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: aopalliance:aopalliance:1.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="aopalliance-1.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="aopalliance" type="462c0819:PsiDirectoryNode" />
-              <item name="intercept" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.alibaba:druid:1.0.24" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.alibaba:druid:1.0.24" type="70bed36:NamedLibraryElementNode" />
-              <item name="druid-1.0.24.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.alibaba:druid:1.0.24" type="70bed36:NamedLibraryElementNode" />
-              <item name="druid-1.0.24.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="druid" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.alibaba:druid:1.0.24" type="70bed36:NamedLibraryElementNode" />
-              <item name="druid-1.0.24.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="druid" type="462c0819:PsiDirectoryNode" />
-              <item name="pool" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.alibaba:druid:1.0.24" type="70bed36:NamedLibraryElementNode" />
-              <item name="druid-1.0.24.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="druid" type="462c0819:PsiDirectoryNode" />
-              <item name="support" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.alibaba:druid:1.0.24" type="70bed36:NamedLibraryElementNode" />
-              <item name="druid-1.0.24.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="druid" type="462c0819:PsiDirectoryNode" />
-              <item name="support" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.alibaba:druid:1.0.24" type="70bed36:NamedLibraryElementNode" />
-              <item name="druid-1.0.24.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="druid" type="462c0819:PsiDirectoryNode" />
-              <item name="support" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-              <item name="stat" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: junit:junit:4.9" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: junit:junit:4.9" type="70bed36:NamedLibraryElementNode" />
-              <item name="junit-4.9.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: junit:junit:4.9" type="70bed36:NamedLibraryElementNode" />
-              <item name="junit-4.9.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: junit:junit:4.9" type="70bed36:NamedLibraryElementNode" />
-              <item name="junit-4.9.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="junit" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: junit:junit:4.9" type="70bed36:NamedLibraryElementNode" />
-              <item name="junit-4.9.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="junit" type="462c0819:PsiDirectoryNode" />
-              <item name="internal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: junit:junit:4.9" type="70bed36:NamedLibraryElementNode" />
-              <item name="junit-4.9.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="junit" type="462c0819:PsiDirectoryNode" />
-              <item name="internal" type="462c0819:PsiDirectoryNode" />
-              <item name="runners" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: junit:junit:4.9" type="70bed36:NamedLibraryElementNode" />
-              <item name="junit-4.9.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
-              <item name="junit" type="462c0819:PsiDirectoryNode" />
-              <item name="internal" type="462c0819:PsiDirectoryNode" />
-              <item name="runners" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
               <item name="Maven: org.springframework:spring-aop:4.2.4.RELEASE" type="70bed36:NamedLibraryElementNode" />
             </path>
             <path>
@@ -656,85 +627,10 @@
               <item name="aop" type="462c0819:PsiDirectoryNode" />
               <item name="support" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:4.2.4.RELEASE" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:4.2.4.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-4.2.4.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:4.2.4.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-4.2.4.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:4.2.4.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-4.2.4.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:4.2.4.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-4.2.4.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="bind" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:4.2.4.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-4.2.4.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="bind" type="462c0819:PsiDirectoryNode" />
-              <item name="annotation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:4.2.4.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-4.2.4.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="bind" type="462c0819:PsiDirectoryNode" />
-              <item name="annotation" type="462c0819:PsiDirectoryNode" />
-              <item name="support" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-webmvc:4.2.4.RELEASE" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-webmvc:4.2.4.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-webmvc-4.2.4.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-webmvc:4.2.4.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-webmvc-4.2.4.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -757,14 +653,17 @@
       <recent name="com.tay.futures.entity" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.tay.futures.dao" />
+      <recent name="com.tay.futures.entity" />
+      <recent name="com.tay.futures.exception" />
       <recent name="com.tay.futures.util" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\gitprogram\futures-web\src\main\java\com\tay\futures\dao" />
       <recent name="D:\gitprogram\futures-web\src\main\resources\mappers" />
+      <recent name="D:\gitprogram\futures-web\src\main\java\com\tay\futures\dao" />
       <recent name="D:\gitprogram\futures-web\src\main\java\com\tay\futures\entity" />
+      <recent name="D:\gitprogram\futures-web\src\main\java\com\tay\futures\util" />
       <recent name="D:\gitprogram\futures-web\src\main\resources" />
-      <recent name="D:\gitprogram\futures-web\src\main\webapp\WEB-INF\jsp\common" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -779,32 +678,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Maven.futures-web">
-    <configuration name="DaoTest.getBookByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="futures-web" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="dao" />
-      <option name="MAIN_CLASS_NAME" value="dao.DaoTest" />
-      <option name="METHOD_NAME" value="getBookByIdTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
+  <component name="RunManager" selected="JUnit.ServiceTest.computePrice">
     <configuration name="DaoTest.insertCottonBatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -830,7 +704,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="ServiceTest.testGetBatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ServiceTest.addTemplate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="service.*" />
@@ -842,7 +716,77 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="service" />
       <option name="MAIN_CLASS_NAME" value="service.ServiceTest" />
-      <option name="METHOD_NAME" value="testGetBatch" />
+      <option name="METHOD_NAME" value="addTemplate" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="ServiceTest.computePrice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="futures-web" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="service" />
+      <option name="MAIN_CLASS_NAME" value="service.ServiceTest" />
+      <option name="METHOD_NAME" value="computePrice" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="ServiceTest.deleteBatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="futures-web" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="service" />
+      <option name="MAIN_CLASS_NAME" value="service.ServiceTest" />
+      <option name="METHOD_NAME" value="deleteBatch" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="Test.testFun" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="futures-web" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <option name="METHOD_NAME" value="testFun" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1009,18 +953,22 @@
         </option>
       </method>
     </configuration>
-    <list size="5">
+    <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Maven.futures-web" />
       <item index="1" class="java.lang.String" itemvalue="Resin.resin-futures-web" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.DaoTest.getBookByIdTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.DaoTest.insertCottonBatch" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ServiceTest.testGetBatch" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.DaoTest.insertCottonBatch" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.Test.testFun" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ServiceTest.deleteBatch" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.ServiceTest.addTemplate" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.ServiceTest.computePrice" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ServiceTest.testGetBatch" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.DaoTest.insertCottonBatch" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.DaoTest.getBookByIdTest" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ServiceTest.computePrice" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ServiceTest.addTemplate" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.DaoTest.insertCottonBatch" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ServiceTest.deleteBatch" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.Test.testFun" />
       </list>
     </recent_temporary>
   </component>
@@ -1036,46 +984,71 @@
       <updated>1526049425884</updated>
       <workItem from="1526049429811" duration="686000" />
       <workItem from="1526050689532" duration="265000" />
-      <workItem from="1526050971080" duration="29601000" />
+      <workItem from="1526050971080" duration="35403000" />
+      <workItem from="1526888055166" duration="7694000" />
+      <workItem from="1527130097895" duration="620000" />
+      <workItem from="1527130792578" duration="72000" />
+      <workItem from="1527130898479" duration="19269000" />
+      <workItem from="1527768945377" duration="13866000" />
     </task>
+    <task id="LOCAL-00001" summary="add moneyUtil">
+      <created>1527221258683</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1527221258683</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add design for compute">
+      <created>1527249735586</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1527249735586</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DaoTest_getBookByIdTest - 2018.05.12 at 22h 42m 08s.xml">
-      <configuration name="DaoTest.getBookByIdTest" configurationId="JUnit" />
+    <history-entry file="ServiceTest_addTemplate - 2018.05.31 at 23h 37m 01s.xml">
+      <configuration name="ServiceTest.addTemplate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DaoTest_getBookByIdTest - 2018.05.12 at 22h 43m 49s.xml">
-      <configuration name="DaoTest.getBookByIdTest" configurationId="JUnit" />
+    <history-entry file="ServiceTest_addTemplate - 2018.05.31 at 23h 40m 35s.xml">
+      <configuration name="ServiceTest.addTemplate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DaoTest_getBookByIdTest - 2018.05.12 at 22h 45m 51s.xml">
-      <configuration name="DaoTest.getBookByIdTest" configurationId="JUnit" />
+    <history-entry file="ServiceTest_addTemplate - 2018.05.31 at 23h 42m 45s.xml">
+      <configuration name="ServiceTest.addTemplate" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DaoTest_getBookByIdTest - 2018.05.12 at 22h 50m 32s.xml">
-      <configuration name="DaoTest.getBookByIdTest" configurationId="JUnit" />
+    <history-entry file="ServiceTest_computePrice - 2018.05.31 at 23h 46m 51s.xml">
+      <configuration name="ServiceTest.computePrice" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DaoTest_insertCottonBatch - 2018.05.12 at 22h 55m 18s.xml">
-      <configuration name="DaoTest.insertCottonBatch" configurationId="JUnit" />
+    <history-entry file="ServiceTest_computePrice - 2018.05.31 at 23h 51m 05s.xml">
+      <configuration name="ServiceTest.computePrice" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DaoTest_insertCottonBatch - 2018.05.12 at 22h 56m 46s.xml">
-      <configuration name="DaoTest.insertCottonBatch" configurationId="JUnit" />
+    <history-entry file="ServiceTest_computePrice - 2018.05.31 at 23h 55m 48s.xml">
+      <configuration name="ServiceTest.computePrice" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DaoTest_insertCottonBatch - 2018.05.12 at 23h 02m 08s.xml">
-      <configuration name="DaoTest.insertCottonBatch" configurationId="JUnit" />
+    <history-entry file="ServiceTest_computePrice - 2018.05.31 at 23h 57m 43s.xml">
+      <configuration name="ServiceTest.computePrice" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ServiceTest_testGetBatch - 2018.05.12 at 23h 23m 51s.xml">
-      <configuration name="ServiceTest.testGetBatch" configurationId="JUnit" />
+    <history-entry file="ServiceTest_computePrice - 2018.06.01 at 00h 00m 24s.xml">
+      <configuration name="ServiceTest.computePrice" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ServiceTest_computePrice - 2018.06.01 at 00h 02m 33s.xml">
+      <configuration name="ServiceTest.computePrice" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ServiceTest_computePrice - 2018.06.01 at 00h 04m 14s.xml">
+      <configuration name="ServiceTest.computePrice" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30552000" />
+    <option name="totallyTimeSpent" value="77875000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Redis Servers" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1084,20 +1057,20 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50558037" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3515625" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282123" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3638393" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.453125" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20670392" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25266525" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23027718" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282123" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1106,12 +1079,51 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Redis Servers" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27455357" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924107" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25139666" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28008595" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3282123" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add moneyUtil" />
+    <MESSAGE value="add design for compute" />
+    <option name="LAST_COMMIT_MESSAGE" value="add design for compute" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1123,349 +1135,35 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/service/ServiceTest.java</url>
-          <line>20</line>
+          <url>file://$PROJECT_DIR$/src/test/java/Test.java</url>
+          <line>14</line>
           <properties />
-          <option name="timeStamp" value="4" />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/service/ServiceTest.java</url>
+          <line>65</line>
+          <properties />
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="6" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.4.RELEASE/spring-aop-4.2.4.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="24" column="16" lean-forward="false" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-          <folding>
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#578#579#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.2.4.RELEASE/spring-webmvc-4.2.4.RELEASE.jar!/org/springframework/web/servlet/DispatcherServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="455" column="0" lean-forward="false" selection-start-line="455" selection-start-column="0" selection-end-line="455" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.2.4.RELEASE/spring-web-4.2.4.RELEASE.jar!/org/springframework/web/bind/annotation/support/HandlerMethodInvoker.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="157" column="0" lean-forward="false" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j-test.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" column="34" lean-forward="false" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="60" lean-forward="false" selection-start-line="9" selection-start-column="60" selection-end-line="9" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-context-druid-stat.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="18" column="19" lean-forward="false" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-context-mvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="12" column="82" lean-forward="false" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/ArticleServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="17" column="15" lean-forward="false" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-          <folding>
-            <element signature="e#633#634#0" expanded="true" />
-            <element signature="e#688#689#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/ArticleMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/entity/CottonItemExample.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="10" column="50" lean-forward="false" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
-          <folding>
-            <marker date="1526133632285" expanded="true" signature="1455:1616" ph="insert into ssm_article" />
-            <marker date="1526133632285" expanded="true" signature="1684:1814" ph="update ssm_a... " />
-            <marker date="1526133632285" expanded="true" signature="1882:1924" ph="delete from " />
-            <marker date="1526133632285" expanded="true" signature="2021:2123" ph="select id,ar... ssm_article" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/util/PageInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#630#636#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc-druid-config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-context-mybatis.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="17" column="47" lean-forward="false" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/generated-sources/mybatis-generator/com/tay/futures/dao/mapper/CottonBatchMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/generated-sources/mybatis-generator/com/tay/futures/dao/mapper/xml/CottonBatchMapper.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/entity/CottonTemplateExample.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/generated-sources/mybatis-generator/com/tay/futures/model/CottonBatch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/CottonItemMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="55" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/PictureMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1526133632255" expanded="true" signature="1775:1874" ph="insert into ssm_picture... " />
-            <marker date="1526133632255" expanded="true" signature="1942:2053" ph="update ssm_p... " />
-            <marker date="1526133632255" expanded="true" signature="2121:2161" ph="delete from " />
-            <marker date="1526133632255" expanded="true" signature="2259:2327" ph="select id,pa... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/dao/PictureDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/entity/CottonBatch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/entity/PageBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="7" column="21" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/myBatisGeneratorConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="37" column="63" lean-forward="false" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/generated-sources/mybatis-generator/com/tay/futures/dao/CottonBatchMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/generated-sources/mybatis-generator/com/tay/futures/dao/CottonBatchMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/dao/ArticleDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.9/junit-4.9.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/dao/DaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="43" lean-forward="false" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/BookServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="202" column="23" lean-forward="false" selection-start-line="202" selection-start-column="23" selection-end-line="202" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/util/PageUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="12" column="56" lean-forward="false" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/CottonBatchMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" column="67" lean-forward="false" selection-start-line="10" selection-start-column="67" selection-end-line="10" selection-end-column="67" />
-          <folding>
-            <marker date="1526136514484" expanded="true" signature="5584:5691" ph="select from cotton_batch" />
-            <marker date="1526136514484" expanded="true" signature="5775:5836" ph="delete from " />
-            <marker date="1526136514484" expanded="true" signature="5944:5968" ph="delete from " />
-            <marker date="1526136514484" expanded="true" signature="12290:12323" ph="select count... cotton_batch" />
-            <marker date="1526136514484" expanded="true" signature="15861:17449" ph="update cotto... " />
-            <marker date="1526136514484" expanded="true" signature="17665:20439" ph="update cotto... " />
-            <marker date="1526136514484" expanded="true" signature="20543:21945" ph="update cotto... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/dao/CottonItemMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/dao/CottonBatchMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/entity/CottonBatchExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1478,10 +1176,215 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/service/ServiceTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/entity/CottonTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/CottonItemServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/BookServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/ArticleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1140">
+          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j-test.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="10" column="41" lean-forward="false" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/mybatis-generator/com/tay/futures/entity/RangeStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-240">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/mybatis-generator/com/tay/futures/entity/RangeStrategyExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/entity/RangeStrategyExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/mybatis-generator/com/tay/futures/dao/RangeStrategyMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/mybatis-generator/com/tay/futures/dao/RangeStrategyMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/RangeStrategyMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="161" column="39" lean-forward="true" selection-start-line="161" selection-start-column="39" selection-end-line="161" selection-end-column="39" />
+          <folding>
+            <marker date="1527775437725" expanded="true" signature="3716:3825" ph="select from range_strategy" />
+            <marker date="1527775437725" expanded="true" signature="3909:3972" ph="delete from " />
+            <marker date="1527775437725" expanded="true" signature="4082:4108" ph="delete from " />
+            <marker date="1527775437725" expanded="true" signature="6102:6137" ph="select count... range_strategy" />
+            <marker date="1527775437725" expanded="true" signature="7250:7617" ph="update range... " />
+            <marker date="1527775437725" expanded="true" signature="7835:8464" ph="update range... " />
+            <marker date="1527775437725" expanded="true" signature="8570:8891" ph="update range... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/constants/ColourLevelPrice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/exception/ServiceException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="e#350#351#0" expanded="true" />
+            <element signature="e#378#379#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/dao/CottonTemplateMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
-          <caret line="20" column="22" lean-forward="false" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="22" />
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/myBatisGeneratorConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="37" column="63" lean-forward="false" selection-start-line="37" selection-start-column="63" selection-end-line="37" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/CottonTemplateMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="100" column="9" lean-forward="false" selection-start-line="100" selection-start-column="3" selection-end-line="100" selection-end-column="9" />
+          <folding>
+            <marker date="1527758619477" expanded="true" signature="3509:3619" ph="select from cotton_template" />
+            <marker date="1527758619477" expanded="true" signature="3703:3767" ph="delete from " />
+            <marker date="1527758619477" expanded="true" signature="3878:3905" ph="delete from " />
+            <marker date="1527758619477" expanded="true" signature="5384:5420" ph="select count... cotton_template" />
+            <marker date="1527758619477" expanded="true" signature="6236:6465" ph="update cotto... " />
+            <marker date="1527758619477" expanded="true" signature="6684:7058" ph="update cotto... " />
+            <marker date="1527758619477" expanded="true" signature="7165:7369" ph="update cotto... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/PictureServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/dao/RangeStrategyMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/dao/CottonItemMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="33" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-context-tx.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/CottonBatchServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="60" column="4" lean-forward="true" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1490,88 +1393,173 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/service/CottonBatchService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="88" lean-forward="false" selection-start-line="8" selection-start-column="88" selection-end-line="8" selection-end-column="88" />
+        <state relative-caret-position="480">
+          <caret line="19" column="40" lean-forward="false" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/dao/DaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="31" column="39" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/entity/CottonBatch.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/service/CottonTemplateService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
+        <state relative-caret-position="210">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/entity/RangeStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="93" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/vo/RangeStrategyVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1920">
+          <caret line="92" column="5" lean-forward="false" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/service/RangeStrategyService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="8" column="61" lean-forward="false" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.4.RELEASE/spring-aop-4.2.4.RELEASE.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/RangeStrategyServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="32" column="31" lean-forward="false" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/constants/RangeStrategyType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <folding>
+            <element signature="e#512#513#0" expanded="true" />
+            <element signature="e#539#540#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/service/CottonPriceService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.2.4.RELEASE/spring-aop-4.2.4.RELEASE.jar!/org/springframework/aop/support/AopUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="165" column="0" lean-forward="false" selection-start-line="165" selection-start-column="0" selection-end-line="165" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/CottonTemplateServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="678">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/mybatis-generator/com/tay/futures/entity/CottonBatch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-330">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index/center.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/entity/CottonBatch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="130" column="53" lean-forward="false" selection-start-line="130" selection-start-column="53" selection-end-line="130" selection-end-column="53" />
+        <state relative-caret-position="330">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/common/page.jsp">
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/mybatis-generator/com/tay/futures/entity/CottonBatchExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="16" column="54" lean-forward="false" selection-start-line="16" selection-start-column="54" selection-end-line="16" selection-end-column="54" />
+        <state relative-caret-position="120">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/entity/CottonItemExample.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/entity/CottonBatchExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-600">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="120">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/CottonBatchServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/mybatis-generator/com/tay/futures/dao/CottonBatchMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="22" column="38" lean-forward="false" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="360">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/main.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/dao/CottonBatchMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="182" column="64" lean-forward="false" selection-start-line="182" selection-start-column="50" selection-end-line="182" selection-end-column="64" />
-          <folding>
-            <marker date="1526140211118" expanded="false" signature="4053:4070" ph="..." />
-          </folding>
+        <state relative-caret-position="360">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="140" column="36" lean-forward="false" selection-start-line="140" selection-start-column="27" selection-end-line="140" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/views/userManage.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="108" column="28" lean-forward="false" selection-start-line="108" selection-start-column="28" selection-end-line="108" selection-end-column="28" />
-          <folding>
-            <element signature="n#script#3;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db/索引测试-ssm_picture.sql">
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/mybatis-generator/com/tay/futures/dao/CottonBatchMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1579,10 +1567,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/db/ssm_demo_db.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/CottonBatchMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1950">
-          <caret line="65" column="0" lean-forward="true" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        <state relative-caret-position="240">
+          <caret line="8" column="71" lean-forward="false" selection-start-line="8" selection-start-column="71" selection-end-line="8" selection-end-column="71" />
+          <folding>
+            <marker date="1527781968535" expanded="true" signature="5504:5611" ph="select from cotton_batch" />
+            <marker date="1527781968535" expanded="true" signature="5695:5756" ph="delete from " />
+            <marker date="1527781968535" expanded="true" signature="5864:5888" ph="delete from " />
+            <marker date="1527781968535" expanded="true" signature="12040:12073" ph="select count... cotton_batch" />
+            <marker date="1527781968535" expanded="true" signature="15526:17050" ph="update cotto... " />
+            <marker date="1527781968535" expanded="true" signature="17266:19955" ph="update cotto... " />
+            <marker date="1527781968535" expanded="true" signature="20059:21397" ph="update cotto... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/util/PriceUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="45" column="25" lean-forward="false" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/service/ServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/CottonPriceServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="14" column="46" lean-forward="true" selection-start-line="14" selection-start-column="46" selection-end-line="14" selection-end-column="46" />
           <folding />
         </state>
       </provider>

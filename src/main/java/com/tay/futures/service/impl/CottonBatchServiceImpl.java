@@ -6,6 +6,7 @@ import com.tay.futures.entity.CottonBatchExample;
 import com.tay.futures.service.CottonBatchService;
 import com.tay.futures.util.PageInfo;
 import com.tay.futures.util.PageUtils;
+import org.apache.commons.collections.CollectionUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -41,5 +42,24 @@ public class CottonBatchServiceImpl implements CottonBatchService {
     public List<CottonBatch> getAllCottonBatch() {
         CottonBatchExample cottonBatchExample=new CottonBatchExample();
         return cottonBatchMapper.selectByExample(cottonBatchExample);
+    }
+
+
+    public CottonBatch getCottonBatchByCode(Long code){
+        CottonBatchExample cottonBatchExample=new CottonBatchExample();
+        cottonBatchExample.createCriteria().andProductionCodeEqualTo(code);
+        List<CottonBatch> cottonBatches=cottonBatchMapper.selectByExample(cottonBatchExample);
+        if(CollectionUtils.isNotEmpty(cottonBatches)){
+            return cottonBatches.get(0);
+        }else {
+            return null;
+        }
+    }
+
+
+
+    public void deleteAllCottonBaches(){
+        CottonBatchExample cottonBatchExample=new CottonBatchExample();
+        cottonBatchMapper.deleteByExample(cottonBatchExample);
     }
 }

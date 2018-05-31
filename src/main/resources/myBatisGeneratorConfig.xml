@@ -45,7 +45,16 @@
 		<table tableName="cotton_item" domainObjectName="CottonItem">
 			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
-		
+
+		<table tableName="cotton_template" domainObjectName="CottonTemplate">
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+
+		<table tableName="range_strategy" domainObjectName="RangeStrategy">
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+
+
 
 	</context>
 </generatorConfiguration>

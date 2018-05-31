@@ -4,30 +4,30 @@
   <resultMap id="BaseResultMap" type="com.tay.futures.entity.CottonBatch" >
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="production_code" property="productionCode" jdbcType="BIGINT" />
-    <result column="type" property="type" jdbcType="VARCHAR" />
+    <result column="colour_w1" property="colourW1" jdbcType="DOUBLE" />
+    <result column="colour_w2" property="colourW2" jdbcType="DOUBLE" />
+    <result column="colour_w3" property="colourW3" jdbcType="DOUBLE" />
+    <result column="colour_w4" property="colourW4" jdbcType="DOUBLE" />
+    <result column="colour_w5" property="colourW5" jdbcType="DOUBLE" />
+    <result column="colour_l1" property="colourL1" jdbcType="DOUBLE" />
+    <result column="colour_l2" property="colourL2" jdbcType="DOUBLE" />
+    <result column="colour_l3" property="colourL3" jdbcType="DOUBLE" />
+    <result column="colour_ly1" property="colourLy1" jdbcType="DOUBLE" />
+    <result column="colour_ly2" property="colourLy2" jdbcType="DOUBLE" />
+    <result column="colour_ly3" property="colourLy3" jdbcType="DOUBLE" />
+    <result column="colour_y1" property="colourY1" jdbcType="DOUBLE" />
+    <result column="colour_y2" property="colourY2" jdbcType="DOUBLE" />
+    <result column="ginning_p1" property="ginningP1" jdbcType="DOUBLE" />
+    <result column="ginning_p2" property="ginningP2" jdbcType="DOUBLE" />
+    <result column="ginning_p3" property="ginningP3" jdbcType="DOUBLE" />
+    <result column="avg_length" property="avgLength" jdbcType="DOUBLE" />
+    <result column="avg_micronaire" property="avgMicronaire" jdbcType="DOUBLE" />
+    <result column="avg_evenness" property="avgEvenness" jdbcType="DOUBLE" />
+    <result column="strength" property="strength" jdbcType="DOUBLE" />
+    <result column="miscellaneous" property="miscellaneous" jdbcType="DOUBLE" />
+    <result column="factory" property="factory" jdbcType="VARCHAR" />
     <result column="production_area" property="productionArea" jdbcType="VARCHAR" />
-    <result column="count" property="count" jdbcType="INTEGER" />
-    <result column="price" property="price" jdbcType="VARCHAR" />
-    <result column="weight" property="weight" jdbcType="INTEGER" />
-    <result column="colour_level" property="colourLevel" jdbcType="VARCHAR" />
-    <result column="avg_length" property="avgLength" jdbcType="INTEGER" />
-    <result column="strength" property="strength" jdbcType="INTEGER" />
-    <result column="avg_micronaire" property="avgMicronaire" jdbcType="INTEGER" />
-    <result column="moisture" property="moisture" jdbcType="INTEGER" />
-    <result column="miscellaneous" property="miscellaneous" jdbcType="INTEGER" />
-    <result column="avg_evenness" property="avgEvenness" jdbcType="INTEGER" />
-    <result column="ginning_quality" property="ginningQuality" jdbcType="VARCHAR" />
     <result column="warehouse" property="warehouse" jdbcType="VARCHAR" />
-    <result column="weight_number" property="weightNumber" jdbcType="VARCHAR" />
-    <result column="standard" property="standard" jdbcType="VARCHAR" />
-    <result column="gross_weight" property="grossWeight" jdbcType="INTEGER" />
-    <result column="net_weight" property="netWeight" jdbcType="INTEGER" />
-    <result column="tare_weight" property="tareWeight" jdbcType="INTEGER" />
-    <result column="quality_number" property="qualityNumber" jdbcType="VARCHAR" />
-    <result column="core_length" property="coreLength" jdbcType="INTEGER" />
-    <result column="core_micronaire" property="coreMicronaire" jdbcType="VARCHAR" />
-    <result column="max_evenness" property="maxEvenness" jdbcType="INTEGER" />
-    <result column="min_evenness" property="minEvenness" jdbcType="INTEGER" />
     <result column="remark" property="remark" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
@@ -89,10 +89,10 @@
     </where>
   </sql>
   <sql id="Base_Column_List" >
-    id, production_code, `type`, production_area, `count`, price, weight, colour_level, 
-    avg_length, strength, avg_micronaire, moisture, miscellaneous, avg_evenness, ginning_quality, 
-    warehouse, weight_number, `standard`, gross_weight, net_weight, tare_weight, quality_number, 
-    core_length, core_micronaire, max_evenness, min_evenness, remark
+    id, production_code, colour_w1, colour_w2, colour_w3, colour_w4, colour_w5, colour_l1, 
+    colour_l2, colour_l3, colour_ly1, colour_ly2, colour_ly3, colour_y1, colour_y2, ginning_p1, 
+    ginning_p2, ginning_p3, avg_length, avg_micronaire, avg_evenness, strength, miscellaneous, 
+    factory, production_area, warehouse, remark
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.tay.futures.entity.CottonBatchExample" >
     select
@@ -128,24 +128,24 @@
     <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
-    insert into cotton_batch (production_code, `type`, production_area, 
-      `count`, price, weight, 
-      colour_level, avg_length, strength, 
-      avg_micronaire, moisture, miscellaneous, 
-      avg_evenness, ginning_quality, warehouse, 
-      weight_number, `standard`, gross_weight, 
-      net_weight, tare_weight, quality_number, 
-      core_length, core_micronaire, max_evenness, 
-      min_evenness, remark)
-    values (#{productionCode,jdbcType=BIGINT}, #{type,jdbcType=VARCHAR}, #{productionArea,jdbcType=VARCHAR}, 
-      #{count,jdbcType=INTEGER}, #{price,jdbcType=VARCHAR}, #{weight,jdbcType=INTEGER}, 
-      #{colourLevel,jdbcType=VARCHAR}, #{avgLength,jdbcType=INTEGER}, #{strength,jdbcType=INTEGER}, 
-      #{avgMicronaire,jdbcType=INTEGER}, #{moisture,jdbcType=INTEGER}, #{miscellaneous,jdbcType=INTEGER}, 
-      #{avgEvenness,jdbcType=INTEGER}, #{ginningQuality,jdbcType=VARCHAR}, #{warehouse,jdbcType=VARCHAR}, 
-      #{weightNumber,jdbcType=VARCHAR}, #{standard,jdbcType=VARCHAR}, #{grossWeight,jdbcType=INTEGER}, 
-      #{netWeight,jdbcType=INTEGER}, #{tareWeight,jdbcType=INTEGER}, #{qualityNumber,jdbcType=VARCHAR}, 
-      #{coreLength,jdbcType=INTEGER}, #{coreMicronaire,jdbcType=VARCHAR}, #{maxEvenness,jdbcType=INTEGER}, 
-      #{minEvenness,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR})
+    insert into cotton_batch (production_code, colour_w1, colour_w2, 
+      colour_w3, colour_w4, colour_w5, 
+      colour_l1, colour_l2, colour_l3, 
+      colour_ly1, colour_ly2, colour_ly3, 
+      colour_y1, colour_y2, ginning_p1, 
+      ginning_p2, ginning_p3, avg_length, 
+      avg_micronaire, avg_evenness, strength, 
+      miscellaneous, factory, production_area, 
+      warehouse, remark)
+    values (#{productionCode,jdbcType=BIGINT}, #{colourW1,jdbcType=DOUBLE}, #{colourW2,jdbcType=DOUBLE}, 
+      #{colourW3,jdbcType=DOUBLE}, #{colourW4,jdbcType=DOUBLE}, #{colourW5,jdbcType=DOUBLE}, 
+      #{colourL1,jdbcType=DOUBLE}, #{colourL2,jdbcType=DOUBLE}, #{colourL3,jdbcType=DOUBLE}, 
+      #{colourLy1,jdbcType=DOUBLE}, #{colourLy2,jdbcType=DOUBLE}, #{colourLy3,jdbcType=DOUBLE}, 
+      #{colourY1,jdbcType=DOUBLE}, #{colourY2,jdbcType=DOUBLE}, #{ginningP1,jdbcType=DOUBLE}, 
+      #{ginningP2,jdbcType=DOUBLE}, #{ginningP3,jdbcType=DOUBLE}, #{avgLength,jdbcType=DOUBLE}, 
+      #{avgMicronaire,jdbcType=DOUBLE}, #{avgEvenness,jdbcType=DOUBLE}, #{strength,jdbcType=DOUBLE}, 
+      #{miscellaneous,jdbcType=DOUBLE}, #{factory,jdbcType=VARCHAR}, #{productionArea,jdbcType=VARCHAR}, 
+      #{warehouse,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.tay.futures.entity.CottonBatch" >
     <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
@@ -156,77 +156,77 @@
       <if test="productionCode != null" >
         production_code,
       </if>
-      <if test="type != null" >
-        `type`,
+      <if test="colourW1 != null" >
+        colour_w1,
       </if>
-      <if test="productionArea != null" >
-        production_area,
+      <if test="colourW2 != null" >
+        colour_w2,
       </if>
-      <if test="count != null" >
-        `count`,
+      <if test="colourW3 != null" >
+        colour_w3,
       </if>
-      <if test="price != null" >
-        price,
+      <if test="colourW4 != null" >
+        colour_w4,
       </if>
-      <if test="weight != null" >
-        weight,
+      <if test="colourW5 != null" >
+        colour_w5,
       </if>
-      <if test="colourLevel != null" >
-        colour_level,
+      <if test="colourL1 != null" >
+        colour_l1,
+      </if>
+      <if test="colourL2 != null" >
+        colour_l2,
+      </if>
+      <if test="colourL3 != null" >
+        colour_l3,
+      </if>
+      <if test="colourLy1 != null" >
+        colour_ly1,
+      </if>
+      <if test="colourLy2 != null" >
+        colour_ly2,
+      </if>
+      <if test="colourLy3 != null" >
+        colour_ly3,
+      </if>
+      <if test="colourY1 != null" >
+        colour_y1,
+      </if>
+      <if test="colourY2 != null" >
+        colour_y2,
+      </if>
+      <if test="ginningP1 != null" >
+        ginning_p1,
+      </if>
+      <if test="ginningP2 != null" >
+        ginning_p2,
+      </if>
+      <if test="ginningP3 != null" >
+        ginning_p3,
       </if>
       <if test="avgLength != null" >
         avg_length,
       </if>
-      <if test="strength != null" >
-        strength,
-      </if>
       <if test="avgMicronaire != null" >
         avg_micronaire,
-      </if>
-      <if test="moisture != null" >
-        moisture,
-      </if>
-      <if test="miscellaneous != null" >
-        miscellaneous,
       </if>
       <if test="avgEvenness != null" >
         avg_evenness,
       </if>
-      <if test="ginningQuality != null" >
-        ginning_quality,
+      <if test="strength != null" >
+        strength,
+      </if>
+      <if test="miscellaneous != null" >
+        miscellaneous,
+      </if>
+      <if test="factory != null" >
+        factory,
+      </if>
+      <if test="productionArea != null" >
+        production_area,
       </if>
       <if test="warehouse != null" >
         warehouse,
-      </if>
-      <if test="weightNumber != null" >
-        weight_number,
-      </if>
-      <if test="standard != null" >
-        `standard`,
-      </if>
-      <if test="grossWeight != null" >
-        gross_weight,
-      </if>
-      <if test="netWeight != null" >
-        net_weight,
-      </if>
-      <if test="tareWeight != null" >
-        tare_weight,
-      </if>
-      <if test="qualityNumber != null" >
-        quality_number,
-      </if>
-      <if test="coreLength != null" >
-        core_length,
-      </if>
-      <if test="coreMicronaire != null" >
-        core_micronaire,
-      </if>
-      <if test="maxEvenness != null" >
-        max_evenness,
-      </if>
-      <if test="minEvenness != null" >
-        min_evenness,
       </if>
       <if test="remark != null" >
         remark,
@@ -236,77 +236,77 @@
       <if test="productionCode != null" >
         #{productionCode,jdbcType=BIGINT},
       </if>
-      <if test="type != null" >
-        #{type,jdbcType=VARCHAR},
+      <if test="colourW1 != null" >
+        #{colourW1,jdbcType=DOUBLE},
+      </if>
+      <if test="colourW2 != null" >
+        #{colourW2,jdbcType=DOUBLE},
+      </if>
+      <if test="colourW3 != null" >
+        #{colourW3,jdbcType=DOUBLE},
+      </if>
+      <if test="colourW4 != null" >
+        #{colourW4,jdbcType=DOUBLE},
+      </if>
+      <if test="colourW5 != null" >
+        #{colourW5,jdbcType=DOUBLE},
+      </if>
+      <if test="colourL1 != null" >
+        #{colourL1,jdbcType=DOUBLE},
+      </if>
+      <if test="colourL2 != null" >
+        #{colourL2,jdbcType=DOUBLE},
+      </if>
+      <if test="colourL3 != null" >
+        #{colourL3,jdbcType=DOUBLE},
+      </if>
+      <if test="colourLy1 != null" >
+        #{colourLy1,jdbcType=DOUBLE},
+      </if>
+      <if test="colourLy2 != null" >
+        #{colourLy2,jdbcType=DOUBLE},
+      </if>
+      <if test="colourLy3 != null" >
+        #{colourLy3,jdbcType=DOUBLE},
+      </if>
+      <if test="colourY1 != null" >
+        #{colourY1,jdbcType=DOUBLE},
+      </if>
+      <if test="colourY2 != null" >
+        #{colourY2,jdbcType=DOUBLE},
+      </if>
+      <if test="ginningP1 != null" >
+        #{ginningP1,jdbcType=DOUBLE},
+      </if>
+      <if test="ginningP2 != null" >
+        #{ginningP2,jdbcType=DOUBLE},
+      </if>
+      <if test="ginningP3 != null" >
+        #{ginningP3,jdbcType=DOUBLE},
+      </if>
+      <if test="avgLength != null" >
+        #{avgLength,jdbcType=DOUBLE},
+      </if>
+      <if test="avgMicronaire != null" >
+        #{avgMicronaire,jdbcType=DOUBLE},
+      </if>
+      <if test="avgEvenness != null" >
+        #{avgEvenness,jdbcType=DOUBLE},
+      </if>
+      <if test="strength != null" >
+        #{strength,jdbcType=DOUBLE},
+      </if>
+      <if test="miscellaneous != null" >
+        #{miscellaneous,jdbcType=DOUBLE},
+      </if>
+      <if test="factory != null" >
+        #{factory,jdbcType=VARCHAR},
       </if>
       <if test="productionArea != null" >
         #{productionArea,jdbcType=VARCHAR},
       </if>
-      <if test="count != null" >
-        #{count,jdbcType=INTEGER},
-      </if>
-      <if test="price != null" >
-        #{price,jdbcType=VARCHAR},
-      </if>
-      <if test="weight != null" >
-        #{weight,jdbcType=INTEGER},
-      </if>
-      <if test="colourLevel != null" >
-        #{colourLevel,jdbcType=VARCHAR},
-      </if>
-      <if test="avgLength != null" >
-        #{avgLength,jdbcType=INTEGER},
-      </if>
-      <if test="strength != null" >
-        #{strength,jdbcType=INTEGER},
-      </if>
-      <if test="avgMicronaire != null" >
-        #{avgMicronaire,jdbcType=INTEGER},
-      </if>
-      <if test="moisture != null" >
-        #{moisture,jdbcType=INTEGER},
-      </if>
-      <if test="miscellaneous != null" >
-        #{miscellaneous,jdbcType=INTEGER},
-      </if>
-      <if test="avgEvenness != null" >
-        #{avgEvenness,jdbcType=INTEGER},
-      </if>
-      <if test="ginningQuality != null" >
-        #{ginningQuality,jdbcType=VARCHAR},
-      </if>
       <if test="warehouse != null" >
         #{warehouse,jdbcType=VARCHAR},
-      </if>
-      <if test="weightNumber != null" >
-        #{weightNumber,jdbcType=VARCHAR},
-      </if>
-      <if test="standard != null" >
-        #{standard,jdbcType=VARCHAR},
-      </if>
-      <if test="grossWeight != null" >
-        #{grossWeight,jdbcType=INTEGER},
-      </if>
-      <if test="netWeight != null" >
-        #{netWeight,jdbcType=INTEGER},
-      </if>
-      <if test="tareWeight != null" >
-        #{tareWeight,jdbcType=INTEGER},
-      </if>
-      <if test="qualityNumber != null" >
-        #{qualityNumber,jdbcType=VARCHAR},
-      </if>
-      <if test="coreLength != null" >
-        #{coreLength,jdbcType=INTEGER},
-      </if>
-      <if test="coreMicronaire != null" >
-        #{coreMicronaire,jdbcType=VARCHAR},
-      </if>
-      <if test="maxEvenness != null" >
-        #{maxEvenness,jdbcType=INTEGER},
-      </if>
-      <if test="minEvenness != null" >
-        #{minEvenness,jdbcType=INTEGER},
       </if>
       <if test="remark != null" >
         #{remark,jdbcType=VARCHAR},
@@ -328,77 +328,77 @@
       <if test="record.productionCode != null" >
         production_code = #{record.productionCode,jdbcType=BIGINT},
       </if>
-      <if test="record.type != null" >
-        `type` = #{record.type,jdbcType=VARCHAR},
+      <if test="record.colourW1 != null" >
+        colour_w1 = #{record.colourW1,jdbcType=DOUBLE},
+      </if>
+      <if test="record.colourW2 != null" >
+        colour_w2 = #{record.colourW2,jdbcType=DOUBLE},
+      </if>
+      <if test="record.colourW3 != null" >
+        colour_w3 = #{record.colourW3,jdbcType=DOUBLE},
+      </if>
+      <if test="record.colourW4 != null" >
+        colour_w4 = #{record.colourW4,jdbcType=DOUBLE},
+      </if>
+      <if test="record.colourW5 != null" >
+        colour_w5 = #{record.colourW5,jdbcType=DOUBLE},
+      </if>
+      <if test="record.colourL1 != null" >
+        colour_l1 = #{record.colourL1,jdbcType=DOUBLE},
+      </if>
+      <if test="record.colourL2 != null" >
+        colour_l2 = #{record.colourL2,jdbcType=DOUBLE},
+      </if>
+      <if test="record.colourL3 != null" >
+        colour_l3 = #{record.colourL3,jdbcType=DOUBLE},
+      </if>
+      <if test="record.colourLy1 != null" >
+        colour_ly1 = #{record.colourLy1,jdbcType=DOUBLE},
+      </if>
+      <if test="record.colourLy2 != null" >
+        colour_ly2 = #{record.colourLy2,jdbcType=DOUBLE},
+      </if>
+      <if test="record.colourLy3 != null" >
+        colour_ly3 = #{record.colourLy3,jdbcType=DOUBLE},
+      </if>
+      <if test="record.colourY1 != null" >
+        colour_y1 = #{record.colourY1,jdbcType=DOUBLE},
+      </if>
+      <if test="record.colourY2 != null" >
+        colour_y2 = #{record.colourY2,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ginningP1 != null" >
+        ginning_p1 = #{record.ginningP1,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ginningP2 != null" >
+        ginning_p2 = #{record.ginningP2,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ginningP3 != null" >
+        ginning_p3 = #{record.ginningP3,jdbcType=DOUBLE},
+      </if>
+      <if test="record.avgLength != null" >
+        avg_length = #{record.avgLength,jdbcType=DOUBLE},
+      </if>
+      <if test="record.avgMicronaire != null" >
+        avg_micronaire = #{record.avgMicronaire,jdbcType=DOUBLE},
+      </if>
+      <if test="record.avgEvenness != null" >
+        avg_evenness = #{record.avgEvenness,jdbcType=DOUBLE},
+      </if>
+      <if test="record.strength != null" >
+        strength = #{record.strength,jdbcType=DOUBLE},
+      </if>
+      <if test="record.miscellaneous != null" >
+        miscellaneous = #{record.miscellaneous,jdbcType=DOUBLE},
+      </if>
+      <if test="record.factory != null" >
+        factory = #{record.factory,jdbcType=VARCHAR},
       </if>
       <if test="record.productionArea != null" >
         production_area = #{record.productionArea,jdbcType=VARCHAR},
       </if>
-      <if test="record.count != null" >
-        `count` = #{record.count,jdbcType=INTEGER},
-      </if>
-      <if test="record.price != null" >
-        price = #{record.price,jdbcType=VARCHAR},
-      </if>
-      <if test="record.weight != null" >
-        weight = #{record.weight,jdbcType=INTEGER},
-      </if>
-      <if test="record.colourLevel != null" >
-        colour_level = #{record.colourLevel,jdbcType=VARCHAR},
-      </if>
-      <if test="record.avgLength != null" >
-        avg_length = #{record.avgLength,jdbcType=INTEGER},
-      </if>
-      <if test="record.strength != null" >
-        strength = #{record.strength,jdbcType=INTEGER},
-      </if>
-      <if test="record.avgMicronaire != null" >
-        avg_micronaire = #{record.avgMicronaire,jdbcType=INTEGER},
-      </if>
-      <if test="record.moisture != null" >
-        moisture = #{record.moisture,jdbcType=INTEGER},
-      </if>
-      <if test="record.miscellaneous != null" >
-        miscellaneous = #{record.miscellaneous,jdbcType=INTEGER},
-      </if>
-      <if test="record.avgEvenness != null" >
-        avg_evenness = #{record.avgEvenness,jdbcType=INTEGER},
-      </if>
-      <if test="record.ginningQuality != null" >
-        ginning_quality = #{record.ginningQuality,jdbcType=VARCHAR},
-      </if>
       <if test="record.warehouse != null" >
         warehouse = #{record.warehouse,jdbcType=VARCHAR},
-      </if>
-      <if test="record.weightNumber != null" >
-        weight_number = #{record.weightNumber,jdbcType=VARCHAR},
-      </if>
-      <if test="record.standard != null" >
-        `standard` = #{record.standard,jdbcType=VARCHAR},
-      </if>
-      <if test="record.grossWeight != null" >
-        gross_weight = #{record.grossWeight,jdbcType=INTEGER},
-      </if>
-      <if test="record.netWeight != null" >
-        net_weight = #{record.netWeight,jdbcType=INTEGER},
-      </if>
-      <if test="record.tareWeight != null" >
-        tare_weight = #{record.tareWeight,jdbcType=INTEGER},
-      </if>
-      <if test="record.qualityNumber != null" >
-        quality_number = #{record.qualityNumber,jdbcType=VARCHAR},
-      </if>
-      <if test="record.coreLength != null" >
-        core_length = #{record.coreLength,jdbcType=INTEGER},
-      </if>
-      <if test="record.coreMicronaire != null" >
-        core_micronaire = #{record.coreMicronaire,jdbcType=VARCHAR},
-      </if>
-      <if test="record.maxEvenness != null" >
-        max_evenness = #{record.maxEvenness,jdbcType=INTEGER},
-      </if>
-      <if test="record.minEvenness != null" >
-        min_evenness = #{record.minEvenness,jdbcType=INTEGER},
       </if>
       <if test="record.remark != null" >
         remark = #{record.remark,jdbcType=VARCHAR},
@@ -412,30 +412,30 @@
     update cotton_batch
     set id = #{record.id,jdbcType=BIGINT},
       production_code = #{record.productionCode,jdbcType=BIGINT},
-      `type` = #{record.type,jdbcType=VARCHAR},
+      colour_w1 = #{record.colourW1,jdbcType=DOUBLE},
+      colour_w2 = #{record.colourW2,jdbcType=DOUBLE},
+      colour_w3 = #{record.colourW3,jdbcType=DOUBLE},
+      colour_w4 = #{record.colourW4,jdbcType=DOUBLE},
+      colour_w5 = #{record.colourW5,jdbcType=DOUBLE},
+      colour_l1 = #{record.colourL1,jdbcType=DOUBLE},
+      colour_l2 = #{record.colourL2,jdbcType=DOUBLE},
+      colour_l3 = #{record.colourL3,jdbcType=DOUBLE},
+      colour_ly1 = #{record.colourLy1,jdbcType=DOUBLE},
+      colour_ly2 = #{record.colourLy2,jdbcType=DOUBLE},
+      colour_ly3 = #{record.colourLy3,jdbcType=DOUBLE},
+      colour_y1 = #{record.colourY1,jdbcType=DOUBLE},
+      colour_y2 = #{record.colourY2,jdbcType=DOUBLE},
+      ginning_p1 = #{record.ginningP1,jdbcType=DOUBLE},
+      ginning_p2 = #{record.ginningP2,jdbcType=DOUBLE},
+      ginning_p3 = #{record.ginningP3,jdbcType=DOUBLE},
+      avg_length = #{record.avgLength,jdbcType=DOUBLE},
+      avg_micronaire = #{record.avgMicronaire,jdbcType=DOUBLE},
+      avg_evenness = #{record.avgEvenness,jdbcType=DOUBLE},
+      strength = #{record.strength,jdbcType=DOUBLE},
+      miscellaneous = #{record.miscellaneous,jdbcType=DOUBLE},
+      factory = #{record.factory,jdbcType=VARCHAR},
       production_area = #{record.productionArea,jdbcType=VARCHAR},
-      `count` = #{record.count,jdbcType=INTEGER},
-      price = #{record.price,jdbcType=VARCHAR},
-      weight = #{record.weight,jdbcType=INTEGER},
-      colour_level = #{record.colourLevel,jdbcType=VARCHAR},
-      avg_length = #{record.avgLength,jdbcType=INTEGER},
-      strength = #{record.strength,jdbcType=INTEGER},
-      avg_micronaire = #{record.avgMicronaire,jdbcType=INTEGER},
-      moisture = #{record.moisture,jdbcType=INTEGER},
-      miscellaneous = #{record.miscellaneous,jdbcType=INTEGER},
-      avg_evenness = #{record.avgEvenness,jdbcType=INTEGER},
-      ginning_quality = #{record.ginningQuality,jdbcType=VARCHAR},
       warehouse = #{record.warehouse,jdbcType=VARCHAR},
-      weight_number = #{record.weightNumber,jdbcType=VARCHAR},
-      `standard` = #{record.standard,jdbcType=VARCHAR},
-      gross_weight = #{record.grossWeight,jdbcType=INTEGER},
-      net_weight = #{record.netWeight,jdbcType=INTEGER},
-      tare_weight = #{record.tareWeight,jdbcType=INTEGER},
-      quality_number = #{record.qualityNumber,jdbcType=VARCHAR},
-      core_length = #{record.coreLength,jdbcType=INTEGER},
-      core_micronaire = #{record.coreMicronaire,jdbcType=VARCHAR},
-      max_evenness = #{record.maxEvenness,jdbcType=INTEGER},
-      min_evenness = #{record.minEvenness,jdbcType=INTEGER},
       remark = #{record.remark,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -447,77 +447,77 @@
       <if test="productionCode != null" >
         production_code = #{productionCode,jdbcType=BIGINT},
       </if>
-      <if test="type != null" >
-        `type` = #{type,jdbcType=VARCHAR},
+      <if test="colourW1 != null" >
+        colour_w1 = #{colourW1,jdbcType=DOUBLE},
+      </if>
+      <if test="colourW2 != null" >
+        colour_w2 = #{colourW2,jdbcType=DOUBLE},
+      </if>
+      <if test="colourW3 != null" >
+        colour_w3 = #{colourW3,jdbcType=DOUBLE},
+      </if>
+      <if test="colourW4 != null" >
+        colour_w4 = #{colourW4,jdbcType=DOUBLE},
+      </if>
+      <if test="colourW5 != null" >
+        colour_w5 = #{colourW5,jdbcType=DOUBLE},
+      </if>
+      <if test="colourL1 != null" >
+        colour_l1 = #{colourL1,jdbcType=DOUBLE},
+      </if>
+      <if test="colourL2 != null" >
+        colour_l2 = #{colourL2,jdbcType=DOUBLE},
+      </if>
+      <if test="colourL3 != null" >
+        colour_l3 = #{colourL3,jdbcType=DOUBLE},
+      </if>
+      <if test="colourLy1 != null" >
+        colour_ly1 = #{colourLy1,jdbcType=DOUBLE},
+      </if>
+      <if test="colourLy2 != null" >
+        colour_ly2 = #{colourLy2,jdbcType=DOUBLE},
+      </if>
+      <if test="colourLy3 != null" >
+        colour_ly3 = #{colourLy3,jdbcType=DOUBLE},
+      </if>
+      <if test="colourY1 != null" >
+        colour_y1 = #{colourY1,jdbcType=DOUBLE},
+      </if>
+      <if test="colourY2 != null" >
+        colour_y2 = #{colourY2,jdbcType=DOUBLE},
+      </if>
+      <if test="ginningP1 != null" >
+        ginning_p1 = #{ginningP1,jdbcType=DOUBLE},
+      </if>
+      <if test="ginningP2 != null" >
+        ginning_p2 = #{ginningP2,jdbcType=DOUBLE},
+      </if>
+      <if test="ginningP3 != null" >
+        ginning_p3 = #{ginningP3,jdbcType=DOUBLE},
+      </if>
+      <if test="avgLength != null" >
+        avg_length = #{avgLength,jdbcType=DOUBLE},
+      </if>
+      <if test="avgMicronaire != null" >
+        avg_micronaire = #{avgMicronaire,jdbcType=DOUBLE},
+      </if>
+      <if test="avgEvenness != null" >
+        avg_evenness = #{avgEvenness,jdbcType=DOUBLE},
+      </if>
+      <if test="strength != null" >
+        strength = #{strength,jdbcType=DOUBLE},
+      </if>
+      <if test="miscellaneous != null" >
+        miscellaneous = #{miscellaneous,jdbcType=DOUBLE},
+      </if>
+      <if test="factory != null" >
+        factory = #{factory,jdbcType=VARCHAR},
       </if>
       <if test="productionArea != null" >
         production_area = #{productionArea,jdbcType=VARCHAR},
       </if>
-      <if test="count != null" >
-        `count` = #{count,jdbcType=INTEGER},
-      </if>
-      <if test="price != null" >
-        price = #{price,jdbcType=VARCHAR},
-      </if>
-      <if test="weight != null" >
-        weight = #{weight,jdbcType=INTEGER},
-      </if>
-      <if test="colourLevel != null" >
-        colour_level = #{colourLevel,jdbcType=VARCHAR},
-      </if>
-      <if test="avgLength != null" >
-        avg_length = #{avgLength,jdbcType=INTEGER},
-      </if>
-      <if test="strength != null" >
-        strength = #{strength,jdbcType=INTEGER},
-      </if>
-      <if test="avgMicronaire != null" >
-        avg_micronaire = #{avgMicronaire,jdbcType=INTEGER},
-      </if>
-      <if test="moisture != null" >
-        moisture = #{moisture,jdbcType=INTEGER},
-      </if>
-      <if test="miscellaneous != null" >
-        miscellaneous = #{miscellaneous,jdbcType=INTEGER},
-      </if>
-      <if test="avgEvenness != null" >
-        avg_evenness = #{avgEvenness,jdbcType=INTEGER},
-      </if>
-      <if test="ginningQuality != null" >
-        ginning_quality = #{ginningQuality,jdbcType=VARCHAR},
-      </if>
       <if test="warehouse != null" >
         warehouse = #{warehouse,jdbcType=VARCHAR},
-      </if>
-      <if test="weightNumber != null" >
-        weight_number = #{weightNumber,jdbcType=VARCHAR},
-      </if>
-      <if test="standard != null" >
-        `standard` = #{standard,jdbcType=VARCHAR},
-      </if>
-      <if test="grossWeight != null" >
-        gross_weight = #{grossWeight,jdbcType=INTEGER},
-      </if>
-      <if test="netWeight != null" >
-        net_weight = #{netWeight,jdbcType=INTEGER},
-      </if>
-      <if test="tareWeight != null" >
-        tare_weight = #{tareWeight,jdbcType=INTEGER},
-      </if>
-      <if test="qualityNumber != null" >
-        quality_number = #{qualityNumber,jdbcType=VARCHAR},
-      </if>
-      <if test="coreLength != null" >
-        core_length = #{coreLength,jdbcType=INTEGER},
-      </if>
-      <if test="coreMicronaire != null" >
-        core_micronaire = #{coreMicronaire,jdbcType=VARCHAR},
-      </if>
-      <if test="maxEvenness != null" >
-        max_evenness = #{maxEvenness,jdbcType=INTEGER},
-      </if>
-      <if test="minEvenness != null" >
-        min_evenness = #{minEvenness,jdbcType=INTEGER},
       </if>
       <if test="remark != null" >
         remark = #{remark,jdbcType=VARCHAR},
@@ -528,30 +528,30 @@
   <update id="updateByPrimaryKey" parameterType="com.tay.futures.entity.CottonBatch" >
     update cotton_batch
     set production_code = #{productionCode,jdbcType=BIGINT},
-      `type` = #{type,jdbcType=VARCHAR},
+      colour_w1 = #{colourW1,jdbcType=DOUBLE},
+      colour_w2 = #{colourW2,jdbcType=DOUBLE},
+      colour_w3 = #{colourW3,jdbcType=DOUBLE},
+      colour_w4 = #{colourW4,jdbcType=DOUBLE},
+      colour_w5 = #{colourW5,jdbcType=DOUBLE},
+      colour_l1 = #{colourL1,jdbcType=DOUBLE},
+      colour_l2 = #{colourL2,jdbcType=DOUBLE},
+      colour_l3 = #{colourL3,jdbcType=DOUBLE},
+      colour_ly1 = #{colourLy1,jdbcType=DOUBLE},
+      colour_ly2 = #{colourLy2,jdbcType=DOUBLE},
+      colour_ly3 = #{colourLy3,jdbcType=DOUBLE},
+      colour_y1 = #{colourY1,jdbcType=DOUBLE},
+      colour_y2 = #{colourY2,jdbcType=DOUBLE},
+      ginning_p1 = #{ginningP1,jdbcType=DOUBLE},
+      ginning_p2 = #{ginningP2,jdbcType=DOUBLE},
+      ginning_p3 = #{ginningP3,jdbcType=DOUBLE},
+      avg_length = #{avgLength,jdbcType=DOUBLE},
+      avg_micronaire = #{avgMicronaire,jdbcType=DOUBLE},
+      avg_evenness = #{avgEvenness,jdbcType=DOUBLE},
+      strength = #{strength,jdbcType=DOUBLE},
+      miscellaneous = #{miscellaneous,jdbcType=DOUBLE},
+      factory = #{factory,jdbcType=VARCHAR},
       production_area = #{productionArea,jdbcType=VARCHAR},
-      `count` = #{count,jdbcType=INTEGER},
-      price = #{price,jdbcType=VARCHAR},
-      weight = #{weight,jdbcType=INTEGER},
-      colour_level = #{colourLevel,jdbcType=VARCHAR},
-      avg_length = #{avgLength,jdbcType=INTEGER},
-      strength = #{strength,jdbcType=INTEGER},
-      avg_micronaire = #{avgMicronaire,jdbcType=INTEGER},
-      moisture = #{moisture,jdbcType=INTEGER},
-      miscellaneous = #{miscellaneous,jdbcType=INTEGER},
-      avg_evenness = #{avgEvenness,jdbcType=INTEGER},
-      ginning_quality = #{ginningQuality,jdbcType=VARCHAR},
       warehouse = #{warehouse,jdbcType=VARCHAR},
-      weight_number = #{weightNumber,jdbcType=VARCHAR},
-      `standard` = #{standard,jdbcType=VARCHAR},
-      gross_weight = #{grossWeight,jdbcType=INTEGER},
-      net_weight = #{netWeight,jdbcType=INTEGER},
-      tare_weight = #{tareWeight,jdbcType=INTEGER},
-      quality_number = #{qualityNumber,jdbcType=VARCHAR},
-      core_length = #{coreLength,jdbcType=INTEGER},
-      core_micronaire = #{coreMicronaire,jdbcType=VARCHAR},
-      max_evenness = #{maxEvenness,jdbcType=INTEGER},
-      min_evenness = #{minEvenness,jdbcType=INTEGER},
       remark = #{remark,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
