@@ -11,7 +11,7 @@
     <div title="模板修改页面" data-options="iconCls:'icon-home'">
 
         <div align="center" style="padding-top: 50px">
-            <font color="grey" size="10">模板修改页面</font>
+            <font color="grey" size="10">模板修改</font>
         </div>
 
         <form method="post" action="/template/update.do">
