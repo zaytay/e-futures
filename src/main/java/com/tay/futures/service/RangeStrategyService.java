@@ -12,6 +12,11 @@ public interface RangeStrategyService {
     public Long addRangeStrategy(RangeStrategy rangeStrategy);
 
 
-    public void batchAddRangeStrategy(List<RangeStrategy> rangeStrategyList);
+    public void addRangeStrategyList(List<RangeStrategy> rangeStrategyList);
+
+    public List<RangeStrategy> getStrategyByTemplateId(Long templateId);
+
+
+    public Integer deleteRangeStrategyByTemplateId(Long  templateId);
 
 }

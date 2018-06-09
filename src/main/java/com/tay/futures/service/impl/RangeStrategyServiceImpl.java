@@ -24,6 +24,14 @@ public class RangeStrategyServiceImpl implements RangeStrategyService {
 
 
     @Override
+    public List<RangeStrategy> getStrategyByTemplateId(Long templateId) {
+        RangeStrategyExample example=new RangeStrategyExample();
+        example.createCriteria().andTemplateIdEqualTo(templateId);
+        return rangeStrategyMapper.selectByExample(example);
+    }
+
+
+    @Override
     public Long addRangeStrategy(RangeStrategy rangeStrategy) {
         rangeStrategyMapper.insertSelective(rangeStrategy);
         return rangeStrategy.getId();
@@ -32,9 +40,19 @@ public class RangeStrategyServiceImpl implements RangeStrategyService {
 
     //todo  modify batch Insert
     @Override
-    public void batchAddRangeStrategy(List<RangeStrategy> rangeStrategyList) {
+    public void addRangeStrategyList(List<RangeStrategy> rangeStrategyList) {
         for(RangeStrategy rangeStrategy:rangeStrategyList){
             addRangeStrategy(rangeStrategy);
         }
     }
+
+
+
+    @Override
+    public Integer deleteRangeStrategyByTemplateId(Long  templateId) {
+        RangeStrategyExample strategyExample=new RangeStrategyExample();
+        strategyExample.createCriteria().andTemplateIdEqualTo(templateId);
+        return rangeStrategyMapper.deleteByExample(strategyExample);
+    }
+
 }

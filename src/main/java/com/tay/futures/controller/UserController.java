@@ -9,8 +9,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.tay.futures.entity.CottonTemplate;
 import com.tay.futures.entity.PageBean;
 import com.tay.futures.service.CottonBatchService;
+import com.tay.futures.service.CottonTemplateService;
 import com.tay.futures.util.MD5Util;
 import com.tay.futures.entity.User;
 import com.tay.futures.service.UserService;
@@ -44,6 +46,9 @@ public class UserController {
     @Autowired
     private CottonBatchService cottonBatchService;
 
+    @Autowired
+    private CottonTemplateService cottonTemplateService;
+
     /**
      * 登录
      *
@@ -74,6 +79,8 @@ public class UserController {
             PageInfo pageBean=new PageInfo(1,10);
             pageBean=cottonBatchService.getCottonBatchByPage(pageBean.getPageNo(),pageBean.getPageSize());
             model.addAttribute("page",pageBean);
+            List<CottonTemplate> cottonTemplateList=cottonTemplateService.getAllCottonTemplateByUid(resultUser.getId());
+            model.addAttribute("cottonTemplateList",cottonTemplateList);
             return "main";
         }
     }

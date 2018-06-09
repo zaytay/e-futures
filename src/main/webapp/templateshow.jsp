@@ -5,7 +5,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>棉花交易系统主页</title>
+    <title>棉花模板修改</title>
     <link rel="stylesheet" type="text/css"
           href="${pageContext.request.contextPath}/jquery-easyui-1.3.3/themes/default/easyui.css">
     <link rel="stylesheet" type="text/css"
@@ -65,7 +65,7 @@
     </table>
 </div>
 test: ${test}
-<%@include file="/WEB-INF/jsp/compute/compute.jsp" %>
+<%@include file="/WEB-INF/jsp/template/templateUpdate.jsp" %>
 <%--
 <div region="center">
     <div class="easyui-tabs" fit="true" border="false" id="tabs">
@@ -153,14 +153,14 @@ test: ${test}
 <div region="west" style="width: 200px;height:500px;" title="导航菜单"
      split="true">
     <div class="easyui-accordion">
-        <%--<div title="文章管理"
+        <div title="模板修改"
              data-options="selected:true,iconCls:'icon-wenzhangs'"
              style="padding: 10px;height:10px;">
-            <a
+<%--            <a
                     href="javascript:openTab(' 文章管理','articleManage.jsp','icon-wenzhang')"
                     class="easyui-linkbutton"
                     data-options="plain:true,iconCls:'icon-wenzhang'"
-                    style="width: 150px;"> 文章管理</a>
+                    style="width: 150px;"> 文章管理</a>--%>
         </div>
         <div title="图片管理" data-options="iconCls:'icon-shouye'"
              style="padding:10px">
@@ -177,7 +177,7 @@ test: ${test}
                     class="easyui-linkbutton"
                     data-options="plain:true,iconCls:'icon-shuben'"
                     style="width: 150px;">全部书籍</a>
-        </div>--%>
+        </div>
         <div title="模板管理" data-options="iconCls:'icon-shuji'"
              style="padding:10px">
             <a

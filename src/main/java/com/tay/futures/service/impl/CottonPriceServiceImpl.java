@@ -4,6 +4,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tay.futures.constants.RangeStrategyType;
 import com.tay.futures.entity.CottonBatch;
 import com.tay.futures.entity.RangeStrategy;
+import com.tay.futures.exception.BusinessException;
+import com.tay.futures.exception.ErrorCode;
 import com.tay.futures.exception.ServiceException;
 import com.tay.futures.service.CottonBatchService;
 import com.tay.futures.service.CottonPriceService;
@@ -30,12 +32,12 @@ public class CottonPriceServiceImpl implements CottonPriceService{
     private RangeStrategyService rangeStrategyService;
 
     @Override
-    public Double computePrice(Long productionCode,Long templateId) throws Exception{
+    public Double computePrice(Long productionCode,Long templateId) throws BusinessException, ServiceException {
 
         CottonBatch cottonBatch=cottonBatchService.getCottonBatchByCode(productionCode);
         Double price=0.00;
         if(cottonBatch == null){
-            return null;
+            throw new BusinessException(ErrorCode.CODE_NOT_EXIST);
         }else {
             ObjectMapper m = new ObjectMapper();
             Map<String,Object> propsMap = m.convertValue(cottonBatch, Map.class);

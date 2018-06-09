@@ -2,6 +2,7 @@ package com.tay.futures.service.impl;
 
 import com.tay.futures.dao.CottonTemplateMapper;
 import com.tay.futures.entity.CottonTemplate;
+import com.tay.futures.entity.CottonTemplateExample;
 import com.tay.futures.entity.RangeStrategy;
 import com.tay.futures.service.CottonTemplateService;
 import com.tay.futures.service.RangeStrategyService;
@@ -28,14 +29,42 @@ public class CottonTemplateServiceImpl implements CottonTemplateService{
 
 
     @Override
+    public Integer updateTemplate(CottonTemplate cottonTemplate) {
+        return cottonTemplateMapper.updateByPrimaryKeySelective(cottonTemplate);
+    }
+
+
+    @Override
     public Long addTemplateAndStrategy(CottonTemplate cottonTemplate, List<RangeStrategy> rangeStrategyList) {
         Long templateId=addTemplate(cottonTemplate);
-
         for(RangeStrategy rangeStrategy:rangeStrategyList){
             rangeStrategy.setTemplateId(templateId);
         }
-        rangeStrategyService.batchAddRangeStrategy(rangeStrategyList);
+        rangeStrategyService.addRangeStrategyList(rangeStrategyList);
+        return templateId;
+    }
 
-        return null;
+
+
+
+    @Override
+    public List<CottonTemplate> getAllCottonTemplateByUid(Integer userId) {
+        CottonTemplateExample cottonTemplateExample=new CottonTemplateExample();
+        cottonTemplateExample.createCriteria().andCreatorIdEqualTo(userId.longValue());
+        return cottonTemplateMapper.selectByExample(cottonTemplateExample);
+    }
+
+
+    @Override
+    public CottonTemplate getCottonTemplateById(Long templateId) {
+        return cottonTemplateMapper.selectByPrimaryKey(templateId);
+    }
+
+
+
+    @Override
+    public Integer deleteById(Long templateId) {
+        rangeStrategyService.deleteRangeStrategyByTemplateId(templateId);
+        return cottonTemplateMapper.deleteByPrimaryKey(templateId);
     }
 }

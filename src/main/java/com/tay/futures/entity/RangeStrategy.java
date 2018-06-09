@@ -3,7 +3,7 @@ package com.tay.futures.entity;
 import java.io.Serializable;
 import java.util.Date;
 
-public class RangeStrategy implements Serializable {
+public class RangeStrategy implements Serializable ,Comparable<RangeStrategy>{
     private Long id;
 
     private Long templateId;
@@ -91,5 +91,15 @@ public class RangeStrategy implements Serializable {
         sb.append(", price=").append(price);
         sb.append("]");
         return sb.toString();
+    }
+
+
+    @Override
+    public int compareTo(RangeStrategy o) {
+        int i=this.getType()-o.getType();
+        if(i == 0){
+            return (this.getMin().intValue()-o.getMin().intValue());
+        }
+        return i;
     }
 }

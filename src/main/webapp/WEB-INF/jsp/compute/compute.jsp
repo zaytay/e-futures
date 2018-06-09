@@ -5,12 +5,14 @@
   Time: 18:21
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+         pageEncoding="utf-8" %>
 <div region="center">
     <div class="easyui-tabs" fit="true" border="false" id="tabs">
         <div title="首页" data-options="iconCls:'icon-home'">
 
             <div align="center" style="padding-top: 50px">
-                <font color="grey" size="10">计算中心demo</font>
+                <font color="grey" size="10">价格计算中心</font>
             </div>
 
             <form method="post" action="/compute/cottonPrice.do">
@@ -21,8 +23,14 @@
                         <td><input id="code" type="text" name="code" value="${code}"></td>
                     </tr>
                     <tr >
-                        <td>计算模板ID：</td>
-                        <td><input id="templateId" type="text" name="templateId" value="${templateId}"></td>
+                        <td>计算模板：</td>
+                        <td>
+                            <select name="templateId"  id="templateId">
+                                <c:forEach  items="${cottonTemplateList}" var="template">
+                                    <option value="${template.id}" >${template.name}</option>
+                                </c:forEach>
+                            </select>
+                        </td>
                     </tr>
                     <tr >
                         <td>    <input type="submit" value="计算"/> </td>
