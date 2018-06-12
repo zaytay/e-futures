@@ -15,7 +15,7 @@
                 <font color="grey" size="10">价格计算中心</font>
             </div>
 
-            <form method="post" action="/compute/cottonPrice.do">
+            <form method="post" action="${pageContext.request.contextPath}/compute/cottonPrice.do">
                 <table border="0"   >
 
                     <tr >

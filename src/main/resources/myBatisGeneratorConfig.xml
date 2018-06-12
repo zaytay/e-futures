@@ -54,6 +54,10 @@
 			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
 
+		<table tableName="ratio_strategy" domainObjectName="RatioStrategy">
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+
 
 
 	</context>

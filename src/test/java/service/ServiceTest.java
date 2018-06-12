@@ -4,6 +4,7 @@ import com.tay.futures.constants.RangeStrategyType;
 import com.tay.futures.entity.CottonBatch;
 import com.tay.futures.entity.CottonTemplate;
 import com.tay.futures.entity.RangeStrategy;
+import com.tay.futures.entity.RatioStrategy;
 import com.tay.futures.service.CottonBatchService;
 import com.tay.futures.service.CottonPriceService;
 import com.tay.futures.service.CottonTemplateService;
@@ -57,7 +58,8 @@ public class ServiceTest {
             rangeStrategy.setType(rangeStrategyType.getCode().byteValue());
             testRangList.add(rangeStrategy);
         }
-        cottonTemplateService.addTemplateAndStrategy(cottonTemplate,testRangList);
+        RatioStrategy ratioStrategy=new RatioStrategy();
+        cottonTemplateService.addTemplateAndStrategy(cottonTemplate,ratioStrategy,testRangList);
     }
 
 

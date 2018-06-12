@@ -7,8 +7,8 @@ public enum RangeStrategyType {
     LENGTH(1,"avgLength"),
     MICRONAIRE(2,"avgMicronaire"),
     EVENNESS(3,"avgEvenness"),
-    STRENGTH(4,"strength"),
-    MISCELLANEOUS(5,"miscellaneous");
+    STRENGTH(4,"strength");
+    //MISCELLANEOUS(5,"miscellaneous");
 
 
     private Integer code;

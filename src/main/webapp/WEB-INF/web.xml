@@ -8,7 +8,7 @@
 
     <display-name>ssm-maven-demo</display-name>
     <welcome-file-list>
-        <welcome-file>index.html</welcome-file>
+        <welcome-file>login.jsp</welcome-file>
     </welcome-file-list>
     <context-param>
         <param-name>contextConfigLocation</param-name>
@@ -52,12 +52,12 @@
     <!--错误页面配置,这里只是简单的配置了一下 -->
     <error-page>
         <error-code>404</error-code>
-        <location>/main.jsp</location>
+        <location>/404.jsp</location>
     </error-page>
 
     <error-page>
         <error-code>500</error-code>
-        <location>/main.jsp</location>
+        <location>/500.jsp</location>
     </error-page>
     <!--错误页面配置 -->
 

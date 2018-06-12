@@ -113,6 +113,7 @@
         $("#min").val("");
         $("#max").val("");
         $("#price").val("");
+        $("input[id^='ratioStrategy']").val("");
     }
 
     function closeUserDialog() {
@@ -175,6 +176,56 @@
         </tr>
         </br>    </br>    </br>
 
+
+        <table cellspacing="3px" border="0">
+            <tr>
+                <td>颜色级升贴水：</td>
+            </tr>
+            <tr>
+                <td>白棉1:</td>
+                <td><input type="text" id="ratioStrategy.colourW1" name="ratioStrategyVo.colourW1"/></td>
+                <td>白棉2:</td>
+                <td><input type="text" id="ratioStrategy.colourW2" name="ratioStrategyVo.colourW2"/></td>
+                <td>白棉3:</td>
+                <td><input type="text" id="ratioStrategy.colourW3" name="ratioStrategyVo.colourW3"/></td>
+                <td>白棉4:</td>
+                <td><input type="text" id="ratioStrategy.colourW4" name="ratioStrategyVo.colourW4"/></td>
+                <td>白棉5:</td>
+                <td><input type="text" id="ratioStrategy.colourW5" name="ratioStrategyVo.colourW5"/></td>
+                <td>淡棉1:</td>
+                <td><input type="text" id="ratioStrategy.colourL1" name="ratioStrategyVo.colourL1"/></td>
+                <td>淡棉2:</td>
+                <td><input type="text" id="ratioStrategy.colourL2" name="ratioStrategyVo.colourL2"/></td>
+                <td>淡棉3:</td>
+                <td><input type="text" id="ratioStrategy.colourL3" name="ratioStrategyVo.colourL3"/></td>
+                <td>淡黄1:</td>
+                <td><input type="text" id="ratioStrategy.colourLy1" name="ratioStrategyVo.colourLy1"/></td>
+                <td>淡黄2:</td>
+                <td><input type="text" id="ratioStrategy.colourLy2" name="ratioStrategyVo.colourLy2"/></td>
+                <td>淡黄3:</td>
+                <td><input type="text" id="ratioStrategy.colourLy3" name="ratioStrategyVo.colourLy3"/></td>
+                <td>黄染1:</td>
+                <td><input type="text" id="ratioStrategy.colourY1" name="ratioStrategyVo.colourY1"/></td>
+                <td>黄染2:</td>
+                <td><input type="text" id="ratioStrategy.colourY2" name="ratioStrategyVo.colourY2"/></td>
+            </tr>
+        </table>
+        </br>
+
+        <table cellspacing="3px" border="0">
+            <tr>
+                <td>轧工升贴水：</td>
+            </tr>
+            <tr>
+                <td>P1:</td>
+                <td><input type="text" id="ratioStrategy.ginningP1" name="ratioStrategyVo.ginningP1"/></td>
+                <td>P2:</td>
+                <td><input type="text" id="ratioStrategy.ginningP2" name="ratioStrategyVo.ginningP2"/></td>
+                <td>P3:</td>
+                <td><input type="text" id="ratioStrategy.ginningP3" name="ratioStrategyVo.ginningP3"/></td>
+            </tr>
+        </table>
+        </br>
 
         <table cellspacing="3px" border="0">
             <tr>
@@ -251,7 +302,7 @@
                 <td><input type="text" id="max" name="rangeStrategyVoList[5].max"/></td>
                 <td>价格:</td>
                 <td><input type="text" id="price" name="rangeStrategyVoList[5].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[5].type"   value="1" /></td>
+                <td><input type="hidden" id="type" name="rangeStrategyVoList[5].type"   value="2" /></td>
             </tr>
 
 
@@ -266,7 +317,7 @@
                 <td><input type="text" id="max" name="rangeStrategyVoList[6].max"/></td>
                 <td>价格:</td>
                 <td><input type="text" id="price" name="rangeStrategyVoList[6].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[6].type"   value="1" /></td>
+                <td><input type="hidden" id="type" name="rangeStrategyVoList[6].type"   value="2" /></td>
             </tr>
             <tr>
                 <td>区间3：</td>
@@ -276,7 +327,7 @@
                 <td><input type="text" id="max" name="rangeStrategyVoList[7].max"/></td>
                 <td>价格:</td>
                 <td><input type="text" id="price" name="rangeStrategyVoList[7].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[7].type"   value="1" /></td>
+                <td><input type="hidden" id="type" name="rangeStrategyVoList[7].type"   value="2" /></td>
             </tr>
             <tr>
                 <td>区间4：</td>
@@ -286,7 +337,7 @@
                 <td><input type="text" id="max" name="rangeStrategyVoList[8].max"/></td>
                 <td>价格:</td>
                 <td><input type="text" id="price" name="rangeStrategyVoList[8].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[8].type"   value="1" /></td>
+                <td><input type="hidden" id="type" name="rangeStrategyVoList[8].type"   value="2" /></td>
             </tr>
             <tr>
                 <td>区间5：</td>
@@ -296,7 +347,7 @@
                 <td><input type="text" id="max" name="rangeStrategyVoList[9].max"/></td>
                 <td>价格:</td>
                 <td><input type="text" id="price" name="rangeStrategyVoList[9].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[9].type"   value="1" /></td>
+                <td><input type="hidden" id="type" name="rangeStrategyVoList[9].type"   value="2" /></td>
             </tr>
         </table>
 
@@ -314,7 +365,7 @@
                 <td><input type="text" id="max" name="rangeStrategyVoList[10].max"/></td>
                 <td>价格:</td>
                 <td><input type="text" id="price" name="rangeStrategyVoList[10].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[10].type"   value="1" /></td>
+                <td><input type="hidden" id="type" name="rangeStrategyVoList[10].type"   value="3" /></td>
             </tr>
 
             <tr>
@@ -325,7 +376,7 @@
                 <td><input type="text" id="max" name="rangeStrategyVoList[11].max"/></td>
                 <td>价格:</td>
                 <td><input type="text" id="price" name="rangeStrategyVoList[11].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[11].type"   value="1" /></td>
+                <td><input type="hidden" id="type" name="rangeStrategyVoList[11].type"   value="3" /></td>
             </tr>
             <tr>
                 <td>区间3：</td>
@@ -335,7 +386,7 @@
                 <td><input type="text" id="max" name="rangeStrategyVoList[12].max"/></td>
                 <td>价格:</td>
                 <td><input type="text" id="price" name="rangeStrategyVoList[12].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[12].type"   value="1" /></td>
+                <td><input type="hidden" id="type" name="rangeStrategyVoList[12].type"   value="3" /></td>
             </tr>
             <tr>
                 <td>区间4：</td>
@@ -345,7 +396,7 @@
                 <td><input type="text" id="max" name="rangeStrategyVoList[13].max"/></td>
                 <td>价格:</td>
                 <td><input type="text" id="price" name="rangeStrategyVoList[13].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[13].type"   value="1" /></td>
+                <td><input type="hidden" id="type" name="rangeStrategyVoList[13].type"   value="3" /></td>
             </tr>
             <tr>
                 <td>区间5：</td>
@@ -355,7 +406,7 @@
                 <td><input type="text" id="max" name="rangeStrategyVoList[14].max"/></td>
                 <td>价格:</td>
                 <td><input type="text" id="price" name="rangeStrategyVoList[14].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[14].type"   value="1" /></td>
+                <td><input type="hidden" id="type" name="rangeStrategyVoList[14].type"   value="3" /></td>
             </tr>
         </table>
 
@@ -374,7 +425,7 @@
                 <td><input type="text" id="max" name="rangeStrategyVoList[15].max"/></td>
                 <td>价格:</td>
                 <td><input type="text" id="price" name="rangeStrategyVoList[15].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[15].type"   value="1" /></td>
+                <td><input type="hidden" id="type" name="rangeStrategyVoList[15].type"   value="4" /></td>
             </tr>
 
             <tr>
@@ -385,7 +436,7 @@
                 <td><input type="text" id="max" name="rangeStrategyVoList[16].max"/></td>
                 <td>价格:</td>
                 <td><input type="text" id="price" name="rangeStrategyVoList[16].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[16].type"   value="1" /></td>
+                <td><input type="hidden" id="type" name="rangeStrategyVoList[16].type"   value="4" /></td>
             </tr>
             <tr>
                 <td>区间3：</td>
@@ -395,7 +446,7 @@
                 <td><input type="text" id="max" name="rangeStrategyVoList[17].max"/></td>
                 <td>价格:</td>
                 <td><input type="text" id="price" name="rangeStrategyVoList[17].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[17].type"   value="1" /></td>
+                <td><input type="hidden" id="type" name="rangeStrategyVoList[17].type"   value="4" /></td>
             </tr>
             <tr>
                 <td>区间4：</td>
@@ -405,7 +456,7 @@
                 <td><input type="text" id="max" name="rangeStrategyVoList[18].max"/></td>
                 <td>价格:</td>
                 <td><input type="text" id="price" name="rangeStrategyVoList[18].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[18].type"   value="1" /></td>
+                <td><input type="hidden" id="type" name="rangeStrategyVoList[18].type"   value="4" /></td>
             </tr>
             <tr>
                 <td>区间5：</td>
@@ -415,7 +466,7 @@
                 <td><input type="text" id="max" name="rangeStrategyVoList[19].max"/></td>
                 <td>价格:</td>
                 <td><input type="text" id="price" name="rangeStrategyVoList[19].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[19].type"   value="1" /></td>
+                <td><input type="hidden" id="type" name="rangeStrategyVoList[19].type"   value="4" /></td>
             </tr>
         </table>
 
@@ -423,7 +474,7 @@
 
         </br>
 
-        <table cellspacing="3px" border="0">
+     <%--   <table cellspacing="3px" border="0">
             <tr>
                 <td>含杂区间策略</td>
             </tr>
@@ -435,7 +486,7 @@
                 <td><input type="text" id="max" name="rangeStrategyVoList[20].max"/></td>
                 <td>价格:</td>
                 <td><input type="text" id="price" name="rangeStrategyVoList[20].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[20].type"   value="1" /></td>
+                <td><input type="hidden" id="type" name="rangeStrategyVoList[20].type"   value="5" /></td>
             </tr>
 
             <tr>
@@ -446,7 +497,7 @@
                 <td><input type="text" id="max" name="rangeStrategyVoList[21].max"/></td>
                 <td>价格:</td>
                 <td><input type="text" id="price" name="rangeStrategyVoList[21].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[21].type"   value="1" /></td>
+                <td><input type="hidden" id="type" name="rangeStrategyVoList[21].type"   value="5" /></td>
             </tr>
             <tr>
                 <td>区间3：</td>
@@ -456,7 +507,7 @@
                 <td><input type="text" id="max" name="rangeStrategyVoList[22].max"/></td>
                 <td>价格:</td>
                 <td><input type="text" id="price" name="rangeStrategyVoList[22].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[22].type"   value="1" /></td>
+                <td><input type="hidden" id="type" name="rangeStrategyVoList[22].type"   value="5" /></td>
             </tr>
             <tr>
                 <td>区间4：</td>
@@ -466,7 +517,7 @@
                 <td><input type="text" id="max" name="rangeStrategyVoList[23].max"/></td>
                 <td>价格:</td>
                 <td><input type="text" id="price" name="rangeStrategyVoList[23].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[23].type"   value="1" /></td>
+                <td><input type="hidden" id="type" name="rangeStrategyVoList[23].type"   value="5" /></td>
             </tr>
             <tr>
                 <td>区间5：</td>
@@ -476,10 +527,10 @@
                 <td><input type="text" id="max" name="rangeStrategyVoList[24].max"/></td>
                 <td>价格:</td>
                 <td><input type="text" id="price" name="rangeStrategyVoList[24].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[24].type"   value="1" /></td>
+                <td><input type="hidden" id="type" name="rangeStrategyVoList[24].type"   value="5" /></td>
             </tr>
         </table>
-
+--%>
 
     </form>
 

@@ -4,8 +4,10 @@ import com.tay.futures.dao.CottonTemplateMapper;
 import com.tay.futures.entity.CottonTemplate;
 import com.tay.futures.entity.CottonTemplateExample;
 import com.tay.futures.entity.RangeStrategy;
+import com.tay.futures.entity.RatioStrategy;
 import com.tay.futures.service.CottonTemplateService;
 import com.tay.futures.service.RangeStrategyService;
+import com.tay.futures.service.RatioStrategyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +21,9 @@ public class CottonTemplateServiceImpl implements CottonTemplateService{
 
     @Autowired
     private RangeStrategyService rangeStrategyService;
+
+    @Autowired
+    private RatioStrategyService ratioStrategyService;
 
 
     @Override
@@ -35,8 +40,10 @@ public class CottonTemplateServiceImpl implements CottonTemplateService{
 
 
     @Override
-    public Long addTemplateAndStrategy(CottonTemplate cottonTemplate, List<RangeStrategy> rangeStrategyList) {
+    public Long addTemplateAndStrategy(CottonTemplate cottonTemplate,RatioStrategy ratioStrategy ,List<RangeStrategy> rangeStrategyList) {
         Long templateId=addTemplate(cottonTemplate);
+        ratioStrategy.setTemplateId(templateId);
+        ratioStrategyService.addStrategy(ratioStrategy);
         for(RangeStrategy rangeStrategy:rangeStrategyList){
             rangeStrategy.setTemplateId(templateId);
         }

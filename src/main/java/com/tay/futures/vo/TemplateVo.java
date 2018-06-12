@@ -6,6 +6,7 @@ public class TemplateVo {
     private String name;
     private List<RangeStrategyVo> rangeStrategyVoList;
     private Long id;
+    private RatioStrategyVo ratioStrategyVo;
 
     public Long getId() {
         return id;
@@ -31,6 +32,13 @@ public class TemplateVo {
         this.rangeStrategyVoList = rangeStrategyVoList;
     }
 
+    public RatioStrategyVo getRatioStrategyVo() {
+        return ratioStrategyVo;
+    }
+
+    public void setRatioStrategyVo(RatioStrategyVo ratioStrategyVo) {
+        this.ratioStrategyVo = ratioStrategyVo;
+    }
 
     @Override
     public String toString() {

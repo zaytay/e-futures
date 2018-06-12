@@ -3,12 +3,10 @@ package com.tay.futures.controller;
 
 import com.google.common.collect.Lists;
 import com.tay.futures.constants.RangeStrategyType;
-import com.tay.futures.entity.CottonTemplate;
-import com.tay.futures.entity.PageBean;
-import com.tay.futures.entity.RangeStrategy;
-import com.tay.futures.entity.User;
+import com.tay.futures.entity.*;
 import com.tay.futures.service.CottonTemplateService;
 import com.tay.futures.service.RangeStrategyService;
+import com.tay.futures.service.RatioStrategyService;
 import com.tay.futures.util.JsonResponse;
 import com.tay.futures.util.ResponseUtil;
 import com.tay.futures.vo.RangeStrategyVo;
@@ -40,6 +38,9 @@ public class CottonTemplateController {
 
     @Autowired
     private RangeStrategyService rangeStrategyService;
+
+    @Autowired
+    private RatioStrategyService ratioStrategyService;
 
 
 
@@ -92,6 +93,13 @@ public class CottonTemplateController {
         HttpSession session = request.getSession();
         User currentUser=(User)session.getAttribute("currentUser");
         cottonTemplate.setCreatorId(currentUser.getId().longValue());
+        if(templateVo.getRatioStrategyVo() == null){
+            log.error("params:{}  rationStrategyVo is null",templateVo);
+            ResponseUtil.write(response,"rationStrategyVo is null");
+            return null;
+        }
+        RatioStrategy ratioStrategy=new RatioStrategy();
+        BeanUtils.copyProperties(templateVo.getRatioStrategyVo(),ratioStrategy);
         List<RangeStrategy> rangeStrategyList=new ArrayList<>();
         for(RangeStrategyVo rangeStrategyVo:templateVo.getRangeStrategyVoList()){
             //过滤无效值
@@ -103,7 +111,7 @@ public class CottonTemplateController {
             BeanUtils.copyProperties(rangeStrategyVo,rangeStrategy);
             rangeStrategyList.add(rangeStrategy);
         }
-        templateId=cottonTemplateService.addTemplateAndStrategy(cottonTemplate,rangeStrategyList);
+        templateId=cottonTemplateService.addTemplateAndStrategy(cottonTemplate,ratioStrategy,rangeStrategyList);
         JSONObject result = new JSONObject();
         if (templateId > 0) {
             result.put("success", true);
@@ -125,6 +133,22 @@ public class CottonTemplateController {
         cottonTemplate.setId(templateVo.getId());
         cottonTemplateService.updateTemplate(cottonTemplate);
         List<RangeStrategy> rangeStrategyList=new ArrayList<>();
+
+
+        //update ratio strategy
+        if(templateVo.getRatioStrategyVo() == null){
+            log.error("params:{}  rationStrategyVo is null",templateVo);
+            ResponseUtil.write(response,"rationStrategyVo is null");
+            return null;
+        }
+        ratioStrategyService.deleteStrategyByTemplateId(templateVo.getId());
+        RatioStrategy ratioStrategy=new RatioStrategy();
+        BeanUtils.copyProperties(templateVo.getRatioStrategyVo(),ratioStrategy);
+        ratioStrategy.setTemplateId(templateVo.getId());
+        ratioStrategyService.addStrategy(ratioStrategy);
+
+
+        //update range strategy
         for(RangeStrategyVo rangeStrategyVo:templateVo.getRangeStrategyVoList()){
             //过滤无效值
             if(rangeStrategyVo.getMin() ==null  || rangeStrategyVo.getMax() ==null ||rangeStrategyVo.getPrice() ==null){
@@ -157,6 +181,15 @@ public class CottonTemplateController {
             return JsonResponse.badResult("template is null");
         }
         List<RangeStrategy> rangeStrategies = rangeStrategyService.getStrategyByTemplateId(cottonTemplate.getId());
+
+
+        List<RatioStrategy> ratioStrategyList = ratioStrategyService.getStrategyByTemplateId(cottonTemplate.getId());
+        if(CollectionUtils.isEmpty(ratioStrategyList)){
+            log.warn("template id:{} ratioStrategy is null",id);
+            return JsonResponse.badResult("ratioStrategy is null");
+        }
+        model.addAttribute("ratioStrategy",ratioStrategyList.get(0));
+
         Collections.sort(rangeStrategies);
 
         List<RangeStrategy> lengthStrategies= Lists.newArrayList();
@@ -173,8 +206,6 @@ public class CottonTemplateController {
                 evennessStrategies.add(rangeStrategy);
             }else if(RangeStrategyType.STRENGTH.getCode().equals(rangeStrategy.getType().intValue())){
                 strengthStrategies.add(rangeStrategy);
-            }else if(RangeStrategyType.MISCELLANEOUS.getCode().equals(rangeStrategy.getType().intValue())){
-                miscellaneousStrategies.add(rangeStrategy);
             }
 
 
