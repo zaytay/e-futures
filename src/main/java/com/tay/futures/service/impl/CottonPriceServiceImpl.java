@@ -136,8 +136,9 @@ public class CottonPriceServiceImpl implements CottonPriceService{
         {
             return ret;
         }
-        int colot_level_num = 0;
+        int colot_level_num = 1;
         Set<String> set_color_type = new HashSet<String>();
+        set_color_type.add(color_level_2_color_type.get(topic_80));
         for ( String color_level : color_level_list )
         {
             if ( color_level == topic_80)
