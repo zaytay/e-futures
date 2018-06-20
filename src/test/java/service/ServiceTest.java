@@ -65,7 +65,7 @@ public class ServiceTest {
 
     @Test
     public void computePrice() throws Exception {
-        Double price=cottonPriceService.computePrice(123456L,3L);
+        Double price=cottonPriceService.computePrice(65001171040L,4L);
         System.out.println(price);
     }
 
