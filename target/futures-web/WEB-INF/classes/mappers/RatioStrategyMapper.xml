@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.tay.futures.dao.RatioStrategyMapper" >
+  <resultMap id="BaseResultMap" type="com.tay.futures.entity.RatioStrategy" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="template_id" property="templateId" jdbcType="BIGINT" />
+    <result column="colour_w1" property="colourW1" jdbcType="DOUBLE" />
+    <result column="colour_w2" property="colourW2" jdbcType="DOUBLE" />
+    <result column="colour_w3" property="colourW3" jdbcType="DOUBLE" />
+    <result column="colour_w4" property="colourW4" jdbcType="DOUBLE" />
+    <result column="colour_w5" property="colourW5" jdbcType="DOUBLE" />
+    <result column="colour_l1" property="colourL1" jdbcType="DOUBLE" />
+    <result column="colour_l2" property="colourL2" jdbcType="DOUBLE" />
+    <result column="colour_l3" property="colourL3" jdbcType="DOUBLE" />
+    <result column="colour_ly1" property="colourLy1" jdbcType="DOUBLE" />
+    <result column="colour_ly2" property="colourLy2" jdbcType="DOUBLE" />
+    <result column="colour_ly3" property="colourLy3" jdbcType="DOUBLE" />
+    <result column="colour_y1" property="colourY1" jdbcType="DOUBLE" />
+    <result column="colour_y2" property="colourY2" jdbcType="DOUBLE" />
+    <result column="ginning_p1" property="ginningP1" jdbcType="DOUBLE" />
+    <result column="ginning_p2" property="ginningP2" jdbcType="DOUBLE" />
+    <result column="ginning_p3" property="ginningP3" jdbcType="DOUBLE" />
+    <result column="create_date" property="createDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, template_id, colour_w1, colour_w2, colour_w3, colour_w4, colour_w5, colour_l1, 
+    colour_l2, colour_l3, colour_ly1, colour_ly2, colour_ly3, colour_y1, colour_y2, ginning_p1, 
+    ginning_p2, ginning_p3, create_date
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.tay.futures.entity.RatioStrategyExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from ratio_strategy
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from ratio_strategy
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from ratio_strategy
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.tay.futures.entity.RatioStrategyExample" >
+    delete from ratio_strategy
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.tay.futures.entity.RatioStrategy" >
+    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into ratio_strategy (template_id, colour_w1, colour_w2, 
+      colour_w3, colour_w4, colour_w5, 
+      colour_l1, colour_l2, colour_l3, 
+      colour_ly1, colour_ly2, colour_ly3, 
+      colour_y1, colour_y2, ginning_p1, 
+      ginning_p2, ginning_p3, create_date
+      )
+    values (#{templateId,jdbcType=BIGINT}, #{colourW1,jdbcType=DOUBLE}, #{colourW2,jdbcType=DOUBLE}, 
+      #{colourW3,jdbcType=DOUBLE}, #{colourW4,jdbcType=DOUBLE}, #{colourW5,jdbcType=DOUBLE}, 
+      #{colourL1,jdbcType=DOUBLE}, #{colourL2,jdbcType=DOUBLE}, #{colourL3,jdbcType=DOUBLE}, 
+      #{colourLy1,jdbcType=DOUBLE}, #{colourLy2,jdbcType=DOUBLE}, #{colourLy3,jdbcType=DOUBLE}, 
+      #{colourY1,jdbcType=DOUBLE}, #{colourY2,jdbcType=DOUBLE}, #{ginningP1,jdbcType=DOUBLE}, 
+      #{ginningP2,jdbcType=DOUBLE}, #{ginningP3,jdbcType=DOUBLE}, #{createDate,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.tay.futures.entity.RatioStrategy" >
+    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into ratio_strategy
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="templateId != null" >
+        template_id,
+      </if>
+      <if test="colourW1 != null" >
+        colour_w1,
+      </if>
+      <if test="colourW2 != null" >
+        colour_w2,
+      </if>
+      <if test="colourW3 != null" >
+        colour_w3,
+      </if>
+      <if test="colourW4 != null" >
+        colour_w4,
+      </if>
+      <if test="colourW5 != null" >
+        colour_w5,
+      </if>
+      <if test="colourL1 != null" >
+        colour_l1,
+      </if>
+      <if test="colourL2 != null" >
+        colour_l2,
+      </if>
+      <if test="colourL3 != null" >
+        colour_l3,
+      </if>
+      <if test="colourLy1 != null" >
+        colour_ly1,
+      </if>
+      <if test="colourLy2 != null" >
+        colour_ly2,
+      </if>
+      <if test="colourLy3 != null" >
+        colour_ly3,
+      </if>
+      <if test="colourY1 != null" >
+        colour_y1,
+      </if>
+      <if test="colourY2 != null" >
+        colour_y2,
+      </if>
+      <if test="ginningP1 != null" >
+        ginning_p1,
+      </if>
+      <if test="ginningP2 != null" >
+        ginning_p2,
+      </if>
+      <if test="ginningP3 != null" >
+        ginning_p3,
+      </if>
+      <if test="createDate != null" >
+        create_date,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="templateId != null" >
+        #{templateId,jdbcType=BIGINT},
+      </if>
+      <if test="colourW1 != null" >
+        #{colourW1,jdbcType=DOUBLE},
+      </if>
+      <if test="colourW2 != null" >
+        #{colourW2,jdbcType=DOUBLE},
+      </if>
+      <if test="colourW3 != null" >
+        #{colourW3,jdbcType=DOUBLE},
+      </if>
+      <if test="colourW4 != null" >
+        #{colourW4,jdbcType=DOUBLE},
+      </if>
+      <if test="colourW5 != null" >
+        #{colourW5,jdbcType=DOUBLE},
+      </if>
+      <if test="colourL1 != null" >
+        #{colourL1,jdbcType=DOUBLE},
+      </if>
+      <if test="colourL2 != null" >
+        #{colourL2,jdbcType=DOUBLE},
+      </if>
+      <if test="colourL3 != null" >
+        #{colourL3,jdbcType=DOUBLE},
+      </if>
+      <if test="colourLy1 != null" >
+        #{colourLy1,jdbcType=DOUBLE},
+      </if>
+      <if test="colourLy2 != null" >
+        #{colourLy2,jdbcType=DOUBLE},
+      </if>
+      <if test="colourLy3 != null" >
+        #{colourLy3,jdbcType=DOUBLE},
+      </if>
+      <if test="colourY1 != null" >
+        #{colourY1,jdbcType=DOUBLE},
+      </if>
+      <if test="colourY2 != null" >
+        #{colourY2,jdbcType=DOUBLE},
+      </if>
+      <if test="ginningP1 != null" >
+        #{ginningP1,jdbcType=DOUBLE},
+      </if>
+      <if test="ginningP2 != null" >
+        #{ginningP2,jdbcType=DOUBLE},
+      </if>
+      <if test="ginningP3 != null" >
+        #{ginningP3,jdbcType=DOUBLE},
+      </if>
+      <if test="createDate != null" >
+        #{createDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.tay.futures.entity.RatioStrategyExample" resultType="java.lang.Integer" >
+    select count(*) from ratio_strategy
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update ratio_strategy
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.templateId != null" >
+        template_id = #{record.templateId,jdbcType=BIGINT},
+      </if>
+      <if test="record.colourW1 != null" >
+        colour_w1 = #{record.colourW1,jdbcType=DOUBLE},
+      </if>
+      <if test="record.colourW2 != null" >
+        colour_w2 = #{record.colourW2,jdbcType=DOUBLE},
+      </if>
+      <if test="record.colourW3 != null" >
+        colour_w3 = #{record.colourW3,jdbcType=DOUBLE},
+      </if>
+      <if test="record.colourW4 != null" >
+        colour_w4 = #{record.colourW4,jdbcType=DOUBLE},
+      </if>
+      <if test="record.colourW5 != null" >
+        colour_w5 = #{record.colourW5,jdbcType=DOUBLE},
+      </if>
+      <if test="record.colourL1 != null" >
+        colour_l1 = #{record.colourL1,jdbcType=DOUBLE},
+      </if>
+      <if test="record.colourL2 != null" >
+        colour_l2 = #{record.colourL2,jdbcType=DOUBLE},
+      </if>
+      <if test="record.colourL3 != null" >
+        colour_l3 = #{record.colourL3,jdbcType=DOUBLE},
+      </if>
+      <if test="record.colourLy1 != null" >
+        colour_ly1 = #{record.colourLy1,jdbcType=DOUBLE},
+      </if>
+      <if test="record.colourLy2 != null" >
+        colour_ly2 = #{record.colourLy2,jdbcType=DOUBLE},
+      </if>
+      <if test="record.colourLy3 != null" >
+        colour_ly3 = #{record.colourLy3,jdbcType=DOUBLE},
+      </if>
+      <if test="record.colourY1 != null" >
+        colour_y1 = #{record.colourY1,jdbcType=DOUBLE},
+      </if>
+      <if test="record.colourY2 != null" >
+        colour_y2 = #{record.colourY2,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ginningP1 != null" >
+        ginning_p1 = #{record.ginningP1,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ginningP2 != null" >
+        ginning_p2 = #{record.ginningP2,jdbcType=DOUBLE},
+      </if>
+      <if test="record.ginningP3 != null" >
+        ginning_p3 = #{record.ginningP3,jdbcType=DOUBLE},
+      </if>
+      <if test="record.createDate != null" >
+        create_date = #{record.createDate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update ratio_strategy
+    set id = #{record.id,jdbcType=BIGINT},
+      template_id = #{record.templateId,jdbcType=BIGINT},
+      colour_w1 = #{record.colourW1,jdbcType=DOUBLE},
+      colour_w2 = #{record.colourW2,jdbcType=DOUBLE},
+      colour_w3 = #{record.colourW3,jdbcType=DOUBLE},
+      colour_w4 = #{record.colourW4,jdbcType=DOUBLE},
+      colour_w5 = #{record.colourW5,jdbcType=DOUBLE},
+      colour_l1 = #{record.colourL1,jdbcType=DOUBLE},
+      colour_l2 = #{record.colourL2,jdbcType=DOUBLE},
+      colour_l3 = #{record.colourL3,jdbcType=DOUBLE},
+      colour_ly1 = #{record.colourLy1,jdbcType=DOUBLE},
+      colour_ly2 = #{record.colourLy2,jdbcType=DOUBLE},
+      colour_ly3 = #{record.colourLy3,jdbcType=DOUBLE},
+      colour_y1 = #{record.colourY1,jdbcType=DOUBLE},
+      colour_y2 = #{record.colourY2,jdbcType=DOUBLE},
+      ginning_p1 = #{record.ginningP1,jdbcType=DOUBLE},
+      ginning_p2 = #{record.ginningP2,jdbcType=DOUBLE},
+      ginning_p3 = #{record.ginningP3,jdbcType=DOUBLE},
+      create_date = #{record.createDate,jdbcType=TIMESTAMP}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.tay.futures.entity.RatioStrategy" >
+    update ratio_strategy
+    <set >
+      <if test="templateId != null" >
+        template_id = #{templateId,jdbcType=BIGINT},
+      </if>
+      <if test="colourW1 != null" >
+        colour_w1 = #{colourW1,jdbcType=DOUBLE},
+      </if>
+      <if test="colourW2 != null" >
+        colour_w2 = #{colourW2,jdbcType=DOUBLE},
+      </if>
+      <if test="colourW3 != null" >
+        colour_w3 = #{colourW3,jdbcType=DOUBLE},
+      </if>
+      <if test="colourW4 != null" >
+        colour_w4 = #{colourW4,jdbcType=DOUBLE},
+      </if>
+      <if test="colourW5 != null" >
+        colour_w5 = #{colourW5,jdbcType=DOUBLE},
+      </if>
+      <if test="colourL1 != null" >
+        colour_l1 = #{colourL1,jdbcType=DOUBLE},
+      </if>
+      <if test="colourL2 != null" >
+        colour_l2 = #{colourL2,jdbcType=DOUBLE},
+      </if>
+      <if test="colourL3 != null" >
+        colour_l3 = #{colourL3,jdbcType=DOUBLE},
+      </if>
+      <if test="colourLy1 != null" >
+        colour_ly1 = #{colourLy1,jdbcType=DOUBLE},
+      </if>
+      <if test="colourLy2 != null" >
+        colour_ly2 = #{colourLy2,jdbcType=DOUBLE},
+      </if>
+      <if test="colourLy3 != null" >
+        colour_ly3 = #{colourLy3,jdbcType=DOUBLE},
+      </if>
+      <if test="colourY1 != null" >
+        colour_y1 = #{colourY1,jdbcType=DOUBLE},
+      </if>
+      <if test="colourY2 != null" >
+        colour_y2 = #{colourY2,jdbcType=DOUBLE},
+      </if>
+      <if test="ginningP1 != null" >
+        ginning_p1 = #{ginningP1,jdbcType=DOUBLE},
+      </if>
+      <if test="ginningP2 != null" >
+        ginning_p2 = #{ginningP2,jdbcType=DOUBLE},
+      </if>
+      <if test="ginningP3 != null" >
+        ginning_p3 = #{ginningP3,jdbcType=DOUBLE},
+      </if>
+      <if test="createDate != null" >
+        create_date = #{createDate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.tay.futures.entity.RatioStrategy" >
+    update ratio_strategy
+    set template_id = #{templateId,jdbcType=BIGINT},
+      colour_w1 = #{colourW1,jdbcType=DOUBLE},
+      colour_w2 = #{colourW2,jdbcType=DOUBLE},
+      colour_w3 = #{colourW3,jdbcType=DOUBLE},
+      colour_w4 = #{colourW4,jdbcType=DOUBLE},
+      colour_w5 = #{colourW5,jdbcType=DOUBLE},
+      colour_l1 = #{colourL1,jdbcType=DOUBLE},
+      colour_l2 = #{colourL2,jdbcType=DOUBLE},
+      colour_l3 = #{colourL3,jdbcType=DOUBLE},
+      colour_ly1 = #{colourLy1,jdbcType=DOUBLE},
+      colour_ly2 = #{colourLy2,jdbcType=DOUBLE},
+      colour_ly3 = #{colourLy3,jdbcType=DOUBLE},
+      colour_y1 = #{colourY1,jdbcType=DOUBLE},
+      colour_y2 = #{colourY2,jdbcType=DOUBLE},
+      ginning_p1 = #{ginningP1,jdbcType=DOUBLE},
+      ginning_p2 = #{ginningP2,jdbcType=DOUBLE},
+      ginning_p3 = #{ginningP3,jdbcType=DOUBLE},
+      create_date = #{createDate,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>

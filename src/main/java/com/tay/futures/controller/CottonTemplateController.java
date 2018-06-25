@@ -7,7 +7,6 @@ import com.tay.futures.entity.*;
 import com.tay.futures.service.CottonTemplateService;
 import com.tay.futures.service.RangeStrategyService;
 import com.tay.futures.service.RatioStrategyService;
-import com.tay.futures.util.JsonResponse;
 import com.tay.futures.util.ResponseUtil;
 import com.tay.futures.vo.RangeStrategyVo;
 import com.tay.futures.vo.TemplateVo;
@@ -173,12 +172,14 @@ public class CottonTemplateController {
 
     @RequestMapping("/show")
     public String cottonPriceCompute(@RequestParam(value = "id", required = false) Long  id,
-                                     Model model) throws Exception {
+                                     Model model,
+                                     HttpServletResponse response) throws Exception {
         log.info("request: template/show  ");
         CottonTemplate cottonTemplate=cottonTemplateService.getCottonTemplateById(id);
         if(cottonTemplate == null){
             log.warn("template id:{}  is null",id);
-            return JsonResponse.badResult("template is null");
+            ResponseUtil.write(response, "模板无法在数据库中找到");
+            return null;
         }
         List<RangeStrategy> rangeStrategies = rangeStrategyService.getStrategyByTemplateId(cottonTemplate.getId());
 
@@ -186,7 +187,8 @@ public class CottonTemplateController {
         List<RatioStrategy> ratioStrategyList = ratioStrategyService.getStrategyByTemplateId(cottonTemplate.getId());
         if(CollectionUtils.isEmpty(ratioStrategyList)){
             log.warn("template id:{} ratioStrategy is null",id);
-            return JsonResponse.badResult("ratioStrategy is null");
+            ResponseUtil.write(response, "模板中没有升贴水比值策略，请重新设置");
+            return null;
         }
         model.addAttribute("ratioStrategy",ratioStrategyList.get(0));
 
