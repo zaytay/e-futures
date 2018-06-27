@@ -40,13 +40,17 @@
                         <td>最终价格：</td>
                         <td><input id="price" type="text" name="price" value="${price}"></td>
                     </tr>
-
                 </table>
             </form>
+
+            <a href="${pageContext.request.contextPath}/compute/batchComputeIndex.do">批量计算页面</a>
 
             <br/>
             <br/>
 
         </div>
+
+
+
     </div>
 </div>

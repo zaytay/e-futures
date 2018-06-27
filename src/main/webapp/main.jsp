@@ -64,7 +64,6 @@
         </tr>
     </table>
 </div>
-test: ${test}
 <%@include file="/WEB-INF/jsp/compute/compute.jsp" %>
 <%--
 <div region="center">

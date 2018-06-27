@@ -60,6 +60,20 @@ public class ComputeController {
     }
 
 
+    @RequestMapping("/batchComputeIndex")
+    public String batchComputeIndex(
+                                     Model model,HttpServletResponse response,HttpServletRequest request
+    ) throws Exception {
+        log.info("request: batchComputeIndex  ");
+
+        HttpSession session = request.getSession();
+        User currentUser=(User)session.getAttribute("currentUser");
+        List<CottonTemplate> cottonTemplateList=cottonTemplateService.getAllCottonTemplateByUid(currentUser.getId());
+        model.addAttribute("cottonTemplateList",cottonTemplateList);
+        return "WEB-INF/jsp/compute/batchCompute";
+    }
+
+
 
 
 }
