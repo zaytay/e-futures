@@ -55,7 +55,7 @@
 <div>
     <h2>下载批量文件模板</h2>
     <form action="${pageContext.request.contextPath}/compute/downloadPattern.do" enctype="multipart/form-data" method="post">
-        <input type="submit" value="下载Excel"></input>
+        <input type="submit" value="下载模版Excel"></input>
     </form>
 
     <br/>
