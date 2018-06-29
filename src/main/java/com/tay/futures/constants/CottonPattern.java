@@ -25,7 +25,8 @@ public enum CottonPattern {
     AVG_LENGTH("avgLength","平均长度"),
     AVG_MICRONAIRE("avgMicronaire","马克龙值"),
     AVG_EVENNESS("avgEvenness","平均长整"),
-    STRENGTH("strength","强度");
+    STRENGTH("strength","强度"),
+    PRICE("price","价格");
 
 
     private String field;
@@ -69,6 +70,17 @@ public enum CottonPattern {
         List<String> fields=new ArrayList<>();
         for(CottonPattern cottonPattern: cottonPatterns){
             fields.add(cottonPattern.headerName);
+        }
+        return fields;
+    }
+
+    public static List<String> getHeaderNamesExcludePrice(){
+        CottonPattern[] cottonPatterns=   values();
+        List<String> fields=new ArrayList<>();
+        for(CottonPattern cottonPattern: cottonPatterns){
+            if(!cottonPattern.equals(CottonPattern.PRICE)){
+                fields.add(cottonPattern.headerName);
+            }
         }
         return fields;
     }

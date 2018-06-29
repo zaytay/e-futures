@@ -9,5 +9,8 @@
         <module name="futures-web" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="futures-web" target="1.7" />
+    </bytecodeTargetLevel>
   </component>
 </project>

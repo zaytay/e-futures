@@ -3,6 +3,7 @@ package com.tay.futures.service.impl;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tay.futures.constants.CottonConst;
 import com.tay.futures.constants.RangeStrategyType;
+import com.tay.futures.dto.CottonBatchDto;
 import com.tay.futures.entity.CottonBatch;
 import com.tay.futures.entity.RangeStrategy;
 import com.tay.futures.entity.RatioStrategy;
@@ -19,6 +20,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.Assert;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -78,6 +80,52 @@ public class CottonPriceServiceImpl implements CottonPriceService{
         }
 
     }
+
+
+
+    public List<CottonBatchDto> batchComputePrice(List<CottonBatchDto> cottonBatchList, Long templateId) throws  ServiceException {
+
+        Assert.notEmpty(cottonBatchList);
+
+
+        //ratioStrategy prepare
+        List<RatioStrategy> ratioStrategyList=ratioStrategyService.getStrategyByTemplateId(templateId);
+        if(CollectionUtils.isEmpty(ratioStrategyList) || ratioStrategyList.get(0) == null){
+            throw new BusinessException(ErrorCode.CODE_NOT_EXIST);
+        }
+        ObjectMapper objectMapper = new ObjectMapper();
+        Map<String,Object> priceMap=objectMapper.convertValue(ratioStrategyList.get(0),Map.class);
+
+
+        //range strategy prepare
+        Map<Integer,List<RangeStrategy>>  strategyListMap=new HashMap<>();
+        for(RangeStrategyType type:RangeStrategyType.values()){
+            List<RangeStrategy> rangeStrategies = rangeStrategyService.getStrategyByTemplateIdAndType(templateId, type.getCode());
+            strategyListMap.put(type.getCode(),rangeStrategies);
+        }
+
+        for(CottonBatchDto cottonBatchDto:cottonBatchList){
+            Double price=0.00;
+            ObjectMapper m = new ObjectMapper();
+            Map<String,Object> propsMap = m.convertValue(cottonBatchDto, Map.class);
+            //ratio strategy calculate
+            price=computeRatioPrice(propsMap,priceMap,price);
+
+            Double promot_fix = computeFixStrategy(propsMap);
+            price += promot_fix;
+
+            for(RangeStrategyType type:RangeStrategyType.values()){
+                List<RangeStrategy> rangeStrategies = strategyListMap.get(type.getCode());
+                double currentValue=(Double)propsMap.get(type.getAttributeName());
+                price+=rangePriceCalculate(currentValue,rangeStrategies);
+            }
+            cottonBatchDto.setPrice(price);
+        }
+        return cottonBatchList;
+    }
+
+
+
 
     private Double computeFixStrategy(Map<String, Object> propsMap) {
         Double promot_color_topic = computeColorTopic(propsMap);

@@ -119,15 +119,17 @@ public class ExcelUtils {
 			if(sheet==null){continue;}
 
 			//遍历当前sheet中的所有行
-			for (int j = sheet.getFirstRowNum(); j < sheet.getLastRowNum(); j++) {
+			for (int j = sheet.getFirstRowNum(); j < sheet.getLastRowNum()+1; j++) {
 				row = sheet.getRow(j);
-				if(row==null||row.getFirstCellNum()==j){continue;}
+				if(row == null || j == 0) {continue;}
 
 				//遍历所有的列
 				List<Object> li = new ArrayList<>();
-				for (int y = row.getFirstCellNum(); y < row.getLastCellNum(); y++) {
+				for (int y = row.getFirstCellNum(); y < row.getLastCellNum()+1; y++) {
 					cell = row.getCell(y);
-					li.add(getCellValue(cell));
+					if(cell !=null){
+						li.add(getCellValue(cell));
+					}
 				}
 				list.add(li);
 			}

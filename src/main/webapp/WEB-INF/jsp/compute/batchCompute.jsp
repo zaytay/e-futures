@@ -63,7 +63,7 @@
 
     <h2>上传文件并计算</h2>
     <form action="${pageContext.request.contextPath}/compute/upload.do" enctype="multipart/form-data" method="post">
-        <input type="file" name="file"></input>
+        <input type="file" name="sourceFile"></input>
 
         <h5>选择模板</h5>
         <select name="templateId"  id="templateId">
