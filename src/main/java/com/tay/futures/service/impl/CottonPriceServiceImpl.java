@@ -222,8 +222,8 @@ public class CottonPriceServiceImpl implements CottonPriceService{
     private Double rangePriceCalculate(double currentValue,List<RangeStrategy>  rangeStrategies) throws ServiceException {
         RangeStrategy rangeStrategy=rangeMatch(currentValue,rangeStrategies);
         if (rangeStrategy == null){
-            logger.error("currentValue:{} not match any range");
-            throw new BusinessException(ErrorCode.RANGE_NOT_MATCH);
+            logger.warn("currentValue:{} not match any range");
+            return 0.0;
         }
         return rangeStrategy.getPrice();
     }

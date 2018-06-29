@@ -43,7 +43,7 @@
                 </table>
             </form>
 
-            <a href="${pageContext.request.contextPath}/compute/batchComputeIndex.do">批量计算页面</a>
+            <a href="${pageContext.request.contextPath}/compute/batchComputeIndex.do" target="_blank">批量计算页面</a>
 
             <br/>
             <br/>
