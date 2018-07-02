@@ -1,5 +1,6 @@
 package com.tay.futures.service.impl;
 
+import com.google.common.collect.Lists;
 import com.tay.futures.dao.CottonBatchMapper;
 import com.tay.futures.entity.CottonBatch;
 import com.tay.futures.entity.CottonBatchExample;
@@ -11,11 +12,13 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service("cottonBatchService")
 public class CottonBatchServiceImpl implements CottonBatchService {
 
+    public static final Integer BATCH_SIZE=1000;
 
     private static final Logger log = Logger
             .getLogger(CottonBatchServiceImpl.class);// 日志文件
@@ -54,6 +57,21 @@ public class CottonBatchServiceImpl implements CottonBatchService {
         }else {
             return null;
         }
+    }
+
+
+    public List<CottonBatch> getCottonBatchListByCodes(List<Long> codeList){
+        CottonBatchExample cottonBatchExample=new CottonBatchExample();
+        List<List<Long>> codesList = Lists.partition(codeList,BATCH_SIZE);
+        List<CottonBatch> cottonBatchList=new ArrayList<>();
+
+        for(List<Long> codes : codesList){
+            cottonBatchExample.createCriteria().andProductionCodeIn(codes);
+            List<CottonBatch> cottonBatches=cottonBatchMapper.selectByExample(cottonBatchExample);
+            cottonBatchExample.clear();
+            cottonBatchList.addAll(cottonBatches);
+        }
+        return  cottonBatchList;
     }
 
 

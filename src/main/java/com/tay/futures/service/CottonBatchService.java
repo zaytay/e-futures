@@ -18,4 +18,7 @@ public interface CottonBatchService   {
     public CottonBatch getCottonBatchByCode(Long code);
 
     public void deleteAllCottonBaches();
+
+
+    public List<CottonBatch> getCottonBatchListByCodes(List<Long> codeList);
 }

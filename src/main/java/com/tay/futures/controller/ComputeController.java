@@ -8,6 +8,7 @@ import com.tay.futures.entity.CottonTemplate;
 import com.tay.futures.entity.User;
 import com.tay.futures.exception.BusinessException;
 import com.tay.futures.exception.ErrorCode;
+import com.tay.futures.service.CottonBatchService;
 import com.tay.futures.service.CottonPriceService;
 import com.tay.futures.service.CottonTemplateService;
 import com.tay.futures.util.DateUtil;
@@ -18,6 +19,7 @@ import org.apache.commons.lang.StringUtils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -45,6 +47,9 @@ public class ComputeController {
 
     @Autowired
     private CottonTemplateService cottonTemplateService;
+
+    @Autowired
+    private CottonBatchService cottonBatchService;
 
     public static final String DOWNLOAD_TEMPLATE_NAME = "棉花数据导入模板.xlsx";
 
@@ -97,9 +102,10 @@ public class ComputeController {
     @ResponseBody
     public String downloadPattern(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-        List<String> headerNameList = CottonPattern.getHeaderNamesExcludePrice();
+/*        List<String> headerNameList = CottonPattern.getHeaderNamesExcludePrice();
         //downloadPattern ignore price
-        String[] headerNames=headerNameList.toArray(new String[headerNameList.size()]);
+        String[] headerNames=headerNameList.toArray(new String[headerNameList.size()]);*/
+        String [] headerNames= {CottonPattern.PRODUCTION_CODE.getHeaderName()};
         List<String[]> rows = new ArrayList<>(1);
         String[] row = new String[headerNames.length];
         for(int i=0;i<headerNames.length;i++){
@@ -132,54 +138,81 @@ public class ComputeController {
             log.error("upload file is invalid ");
             ResponseUtil.write(response, "上传文件无效");
         } else {
-            List<CottonBatchDto> cottonBatchDtoList =  batchImport(originalFilename,sourceFile);
-
-            if(CollectionUtils.isEmpty(cottonBatchDtoList)){
-                log.info("batchImport file {} data is empty",originalFilename);
-                ResponseUtil.write(response, "上传数据为空");
-
-            }else {
-                cottonBatchDtoList=cottonPriceService.batchComputePrice(cottonBatchDtoList,templateId);
-                List<String> headerNameList = CottonPattern.getHeaderNames();
-                String[] headerNames=headerNameList.toArray(new String[headerNameList.size()]);
-                List<String[]> rows = new ArrayList<>(cottonBatchDtoList.size());
-                for(CottonBatchDto dto:cottonBatchDtoList){
-                    String[] row = new String[headerNames.length];
-                    row[0] =dto.getProductionCode().toString();
-                    row[1] =dto.getColourW1().toString();
-                    row[2] =dto.getColourW2().toString();
-                    row[3] =dto.getColourW3().toString();
-                    row[4] =dto.getColourW4().toString();
-                    row[5] =dto.getColourW5().toString();
-                    row[6] =dto.getColourL1().toString();
-                    row[7] =dto.getColourL2().toString();
-                    row[8] =dto.getColourL3().toString();
-                    row[9] =dto.getColourLy1().toString();
-                    row[10] =dto.getColourLy2().toString();
-                    row[11] =dto.getColourLy3().toString();
-                    row[12] =dto.getColourY1().toString();
-                    row[13] =dto.getColourY2().toString();
-                    row[14] =dto.getGinningP1().toString();
-                    row[15] =dto.getGinningP2().toString();
-                    row[16] =dto.getGinningP3().toString();
-                    row[17] =dto.getAvgLength().toString();
-                    row[18] =dto.getAvgMicronaire().toString();
-                    row[19] =dto.getAvgEvenness().toString();
-                    row[20] =dto.getStrength().toString();
-                    row[21] =dto.getPrice().toString();
-                    rows.add(row);
+            try {
+                List<CottonBatchDto> cottonBatchDtoList =  batchImportJustCode(originalFilename,sourceFile);
+                if(CollectionUtils.isEmpty(cottonBatchDtoList)){
+                    log.info("batchImport file {} data is empty",originalFilename);
+                    ResponseUtil.write(response, "上传数据为空");
+                }else {
+                    cottonBatchDtoList=cottonPriceService.batchComputePrice(cottonBatchDtoList,templateId);
+                    List<String> headerNameList = CottonPattern.getHeaderNames();
+                    String[] headerNames=headerNameList.toArray(new String[headerNameList.size()]);
+                    List<String[]> rows = new ArrayList<>(cottonBatchDtoList.size());
+                    for(CottonBatchDto dto:cottonBatchDtoList){
+                        String[] row = new String[headerNames.length];
+                        row[0] =dto.getProductionCode().toString();
+                        row[1] =dto.getColourW1().toString();
+                        row[2] =dto.getColourW2().toString();
+                        row[3] =dto.getColourW3().toString();
+                        row[4] =dto.getColourW4().toString();
+                        row[5] =dto.getColourW5().toString();
+                        row[6] =dto.getColourL1().toString();
+                        row[7] =dto.getColourL2().toString();
+                        row[8] =dto.getColourL3().toString();
+                        row[9] =dto.getColourLy1().toString();
+                        row[10] =dto.getColourLy2().toString();
+                        row[11] =dto.getColourLy3().toString();
+                        row[12] =dto.getColourY1().toString();
+                        row[13] =dto.getColourY2().toString();
+                        row[14] =dto.getGinningP1().toString();
+                        row[15] =dto.getGinningP2().toString();
+                        row[16] =dto.getGinningP3().toString();
+                        row[17] =dto.getAvgLength().toString();
+                        row[18] =dto.getAvgMicronaire().toString();
+                        row[19] =dto.getAvgEvenness().toString();
+                        row[20] =dto.getStrength().toString();
+                        row[21] =dto.getPrice().toString();
+                        rows.add(row);
+                    }
+                    HttpSession session = request.getSession();
+                    User currentUser=(User)session.getAttribute("currentUser");
+                    String fileName=COTTON_PRICE_FILE_NAME+"_"+ DateUtil.getCurrentDateStr()+"_" +currentUser.getUserName()+".xlsx";
+                    ExcelUtils.writeExcelTable(request, response, fileName, headerNames, rows);
                 }
-                HttpSession session = request.getSession();
-                User currentUser=(User)session.getAttribute("currentUser");
-                String fileName=COTTON_PRICE_FILE_NAME+"_"+ DateUtil.getCurrentDateStr()+"_" +currentUser.getUserName()+".xlsx";
-                ExcelUtils.writeExcelTable(request, response, fileName, headerNames, rows);
+            }catch (Exception e){
+                log.error(e.getMessage(),e);
+                ResponseUtil.write(response, "上传文件格式非法");
             }
         }
         return null;
     }
 
 
-    private List<CottonBatchDto> batchImport(String originalFilename, MultipartFile sourceFile) throws Exception {
+
+    private List<CottonBatchDto> batchImportJustCode(String originalFilename, MultipartFile sourceFile) throws Exception {
+        List<List<Object>> objectList = ExcelUtils.getBankListByExcel(sourceFile.getInputStream(), originalFilename);
+        List<CottonBatchDto> cottonBatchDtoList=new ArrayList<>();
+        if (objectList.isEmpty()){
+            return null;
+        }
+        List<Long> codeList=new ArrayList<>();
+        for (int i = 0; i < objectList.size(); i++) {
+            List<Object> rowObject = objectList.get(i);
+            codeList.add(Long.valueOf(rowObject.get(0).toString()));
+        }
+        List<CottonBatch> cottonBatches =  cottonBatchService.getCottonBatchListByCodes(codeList);
+        for(CottonBatch cottonBatch: cottonBatches){
+            CottonBatchDto cottonBatchDto=new CottonBatchDto();
+            BeanUtils.copyProperties(cottonBatch,cottonBatchDto);
+            cottonBatchDtoList.add(cottonBatchDto);
+        }
+        return cottonBatchDtoList;
+    }
+
+
+
+
+    private List<CottonBatchDto> batchImportAllFileDate(String originalFilename, MultipartFile sourceFile) throws Exception {
         List<List<Object>> objectList = ExcelUtils.getBankListByExcel(sourceFile.getInputStream(), originalFilename);
         List<CottonBatchDto> cottonBatchList=new ArrayList<>();
         if (objectList.isEmpty()){
