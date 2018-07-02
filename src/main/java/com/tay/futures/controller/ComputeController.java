@@ -11,9 +11,11 @@ import com.tay.futures.exception.ErrorCode;
 import com.tay.futures.service.CottonBatchService;
 import com.tay.futures.service.CottonPriceService;
 import com.tay.futures.service.CottonTemplateService;
+import com.tay.futures.thread.RecordCottonCrawler;
 import com.tay.futures.util.DateUtil;
 import com.tay.futures.util.ExcelUtils;
 import com.tay.futures.util.ResponseUtil;
+import com.tay.futures.util.ThreadService;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang.StringUtils;
 
@@ -179,6 +181,8 @@ public class ComputeController {
                     String fileName=COTTON_PRICE_FILE_NAME+"_"+ DateUtil.getCurrentDateStr()+"_" +currentUser.getUserName()+".xlsx";
                     ExcelUtils.writeExcelTable(request, response, fileName, headerNames, rows);
                 }
+
+
             }catch (Exception e){
                 log.error(e.getMessage(),e);
                 ResponseUtil.write(response, "上传文件格式非法");
@@ -201,11 +205,18 @@ public class ComputeController {
             codeList.add(Long.valueOf(rowObject.get(0).toString()));
         }
         List<CottonBatch> cottonBatches =  cottonBatchService.getCottonBatchListByCodes(codeList);
+        List<Long> codeInDbList=new ArrayList<>();
         for(CottonBatch cottonBatch: cottonBatches){
             CottonBatchDto cottonBatchDto=new CottonBatchDto();
             BeanUtils.copyProperties(cottonBatch,cottonBatchDto);
+            codeInDbList.add(cottonBatchDto.getProductionCode());
             cottonBatchDtoList.add(cottonBatchDto);
         }
+        Set<Long> allCodes=new HashSet<>(codeList);
+        Set<Long> existCodes=new HashSet<>(codeInDbList);
+        allCodes.removeAll(existCodes);
+        List<Long> recordCodeList=new ArrayList<>(allCodes);
+        ThreadService.getInstance().execute(new RecordCottonCrawler(recordCodeList));
         return cottonBatchDtoList;
     }
 

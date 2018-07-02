@@ -1,6 +1,7 @@
 package com.tay.futures.service.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.collect.Lists;
 import com.tay.futures.constants.CottonConst;
 import com.tay.futures.constants.RangeStrategyType;
 import com.tay.futures.dto.CottonBatchDto;
@@ -10,11 +11,10 @@ import com.tay.futures.entity.RatioStrategy;
 import com.tay.futures.exception.BusinessException;
 import com.tay.futures.exception.ErrorCode;
 import com.tay.futures.exception.ServiceException;
-import com.tay.futures.service.CottonBatchService;
-import com.tay.futures.service.CottonPriceService;
-import com.tay.futures.service.RangeStrategyService;
-import com.tay.futures.service.RatioStrategyService;
+import com.tay.futures.service.*;
+import com.tay.futures.thread.RecordCottonCrawler;
 import com.tay.futures.util.PriceUtil;
+import com.tay.futures.util.ThreadService;
 import org.apache.commons.collections.CollectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -44,12 +44,16 @@ public class CottonPriceServiceImpl implements CottonPriceService{
     @Autowired
     private RatioStrategyService ratioStrategyService;
 
+    @Autowired
+    private CottonCrawlerService cottonCrawlerService;
+
     @Override
     public Double computePrice(Long productionCode,Long templateId) throws BusinessException, ServiceException {
 
         CottonBatch cottonBatch=cottonBatchService.getCottonBatchByCode(productionCode);
         Double price=0.00;
         if(cottonBatch == null){
+            ThreadService.getInstance().execute(new RecordCottonCrawler(Lists.newArrayList(productionCode)));
             throw new BusinessException(ErrorCode.CODE_NOT_EXIST);
         }else {
             ObjectMapper m = new ObjectMapper();

@@ -9,6 +9,8 @@
     <context:component-scan base-package="com.tay.futures.dao"/>
     <context:component-scan base-package="com.tay.futures.service"/>
 
+    <bean id="springContainerHolder" class="com.tay.futures.util.SpringContainerHolder"/>
+
     <!-- druid监控配置 -->
     <import resource="classpath:spring-context-druid-stat.xml"/>
     <!-- 事务管理配置 -->

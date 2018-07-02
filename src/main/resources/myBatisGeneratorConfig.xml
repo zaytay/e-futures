@@ -58,6 +58,11 @@
 			<generatedKey column="id" sqlStatement="MySql" identity="true" />
 		</table>
 
+		<table tableName="cotton_crawler" domainObjectName="CottonCrawler">
+			<generatedKey column="id" sqlStatement="MySql" identity="true" />
+		</table>
+
+
 
 
 	</context>
