@@ -7,20 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38c9796c-ba4f-4033-ac23-8ed2badb0a03" name="Default" comment="add design">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/templateshow.jsp" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tay/futures/constants/RangeStrategyType.java" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/constants/RangeStrategyType.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tay/futures/controller/ComputeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/controller/ComputeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tay/futures/controller/CottonTemplateController.java" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/controller/CottonTemplateController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tay/futures/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tay/futures/dto/CottonBatchDto.java" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/dto/CottonBatchDto.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tay/futures/entity/CottonBatch.java" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/entity/CottonBatch.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tay/futures/entity/CottonBatchExample.java" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/entity/CottonBatchExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/db/cotton.sql" afterPath="$PROJECT_DIR$/src/main/resources/db/cotton.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mappers/CottonBatchMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mappers/CottonBatchMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/template/templateUpdate.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/template/templateUpdate.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/main.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/main.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/views/cottonTemplate.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/views/cottonTemplate.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/tay/futures/util/ExcelUtils.java" afterPath="$PROJECT_DIR$/src/main/java/com/tay/futures/util/ExcelUtils.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,6 +23,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="CottonPriceServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/CottonPriceServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-220">
+              <caret line="110" column="27" lean-forward="false" selection-start-line="110" selection-start-column="12" selection-end-line="110" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="cottonTemplate.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/views/cottonTemplate.jsp">
           <provider selected="true" editor-type-id="text-editor">
@@ -46,31 +46,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="templateUpdate.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/template/templateUpdate.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9352">
-              <caret line="349" column="0" lean-forward="false" selection-start-line="349" selection-start-column="0" selection-end-line="349" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RangeStrategyType.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/constants/RangeStrategyType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="22" />
+            <state relative-caret-position="60">
+              <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ComputeController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Long.java" pinned="false" current-in-tab="false">
+        <entry file="jar://D:/Program Files/Java/jdk1.7.0_79/src.zip!/java/lang/Long.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="762" column="18" lean-forward="false" selection-start-line="762" selection-start-column="18" selection-end-line="762" selection-end-column="18" />
+              <folding>
+                <element signature="e#27324#27325#0" expanded="true" />
+                <element signature="e#27362#27363#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ComputeController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/controller/ComputeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="154" column="40" lean-forward="false" selection-start-line="154" selection-start-column="29" selection-end-line="154" selection-end-column="40" />
+            <state relative-caret-position="492">
+              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -78,21 +81,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CottonTemplateController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/controller/CottonTemplateController.java">
+      <file leaf-file-name="ExcelUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/util/ExcelUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="226" column="45" lean-forward="false" selection-start-line="226" selection-start-column="28" selection-end-line="226" selection-end-column="45" />
+            <state relative-caret-position="332">
+              <caret line="134" column="29" lean-forward="true" selection-start-line="134" selection-start-column="29" selection-end-line="134" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="templateinfo.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/templateinfo.jsp">
+      <file leaf-file-name="Cell.java" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.9/poi-3.9-sources.jar!/org/apache/poi/ss/usermodel/Cell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-139">
-              <caret line="45" column="34" lean-forward="false" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+            <state relative-caret-position="290">
+              <caret line="206" column="9" lean-forward="false" selection-start-line="206" selection-start-column="9" selection-end-line="206" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CottonTemplateController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/controller/CottonTemplateController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2694">
+              <caret line="143" column="56" lean-forward="false" selection-start-line="143" selection-start-column="56" selection-end-line="143" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -101,18 +114,18 @@
       <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
-              <caret line="83" column="62" lean-forward="false" selection-start-line="83" selection-start-column="62" selection-end-line="83" selection-end-column="62" />
+            <state relative-caret-position="-338">
+              <caret line="80" column="50" lean-forward="false" selection-start-line="80" selection-start-column="50" selection-end-line="80" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/main.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="109" column="54" lean-forward="false" selection-start-line="109" selection-start-column="54" selection-end-line="109" selection-end-column="54" />
+            <state relative-caret-position="366">
+              <caret line="106" column="48" lean-forward="false" selection-start-line="106" selection-start-column="48" selection-end-line="106" selection-end-column="48" />
               <folding>
                 <marker date="1530629607143" expanded="false" signature="3354:3367" ph="..." />
                 <marker date="1530629607143" expanded="false" signature="3477:3489" ph="..." />
@@ -158,7 +171,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/service/CottonPriceService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/constants/CottonPattern.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/compute/batchCompute.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/util/ExcelUtils.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/compute/compute.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/util/Common.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/CottonBatchServiceImpl.java" />
@@ -176,13 +188,14 @@
         <option value="$PROJECT_DIR$/src/main/resources/db/cotton.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/dao/CottonBatchMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/dto/CottonBatchDto.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/controller/ComputeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/constants/RangeStrategyType.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/controller/CottonTemplateController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/template/templateUpdate.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/controller/UserController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/views/cottonTemplate.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/main.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/controller/ComputeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/tay/futures/util/ExcelUtils.java" />
       </list>
     </option>
   </component>
@@ -225,6 +238,82 @@
           <expand>
             <path>
               <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="futures-web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="futures-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="futures-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="futures-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="futures-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="futures" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="futures-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="futures" type="462c0819:PsiDirectoryNode" />
+              <item name="constants" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="futures-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="futures" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="futures-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="futures" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="futures-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="futures" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="futures-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="futures" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
@@ -244,6 +333,14 @@
               <item name="&lt; 1.7 &gt;" type="70bed36:NamedLibraryElementNode" />
               <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.7 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="lang" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="futures-web" type="b2602c69:ProjectViewProjectNode" />
@@ -787,7 +884,7 @@
       <option name="presentableId" value="Default" />
       <updated>1530274763313</updated>
       <workItem from="1530274765072" duration="13902000" />
-      <workItem from="1530498531432" duration="30033000" />
+      <workItem from="1530498531432" duration="36515000" />
     </task>
     <servers />
   </component>
@@ -824,7 +921,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44208000" />
+    <option name="totallyTimeSpent" value="50690000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -837,6 +934,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -857,10 +955,10 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20530726" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4140625" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4140625" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2585288" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2531983" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38169643" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -943,48 +1041,12 @@
           <properties />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tay/futures/controller/CottonTemplateController.java</url>
-          <line>87</line>
-          <properties />
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/tay/futures/controller/CottonTemplateController.java</url>
-          <line>113</line>
-          <properties />
-          <option name="timeStamp" value="23" />
-        </line-breakpoint>
       </breakpoints>
       <option name="time" value="45" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mappers/CottonCrawlerMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1530506603237" expanded="true" signature="3434:3543" ph="select from cotton_crawler" />
-            <marker date="1530506603237" expanded="true" signature="3627:3690" ph="delete from " />
-            <marker date="1530506603237" expanded="true" signature="3800:3826" ph="delete from " />
-            <marker date="1530506603237" expanded="true" signature="5118:5153" ph="select count... cotton_crawler" />
-            <marker date="1530506603237" expanded="true" signature="5869:6050" ph="update cotto... " />
-            <marker date="1530506603237" expanded="true" signature="6268:6556" ph="update cotto... " />
-            <marker date="1530506603237" expanded="true" signature="6662:6825" ph="update cotto... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/generated-sources/mybatis-generator/com/tay/futures/entity/CottonCrawler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/entity/CottonCrawler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1383,42 +1445,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/util/ExcelUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="49" column="25" lean-forward="true" selection-start-line="49" selection-start-column="25" selection-end-line="49" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/service/ServiceTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="52" column="48" lean-forward="false" selection-start-line="52" selection-start-column="48" selection-end-line="52" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/CottonPriceServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="79" column="39" lean-forward="false" selection-start-line="79" selection-start-column="39" selection-end-line="79" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/controller/CottonTemplateController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="226" column="45" lean-forward="false" selection-start-line="226" selection-start-column="28" selection-end-line="226" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/constants/RangeStrategyType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -1435,14 +1465,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
-          <caret line="83" column="62" lean-forward="false" selection-start-line="83" selection-start-column="62" selection-end-line="83" selection-end-column="62" />
           <folding />
         </state>
       </provider>
@@ -1474,26 +1496,85 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/controller/ComputeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="154" column="40" lean-forward="false" selection-start-line="154" selection-start-column="29" selection-end-line="154" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/main.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="109" column="54" lean-forward="false" selection-start-line="109" selection-start-column="54" selection-end-line="109" selection-end-column="54" />
+        <state relative-caret-position="366">
+          <caret line="106" column="48" lean-forward="false" selection-start-line="106" selection-start-column="48" selection-end-line="106" selection-end-column="48" />
           <folding>
             <marker date="1530629607143" expanded="false" signature="3354:3367" ph="..." />
             <marker date="1530629607143" expanded="false" signature="3477:3489" ph="..." />
             <marker date="1530629607143" expanded="false" signature="3753:3766" ph="..." />
             <marker date="1530629607143" expanded="false" signature="3875:3887" ph="..." />
             <marker date="1530629607143" expanded="false" signature="4136:4149" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/controller/CottonTemplateController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2694">
+          <caret line="143" column="56" lean-forward="false" selection-start-line="143" selection-start-column="56" selection-end-line="143" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/constants/RangeStrategyType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/service/impl/CottonPriceServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-220">
+          <caret line="110" column="27" lean-forward="false" selection-start-line="110" selection-start-column="12" selection-end-line="110" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/poi/poi/3.9/poi-3.9-sources.jar!/org/apache/poi/ss/usermodel/Cell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="206" column="9" lean-forward="false" selection-start-line="206" selection-start-column="9" selection-end-line="206" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Program Files/Java/jdk1.7.0_79/src.zip!/java/lang/Long.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="762" column="18" lean-forward="false" selection-start-line="762" selection-start-column="18" selection-end-line="762" selection-end-column="18" />
+          <folding>
+            <element signature="e#27324#27325#0" expanded="true" />
+            <element signature="e#27362#27363#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-338">
+          <caret line="80" column="50" lean-forward="false" selection-start-line="80" selection-start-column="50" selection-end-line="80" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/util/ExcelUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="134" column="29" lean-forward="true" selection-start-line="134" selection-start-column="29" selection-end-line="134" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/tay/futures/controller/ComputeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

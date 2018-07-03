@@ -76,9 +76,9 @@ public class UserController {
             MDC.put("userName", user.getUserName());
 
             //获取首页信息
-            PageInfo pageBean=new PageInfo(1,10);
+           /* PageInfo pageBean=new PageInfo(1,10);
             pageBean=cottonBatchService.getCottonBatchByPage(pageBean.getPageNo(),pageBean.getPageSize());
-            model.addAttribute("page",pageBean);
+            model.addAttribute("page",pageBean);*/
             List<CottonTemplate> cottonTemplateList=cottonTemplateService.getAllCottonTemplateByUid(resultUser.getId());
             model.addAttribute("cottonTemplateList",cottonTemplateList);
             model.addAttribute("userName",user.getUserName());

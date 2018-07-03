@@ -148,10 +148,10 @@ public class ComputeController {
                 }else {
                     cottonBatchDtoList=cottonPriceService.batchComputePrice(cottonBatchDtoList,templateId);
                     //todo write to excel
+                    List<String[]> rows =buildTableContent(cottonBatchDtoList);
 
 
-
-                    List<String> headerNameList = CottonPattern.getHeaderNames();
+                 /*   List<String> headerNameList = CottonPattern.getHeaderNames();
                     String[] headerNames=headerNameList.toArray(new String[headerNameList.size()]);
                     List<String[]> rows = new ArrayList<>(cottonBatchDtoList.size());
                     for(CottonBatchDto dto:cottonBatchDtoList){
@@ -179,11 +179,12 @@ public class ComputeController {
                         row[20] =dto.getStrength().toString();
                         row[21] =dto.getPrice().toString();
                         rows.add(row);
-                    }
+                    }*/
+
                     HttpSession session = request.getSession();
                     User currentUser=(User)session.getAttribute("currentUser");
                     String fileName=COTTON_PRICE_FILE_NAME+"_"+ DateUtil.getCurrentDateStr()+"_" +currentUser.getUserName()+".xlsx";
-                    ExcelUtils.writeExcelTable(request, response, fileName, headerNames, rows);
+                    ExcelUtils.writeCottonExcelTable(request, response, fileName,  rows);
                 }
 
 
@@ -260,6 +261,65 @@ public class ComputeController {
             cottonBatchList.add(cottonBatch);
         }
         return cottonBatchList;
+    }
+
+
+    public List<String[]> buildTableContent (List<CottonBatchDto> cottonBatchDtoList){
+        List<String[]> rows = new ArrayList<>(cottonBatchDtoList.size());
+        for(CottonBatchDto dto:cottonBatchDtoList){
+            String[] row = new String[50];
+            row[0] =dto.getProductionCode() == null ? "": dto.getProductionCode().toString();
+            row[1] =dto.getPrice() == null ? "": dto.getPrice().toString();
+            row[2] =dto.getColourW1() == null ? "": dto.getColourW1().toString();
+            row[3] =dto.getColourW2() == null ? "": dto.getColourW2().toString();
+            row[4] =dto.getColourW3() == null ? "": dto.getColourW3().toString();
+            row[5] =dto.getColourW4() == null ? "": dto.getColourW4().toString();
+            row[6] =dto.getColourW5() == null ? "": dto.getColourW5().toString();
+            row[7] =dto.getColourL1() == null ? "": dto.getColourL1().toString();
+            row[8] =dto.getColourL2() == null ? "": dto.getColourL2().toString();
+            row[9] =dto.getColourL3() == null ? "": dto.getColourL3().toString();
+            row[10] =dto.getColourLy1() == null ? "": dto.getColourLy1().toString();
+            row[11] =dto.getColourLy2() == null ? "": dto.getColourLy2().toString();
+            row[12] =dto.getColourLy3() == null ? "": dto.getColourLy3().toString();
+            row[13] =dto.getColourY1() == null ? "": dto.getColourY1().toString();
+            row[14] =dto.getColourY2() == null ? "": dto.getColourY2().toString();
+            row[15] =dto.getAvgLength() == null ? "": dto.getAvgLength().toString();
+            row[16] =dto.getLength32() == null ? "": dto.getLength32().toString();
+            row[17] =dto.getLength31() == null ? "": dto.getLength31().toString();
+            row[18] =dto.getLength30() == null ? "": dto.getLength30().toString();
+            row[19] =dto.getLength29() == null ? "": dto.getLength29().toString();
+            row[20] =dto.getLength28() == null ? "": dto.getLength28().toString();
+            row[21] =dto.getLength27() == null ? "": dto.getLength27().toString();
+            row[22] =dto.getLength26() == null ? "": dto.getLength26().toString();
+            row[23] =dto.getLength25() == null ? "": dto.getLength25().toString();
+            row[24] =dto.getAvgMicronaire() == null ? "": dto.getAvgMicronaire().toString();
+            row[25] =dto.getMicronaireC1() == null ? "": dto.getMicronaireC1().toString();
+            row[26] =dto.getMicronaireB1() == null ? "": dto.getMicronaireB1().toString();
+            row[27] =dto.getMicronaireA() == null ? "": dto.getMicronaireA().toString();
+            row[28] =dto.getMicronaireB2() == null ? "": dto.getMicronaireB2().toString();
+            row[29] =dto.getMicronaireC2() == null ? "": dto.getMicronaireC2().toString();
+            row[30] =dto.getStrength() == null ? "": dto.getStrength().toString();
+            row[31] =dto.getStrengthMax() == null ? "": dto.getStrengthMax().toString();
+            row[32] =dto.getStrengthMin() == null ? "": dto.getStrengthMin().toString();
+            row[33] =dto.getAvgEvenness() == null ? "": dto.getAvgEvenness().toString();
+            row[34] =dto.getEvennessMax() == null ? "": dto.getEvennessMax().toString();
+            row[35] =dto.getEvennessMin() == null ? "": dto.getEvennessMin().toString();
+            row[36] =dto.getGinningP1() == null ? "": dto.getGinningP1().toString();
+            row[37] =dto.getGinningP2() == null ? "": dto.getGinningP2().toString();
+            row[38] =dto.getGinningP3() == null ? "": dto.getGinningP3().toString();
+            row[39] =dto.getPackageNum() == null ? "": dto.getPackageNum().toString();
+            row[40] =dto.getWeightGross() == null ? "": dto.getWeightGross().toString();
+            row[41] =dto.getWeightTare() == null ? "": dto.getWeightTare().toString();
+            row[42] =dto.getWeightNet() == null ? "": dto.getWeightNet().toString();
+            row[43] =dto.getWeightConditoned() == null ? "": dto.getWeightConditoned().toString();
+            row[45] =dto.getHuichao() == null ? "": dto.getHuichao().toString();
+            row[46] =dto.getProductionArea() == null ? "": dto.getProductionArea().toString();
+            row[47] =dto.getJiagongleixing() == null ? "": dto.getJiagongleixing().toString();
+            row[48] =dto.getFactory() == null ? "": dto.getFactory().toString();
+            row[49] =dto.getWarehouse() == null ? "": dto.getWarehouse().toString();
+            rows.add(row);
+        }
+        return rows;
     }
 
 
