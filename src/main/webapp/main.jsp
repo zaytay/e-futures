@@ -65,90 +65,7 @@
     </table>
 </div>
 <%@include file="/WEB-INF/jsp/compute/compute.jsp" %>
-<%--
-<div region="center">
-    <div class="easyui-tabs" fit="true" border="false" id="tabs">
-        <div title="首页" data-options="iconCls:'icon-home'">
-            <!-- <div align="center" style="padding-top: 20px;"><a
-                    href="https://git.oschina.net/zhenfeng13/ssm-demo"
-                    target="_blank" style="font-size: 20px;">开源中国仓库地址</a>
-            </div>
-            <div align="center" style="padding-top: 20px;"><a href="https://github.com/ZHENFENG13/ssm-demo"
-                                                              target="_blank"
-                                                              style="font-size: 20px;">Gitub仓库地址</a></div>
 
-            <div align="center" style="padding-top: 50px;"><a
-                    href="http://download.csdn.net/detail/zhenfengshisan/9813721"
-                    target="_blank" style="font-size: 20px;">项目源码下载(最新代码)</a>
-            </div>
-            <div align="center" style="padding-top: 20px;"><a
-                    href="http://download.csdn.net/detail/zhenfengshisan/9765855"
-                    target="_blank" style="font-size: 20px;">项目源码下载(非maven)</a>
-            </div> -->
-            <div align="center" style="padding-top: 50px">
-                <font color="grey" size="10">棉花期货web-demo</font>
-            </div>
-
-
-            <form method="post" action="/cpc/query">
-                <table border="0"   >
-
-                    <tr >
-                        <td>棉花期货单号：</td>
-                        <td><input id="keyword" type="text" name="keyword" value="${keyword}"></td>
-                        <td>    <input type="submit" value="查询"/> </td>
-
-                    </tr>
-
-                </table>
-            </form>
-
-            <br/>
-            <br/>
-
-
-
-
-
-            <table border="2">
-                <thead>
-                <tr>
-                    <th>批号</th>
-                    <th>类型</th>
-                    <th>加工单位</th>
-                    <th>件数</th>
-                    <th>价格</th>
-                    <th>重量</th>
-                    <th>颜色级</th>
-                </tr>
-                </thead>
-                <tbody>
-
-                <c:forEach  var="i"  begin="1"  end="9" step="1">
-                    <tr>
-                        <th>${i}</th>
-                        <th>手摘</th>
-                        <th>河南棉花基地</th>
-                        <th>120</th>
-                        <th>10000</th>
-                        <th>
-                            27.396
-                        </th>
-                        <th>
-                            黄染棉1级
-                        </th>
-                    </tr>
-                </c:forEach>
-
-                </tbody>
-            </table>
-            <%@include file="/WEB-INF/jsp/common/page.jsp" %>
-
-
-        </div>
-    </div>
-</div>
---%>
 <div region="west" style="width: 200px;height:500px;" title="导航菜单"
      split="true">
     <div class="easyui-accordion">
@@ -187,10 +104,13 @@
         </div>
         <div title="用户管理" data-options="iconCls:'icon-item'"
              style="padding:10px;border:none;">
-            <a href="javascript:openTab(' 管理员列表','userManage.jsp','icon-lxr')"
-               class="easyui-linkbutton"
-               data-options="plain:true,iconCls:'icon-lxr'" style="width: 150px;">
-                管理员列表</a>
+            <c:if test="${userName == 'admin'}">
+                <a href="javascript:openTab(' 管理员列表','userManage.jsp','icon-lxr')"
+                   class="easyui-linkbutton"
+                   data-options="plain:true,iconCls:'icon-lxr'" style="width: 150px;">
+                    管理员列表</a>
+            </c:if>
+
 
 
             <a href="javascript:logout()"

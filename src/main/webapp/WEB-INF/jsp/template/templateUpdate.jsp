@@ -266,48 +266,86 @@
             <br/>
             <br/>
             <br/>
-            <%--
-                        <table border="0"   >
-                            <tr>
-                                <td>含杂区间策略</td>
-                            </tr>
-                            <c:set var="supplement" value="5" />
-                            <c:forEach items="${miscellaneousStrategies}" var="item" varStatus="status">
-                                <tr>
-                                    <td>区间：${status.index}</td>
-                                    <td>最小值:</td>
-                                    <td><input type="text" id="min" name="rangeStrategyVoList[${strategyIndex}].min"  value="${item.min}"/></td>
-                                    <td>最大值:</td>
-                                    <td><input type="text" id="max" name="rangeStrategyVoList[${strategyIndex}].max"  value="${item.max}"/></td>
-                                    <td>价格:</td>
-                                    <td><input type="text" id="price" name="rangeStrategyVoList[${strategyIndex}].price" value="${item.price}" /></td>
-                                    <td>
-                                        <input type="hidden" id="type" name="rangeStrategyVoList[${strategyIndex}].type"   value="5" />
-                                    </td>
-                                </tr>
-                                <c:set var="strategyIndex" value="${strategyIndex+1}" />
-                                <c:set var="supplement" value="${supplement-1}" />
-                            </c:forEach>
-                            <c:forEach  var="item" begin="1"  end="${supplement}" step="1">
-                                <tr>
-                                    <td>区间：${strategyIndex}</td>
-                                    <td>最小值:</td>
-                                    <td><input type="text" id="min" name="rangeStrategyVoList[${strategyIndex}].min"  /></td>
-                                    <td>最大值:</td>
-                                    <td><input type="text" id="max" name="rangeStrategyVoList[${strategyIndex}].max"  /></td>
-                                    <td>价格:</td>
-                                    <td><input type="text" id="price" name="rangeStrategyVoList[${strategyIndex}].price"  /></td>
-                                    <td>
-                                        <input type="hidden" id="type" name="rangeStrategyVoList[${strategyIndex}].type"   value="5" />
-                                    </td>
-                                </tr>
-                                <c:set var="strategyIndex" value="${strategyIndex+1}" />
-                            </c:forEach>
-                        </table>
-            --%>
+            <table border="0"   >
+                <tr>
+                    <td>含杂区间策略</td>
+                </tr>
+                <c:set var="supplement" value="5" />
+                <c:forEach items="${miscellaneousStrategies}" var="item" varStatus="status">
+                    <tr>
+                        <td>区间:</td>
+                        <td>最小值:</td>
+                        <td><input type="text" id="min" name="rangeStrategyVoList[${strategyIndex}].min"  value="${item.min}"/></td>
+                        <td>最大值:</td>
+                        <td><input type="text" id="max" name="rangeStrategyVoList[${strategyIndex}].max"  value="${item.max}"/></td>
+                        <td>价格:</td>
+                        <td><input type="text" id="price" name="rangeStrategyVoList[${strategyIndex}].price" value="${item.price}" /></td>
+                        <td>
+                            <input type="hidden" id="type" name="rangeStrategyVoList[${strategyIndex}].type"   value="5" />
+                        </td>
+                    </tr>
+                    <c:set var="strategyIndex" value="${strategyIndex+1}" />
+                    <c:set var="supplement" value="${supplement-1}" />
+                </c:forEach>
+                <c:forEach  var="item" begin="1"  end="${supplement}" step="1">
+                    <tr>
+                        <td>区间:</td>
+                        <td>最小值:</td>
+                        <td><input type="text" id="min" name="rangeStrategyVoList[${strategyIndex}].min"  /></td>
+                        <td>最大值:</td>
+                        <td><input type="text" id="max" name="rangeStrategyVoList[${strategyIndex}].max"  /></td>
+                        <td>价格:</td>
+                        <td><input type="text" id="price" name="rangeStrategyVoList[${strategyIndex}].price"  /></td>
+                        <td>
+                            <input type="hidden" id="type" name="rangeStrategyVoList[${strategyIndex}].type"   value="5" />
+                        </td>
+                    </tr>
+                    <c:set var="strategyIndex" value="${strategyIndex+1}" />
+                </c:forEach>
+            </table>
 
 
 
+            <br/>
+            <br/>
+            <br/>
+            <table border="0"   >
+                <tr>
+                    <td>防潮区间策略</td>
+                </tr>
+                <c:set var="supplement" value="5" />
+                <c:forEach items="${huichaoStrategies}" var="item" varStatus="status">
+                    <tr>
+                        <td>区间:</td>
+                        <td>最小值:</td>
+                        <td><input type="text" id="min" name="rangeStrategyVoList[${strategyIndex}].min"  value="${item.min}"/></td>
+                        <td>最大值:</td>
+                        <td><input type="text" id="max" name="rangeStrategyVoList[${strategyIndex}].max"  value="${item.max}"/></td>
+                        <td>价格:</td>
+                        <td><input type="text" id="price" name="rangeStrategyVoList[${strategyIndex}].price" value="${item.price}" /></td>
+                        <td>
+                            <input type="hidden" id="type" name="rangeStrategyVoList[${strategyIndex}].type"   value="6" />
+                        </td>
+                    </tr>
+                    <c:set var="strategyIndex" value="${strategyIndex+1}" />
+                    <c:set var="supplement" value="${supplement-1}" />
+                </c:forEach>
+                <c:forEach  var="item" begin="1"  end="${supplement}" step="1">
+                    <tr>
+                        <td>区间:</td>
+                        <td>最小值:</td>
+                        <td><input type="text" id="min" name="rangeStrategyVoList[${strategyIndex}].min"  /></td>
+                        <td>最大值:</td>
+                        <td><input type="text" id="max" name="rangeStrategyVoList[${strategyIndex}].max"  /></td>
+                        <td>价格:</td>
+                        <td><input type="text" id="price" name="rangeStrategyVoList[${strategyIndex}].price"  /></td>
+                        <td>
+                            <input type="hidden" id="type" name="rangeStrategyVoList[${strategyIndex}].type"   value="6" />
+                        </td>
+                    </tr>
+                    <c:set var="strategyIndex" value="${strategyIndex+1}" />
+                </c:forEach>
+            </table>
 
 
 

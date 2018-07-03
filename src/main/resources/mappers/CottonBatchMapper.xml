@@ -29,6 +29,30 @@
     <result column="production_area" property="productionArea" jdbcType="VARCHAR" />
     <result column="warehouse" property="warehouse" jdbcType="VARCHAR" />
     <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="length_32" property="length32" jdbcType="DOUBLE" />
+    <result column="length_31" property="length31" jdbcType="DOUBLE" />
+    <result column="length_30" property="length30" jdbcType="DOUBLE" />
+    <result column="length_29" property="length29" jdbcType="DOUBLE" />
+    <result column="length_28" property="length28" jdbcType="DOUBLE" />
+    <result column="length_27" property="length27" jdbcType="DOUBLE" />
+    <result column="length_26" property="length26" jdbcType="DOUBLE" />
+    <result column="length_25" property="length25" jdbcType="DOUBLE" />
+    <result column="micronaire_c1" property="micronaireC1" jdbcType="DOUBLE" />
+    <result column="micronaire_b1" property="micronaireB1" jdbcType="DOUBLE" />
+    <result column="micronaire_a" property="micronaireA" jdbcType="DOUBLE" />
+    <result column="micronaire_b2" property="micronaireB2" jdbcType="DOUBLE" />
+    <result column="micronaire_c2" property="micronaireC2" jdbcType="DOUBLE" />
+    <result column="huichao" property="huichao" jdbcType="DOUBLE" />
+    <result column="strength_max" property="strengthMax" jdbcType="DOUBLE" />
+    <result column="strength_min" property="strengthMin" jdbcType="DOUBLE" />
+    <result column="evenness_max" property="evennessMax" jdbcType="DOUBLE" />
+    <result column="evenness_min" property="evennessMin" jdbcType="DOUBLE" />
+    <result column="weight_gross" property="weightGross" jdbcType="DOUBLE" />
+    <result column="weight_tare" property="weightTare" jdbcType="DOUBLE" />
+    <result column="weight_net" property="weightNet" jdbcType="DOUBLE" />
+    <result column="weight_conditoned" property="weightConditoned" jdbcType="DOUBLE" />
+    <result column="jiagongleixing" property="jiagongleixing" jdbcType="VARCHAR" />
+    <result column="package_num" property="packageNum" jdbcType="VARCHAR" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -92,7 +116,11 @@
     id, production_code, colour_w1, colour_w2, colour_w3, colour_w4, colour_w5, colour_l1, 
     colour_l2, colour_l3, colour_ly1, colour_ly2, colour_ly3, colour_y1, colour_y2, ginning_p1, 
     ginning_p2, ginning_p3, avg_length, avg_micronaire, avg_evenness, strength, miscellaneous, 
-    factory, production_area, warehouse, remark
+    factory, production_area, warehouse, remark, length_32, length_31, length_30, length_29, 
+    length_28, length_27, length_26, length_25, micronaire_c1, micronaire_b1, micronaire_a, 
+    micronaire_b2, micronaire_c2, huichao, strength_max, strength_min, evenness_max, 
+    evenness_min, weight_gross, weight_tare, weight_net, weight_conditoned, jiagongleixing, 
+    package_num
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.tay.futures.entity.CottonBatchExample" >
     select
@@ -136,7 +164,15 @@
       ginning_p2, ginning_p3, avg_length, 
       avg_micronaire, avg_evenness, strength, 
       miscellaneous, factory, production_area, 
-      warehouse, remark)
+      warehouse, remark, length_32, 
+      length_31, length_30, length_29, 
+      length_28, length_27, length_26, 
+      length_25, micronaire_c1, micronaire_b1, 
+      micronaire_a, micronaire_b2, micronaire_c2, 
+      huichao, strength_max, strength_min, 
+      evenness_max, evenness_min, weight_gross, 
+      weight_tare, weight_net, weight_conditoned, 
+      jiagongleixing, package_num)
     values (#{productionCode,jdbcType=BIGINT}, #{colourW1,jdbcType=DOUBLE}, #{colourW2,jdbcType=DOUBLE}, 
       #{colourW3,jdbcType=DOUBLE}, #{colourW4,jdbcType=DOUBLE}, #{colourW5,jdbcType=DOUBLE}, 
       #{colourL1,jdbcType=DOUBLE}, #{colourL2,jdbcType=DOUBLE}, #{colourL3,jdbcType=DOUBLE}, 
@@ -145,7 +181,15 @@
       #{ginningP2,jdbcType=DOUBLE}, #{ginningP3,jdbcType=DOUBLE}, #{avgLength,jdbcType=DOUBLE}, 
       #{avgMicronaire,jdbcType=DOUBLE}, #{avgEvenness,jdbcType=DOUBLE}, #{strength,jdbcType=DOUBLE}, 
       #{miscellaneous,jdbcType=DOUBLE}, #{factory,jdbcType=VARCHAR}, #{productionArea,jdbcType=VARCHAR}, 
-      #{warehouse,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR})
+      #{warehouse,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{length32,jdbcType=DOUBLE}, 
+      #{length31,jdbcType=DOUBLE}, #{length30,jdbcType=DOUBLE}, #{length29,jdbcType=DOUBLE}, 
+      #{length28,jdbcType=DOUBLE}, #{length27,jdbcType=DOUBLE}, #{length26,jdbcType=DOUBLE}, 
+      #{length25,jdbcType=DOUBLE}, #{micronaireC1,jdbcType=DOUBLE}, #{micronaireB1,jdbcType=DOUBLE}, 
+      #{micronaireA,jdbcType=DOUBLE}, #{micronaireB2,jdbcType=DOUBLE}, #{micronaireC2,jdbcType=DOUBLE}, 
+      #{huichao,jdbcType=DOUBLE}, #{strengthMax,jdbcType=DOUBLE}, #{strengthMin,jdbcType=DOUBLE}, 
+      #{evennessMax,jdbcType=DOUBLE}, #{evennessMin,jdbcType=DOUBLE}, #{weightGross,jdbcType=DOUBLE}, 
+      #{weightTare,jdbcType=DOUBLE}, #{weightNet,jdbcType=DOUBLE}, #{weightConditoned,jdbcType=DOUBLE}, 
+      #{jiagongleixing,jdbcType=VARCHAR}, #{packageNum,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.tay.futures.entity.CottonBatch" >
     <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
@@ -231,6 +275,78 @@
       <if test="remark != null" >
         remark,
       </if>
+      <if test="length32 != null" >
+        length_32,
+      </if>
+      <if test="length31 != null" >
+        length_31,
+      </if>
+      <if test="length30 != null" >
+        length_30,
+      </if>
+      <if test="length29 != null" >
+        length_29,
+      </if>
+      <if test="length28 != null" >
+        length_28,
+      </if>
+      <if test="length27 != null" >
+        length_27,
+      </if>
+      <if test="length26 != null" >
+        length_26,
+      </if>
+      <if test="length25 != null" >
+        length_25,
+      </if>
+      <if test="micronaireC1 != null" >
+        micronaire_c1,
+      </if>
+      <if test="micronaireB1 != null" >
+        micronaire_b1,
+      </if>
+      <if test="micronaireA != null" >
+        micronaire_a,
+      </if>
+      <if test="micronaireB2 != null" >
+        micronaire_b2,
+      </if>
+      <if test="micronaireC2 != null" >
+        micronaire_c2,
+      </if>
+      <if test="huichao != null" >
+        huichao,
+      </if>
+      <if test="strengthMax != null" >
+        strength_max,
+      </if>
+      <if test="strengthMin != null" >
+        strength_min,
+      </if>
+      <if test="evennessMax != null" >
+        evenness_max,
+      </if>
+      <if test="evennessMin != null" >
+        evenness_min,
+      </if>
+      <if test="weightGross != null" >
+        weight_gross,
+      </if>
+      <if test="weightTare != null" >
+        weight_tare,
+      </if>
+      <if test="weightNet != null" >
+        weight_net,
+      </if>
+      <if test="weightConditoned != null" >
+        weight_conditoned,
+      </if>
+      <if test="jiagongleixing != null" >
+        jiagongleixing,
+      </if>
+      <if test="packageNum != null" >
+        package_num,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="productionCode != null" >
@@ -310,6 +426,78 @@
       </if>
       <if test="remark != null" >
         #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="length32 != null" >
+        #{length32,jdbcType=DOUBLE},
+      </if>
+      <if test="length31 != null" >
+        #{length31,jdbcType=DOUBLE},
+      </if>
+      <if test="length30 != null" >
+        #{length30,jdbcType=DOUBLE},
+      </if>
+      <if test="length29 != null" >
+        #{length29,jdbcType=DOUBLE},
+      </if>
+      <if test="length28 != null" >
+        #{length28,jdbcType=DOUBLE},
+      </if>
+      <if test="length27 != null" >
+        #{length27,jdbcType=DOUBLE},
+      </if>
+      <if test="length26 != null" >
+        #{length26,jdbcType=DOUBLE},
+      </if>
+      <if test="length25 != null" >
+        #{length25,jdbcType=DOUBLE},
+      </if>
+      <if test="micronaireC1 != null" >
+        #{micronaireC1,jdbcType=DOUBLE},
+      </if>
+      <if test="micronaireB1 != null" >
+        #{micronaireB1,jdbcType=DOUBLE},
+      </if>
+      <if test="micronaireA != null" >
+        #{micronaireA,jdbcType=DOUBLE},
+      </if>
+      <if test="micronaireB2 != null" >
+        #{micronaireB2,jdbcType=DOUBLE},
+      </if>
+      <if test="micronaireC2 != null" >
+        #{micronaireC2,jdbcType=DOUBLE},
+      </if>
+      <if test="huichao != null" >
+        #{huichao,jdbcType=DOUBLE},
+      </if>
+      <if test="strengthMax != null" >
+        #{strengthMax,jdbcType=DOUBLE},
+      </if>
+      <if test="strengthMin != null" >
+        #{strengthMin,jdbcType=DOUBLE},
+      </if>
+      <if test="evennessMax != null" >
+        #{evennessMax,jdbcType=DOUBLE},
+      </if>
+      <if test="evennessMin != null" >
+        #{evennessMin,jdbcType=DOUBLE},
+      </if>
+      <if test="weightGross != null" >
+        #{weightGross,jdbcType=DOUBLE},
+      </if>
+      <if test="weightTare != null" >
+        #{weightTare,jdbcType=DOUBLE},
+      </if>
+      <if test="weightNet != null" >
+        #{weightNet,jdbcType=DOUBLE},
+      </if>
+      <if test="weightConditoned != null" >
+        #{weightConditoned,jdbcType=DOUBLE},
+      </if>
+      <if test="jiagongleixing != null" >
+        #{jiagongleixing,jdbcType=VARCHAR},
+      </if>
+      <if test="packageNum != null" >
+        #{packageNum,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -403,6 +591,78 @@
       <if test="record.remark != null" >
         remark = #{record.remark,jdbcType=VARCHAR},
       </if>
+      <if test="record.length32 != null" >
+        length_32 = #{record.length32,jdbcType=DOUBLE},
+      </if>
+      <if test="record.length31 != null" >
+        length_31 = #{record.length31,jdbcType=DOUBLE},
+      </if>
+      <if test="record.length30 != null" >
+        length_30 = #{record.length30,jdbcType=DOUBLE},
+      </if>
+      <if test="record.length29 != null" >
+        length_29 = #{record.length29,jdbcType=DOUBLE},
+      </if>
+      <if test="record.length28 != null" >
+        length_28 = #{record.length28,jdbcType=DOUBLE},
+      </if>
+      <if test="record.length27 != null" >
+        length_27 = #{record.length27,jdbcType=DOUBLE},
+      </if>
+      <if test="record.length26 != null" >
+        length_26 = #{record.length26,jdbcType=DOUBLE},
+      </if>
+      <if test="record.length25 != null" >
+        length_25 = #{record.length25,jdbcType=DOUBLE},
+      </if>
+      <if test="record.micronaireC1 != null" >
+        micronaire_c1 = #{record.micronaireC1,jdbcType=DOUBLE},
+      </if>
+      <if test="record.micronaireB1 != null" >
+        micronaire_b1 = #{record.micronaireB1,jdbcType=DOUBLE},
+      </if>
+      <if test="record.micronaireA != null" >
+        micronaire_a = #{record.micronaireA,jdbcType=DOUBLE},
+      </if>
+      <if test="record.micronaireB2 != null" >
+        micronaire_b2 = #{record.micronaireB2,jdbcType=DOUBLE},
+      </if>
+      <if test="record.micronaireC2 != null" >
+        micronaire_c2 = #{record.micronaireC2,jdbcType=DOUBLE},
+      </if>
+      <if test="record.huichao != null" >
+        huichao = #{record.huichao,jdbcType=DOUBLE},
+      </if>
+      <if test="record.strengthMax != null" >
+        strength_max = #{record.strengthMax,jdbcType=DOUBLE},
+      </if>
+      <if test="record.strengthMin != null" >
+        strength_min = #{record.strengthMin,jdbcType=DOUBLE},
+      </if>
+      <if test="record.evennessMax != null" >
+        evenness_max = #{record.evennessMax,jdbcType=DOUBLE},
+      </if>
+      <if test="record.evennessMin != null" >
+        evenness_min = #{record.evennessMin,jdbcType=DOUBLE},
+      </if>
+      <if test="record.weightGross != null" >
+        weight_gross = #{record.weightGross,jdbcType=DOUBLE},
+      </if>
+      <if test="record.weightTare != null" >
+        weight_tare = #{record.weightTare,jdbcType=DOUBLE},
+      </if>
+      <if test="record.weightNet != null" >
+        weight_net = #{record.weightNet,jdbcType=DOUBLE},
+      </if>
+      <if test="record.weightConditoned != null" >
+        weight_conditoned = #{record.weightConditoned,jdbcType=DOUBLE},
+      </if>
+      <if test="record.jiagongleixing != null" >
+        jiagongleixing = #{record.jiagongleixing,jdbcType=VARCHAR},
+      </if>
+      <if test="record.packageNum != null" >
+        package_num = #{record.packageNum,jdbcType=VARCHAR},
+      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -436,7 +696,31 @@
       factory = #{record.factory,jdbcType=VARCHAR},
       production_area = #{record.productionArea,jdbcType=VARCHAR},
       warehouse = #{record.warehouse,jdbcType=VARCHAR},
-      remark = #{record.remark,jdbcType=VARCHAR}
+      remark = #{record.remark,jdbcType=VARCHAR},
+      length_32 = #{record.length32,jdbcType=DOUBLE},
+      length_31 = #{record.length31,jdbcType=DOUBLE},
+      length_30 = #{record.length30,jdbcType=DOUBLE},
+      length_29 = #{record.length29,jdbcType=DOUBLE},
+      length_28 = #{record.length28,jdbcType=DOUBLE},
+      length_27 = #{record.length27,jdbcType=DOUBLE},
+      length_26 = #{record.length26,jdbcType=DOUBLE},
+      length_25 = #{record.length25,jdbcType=DOUBLE},
+      micronaire_c1 = #{record.micronaireC1,jdbcType=DOUBLE},
+      micronaire_b1 = #{record.micronaireB1,jdbcType=DOUBLE},
+      micronaire_a = #{record.micronaireA,jdbcType=DOUBLE},
+      micronaire_b2 = #{record.micronaireB2,jdbcType=DOUBLE},
+      micronaire_c2 = #{record.micronaireC2,jdbcType=DOUBLE},
+      huichao = #{record.huichao,jdbcType=DOUBLE},
+      strength_max = #{record.strengthMax,jdbcType=DOUBLE},
+      strength_min = #{record.strengthMin,jdbcType=DOUBLE},
+      evenness_max = #{record.evennessMax,jdbcType=DOUBLE},
+      evenness_min = #{record.evennessMin,jdbcType=DOUBLE},
+      weight_gross = #{record.weightGross,jdbcType=DOUBLE},
+      weight_tare = #{record.weightTare,jdbcType=DOUBLE},
+      weight_net = #{record.weightNet,jdbcType=DOUBLE},
+      weight_conditoned = #{record.weightConditoned,jdbcType=DOUBLE},
+      jiagongleixing = #{record.jiagongleixing,jdbcType=VARCHAR},
+      package_num = #{record.packageNum,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -522,6 +806,78 @@
       <if test="remark != null" >
         remark = #{remark,jdbcType=VARCHAR},
       </if>
+      <if test="length32 != null" >
+        length_32 = #{length32,jdbcType=DOUBLE},
+      </if>
+      <if test="length31 != null" >
+        length_31 = #{length31,jdbcType=DOUBLE},
+      </if>
+      <if test="length30 != null" >
+        length_30 = #{length30,jdbcType=DOUBLE},
+      </if>
+      <if test="length29 != null" >
+        length_29 = #{length29,jdbcType=DOUBLE},
+      </if>
+      <if test="length28 != null" >
+        length_28 = #{length28,jdbcType=DOUBLE},
+      </if>
+      <if test="length27 != null" >
+        length_27 = #{length27,jdbcType=DOUBLE},
+      </if>
+      <if test="length26 != null" >
+        length_26 = #{length26,jdbcType=DOUBLE},
+      </if>
+      <if test="length25 != null" >
+        length_25 = #{length25,jdbcType=DOUBLE},
+      </if>
+      <if test="micronaireC1 != null" >
+        micronaire_c1 = #{micronaireC1,jdbcType=DOUBLE},
+      </if>
+      <if test="micronaireB1 != null" >
+        micronaire_b1 = #{micronaireB1,jdbcType=DOUBLE},
+      </if>
+      <if test="micronaireA != null" >
+        micronaire_a = #{micronaireA,jdbcType=DOUBLE},
+      </if>
+      <if test="micronaireB2 != null" >
+        micronaire_b2 = #{micronaireB2,jdbcType=DOUBLE},
+      </if>
+      <if test="micronaireC2 != null" >
+        micronaire_c2 = #{micronaireC2,jdbcType=DOUBLE},
+      </if>
+      <if test="huichao != null" >
+        huichao = #{huichao,jdbcType=DOUBLE},
+      </if>
+      <if test="strengthMax != null" >
+        strength_max = #{strengthMax,jdbcType=DOUBLE},
+      </if>
+      <if test="strengthMin != null" >
+        strength_min = #{strengthMin,jdbcType=DOUBLE},
+      </if>
+      <if test="evennessMax != null" >
+        evenness_max = #{evennessMax,jdbcType=DOUBLE},
+      </if>
+      <if test="evennessMin != null" >
+        evenness_min = #{evennessMin,jdbcType=DOUBLE},
+      </if>
+      <if test="weightGross != null" >
+        weight_gross = #{weightGross,jdbcType=DOUBLE},
+      </if>
+      <if test="weightTare != null" >
+        weight_tare = #{weightTare,jdbcType=DOUBLE},
+      </if>
+      <if test="weightNet != null" >
+        weight_net = #{weightNet,jdbcType=DOUBLE},
+      </if>
+      <if test="weightConditoned != null" >
+        weight_conditoned = #{weightConditoned,jdbcType=DOUBLE},
+      </if>
+      <if test="jiagongleixing != null" >
+        jiagongleixing = #{jiagongleixing,jdbcType=VARCHAR},
+      </if>
+      <if test="packageNum != null" >
+        package_num = #{packageNum,jdbcType=VARCHAR},
+      </if>
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
@@ -552,7 +908,31 @@
       factory = #{factory,jdbcType=VARCHAR},
       production_area = #{productionArea,jdbcType=VARCHAR},
       warehouse = #{warehouse,jdbcType=VARCHAR},
-      remark = #{remark,jdbcType=VARCHAR}
+      remark = #{remark,jdbcType=VARCHAR},
+      length_32 = #{length32,jdbcType=DOUBLE},
+      length_31 = #{length31,jdbcType=DOUBLE},
+      length_30 = #{length30,jdbcType=DOUBLE},
+      length_29 = #{length29,jdbcType=DOUBLE},
+      length_28 = #{length28,jdbcType=DOUBLE},
+      length_27 = #{length27,jdbcType=DOUBLE},
+      length_26 = #{length26,jdbcType=DOUBLE},
+      length_25 = #{length25,jdbcType=DOUBLE},
+      micronaire_c1 = #{micronaireC1,jdbcType=DOUBLE},
+      micronaire_b1 = #{micronaireB1,jdbcType=DOUBLE},
+      micronaire_a = #{micronaireA,jdbcType=DOUBLE},
+      micronaire_b2 = #{micronaireB2,jdbcType=DOUBLE},
+      micronaire_c2 = #{micronaireC2,jdbcType=DOUBLE},
+      huichao = #{huichao,jdbcType=DOUBLE},
+      strength_max = #{strengthMax,jdbcType=DOUBLE},
+      strength_min = #{strengthMin,jdbcType=DOUBLE},
+      evenness_max = #{evennessMax,jdbcType=DOUBLE},
+      evenness_min = #{evennessMin,jdbcType=DOUBLE},
+      weight_gross = #{weightGross,jdbcType=DOUBLE},
+      weight_tare = #{weightTare,jdbcType=DOUBLE},
+      weight_net = #{weightNet,jdbcType=DOUBLE},
+      weight_conditoned = #{weightConditoned,jdbcType=DOUBLE},
+      jiagongleixing = #{jiagongleixing,jdbcType=VARCHAR},
+      package_num = #{packageNum,jdbcType=VARCHAR}
     where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

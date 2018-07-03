@@ -192,12 +192,16 @@
                 <td><input type="text" id="ratioStrategy.colourW4" name="ratioStrategyVo.colourW4"/></td>
                 <td>白棉5:</td>
                 <td><input type="text" id="ratioStrategy.colourW5" name="ratioStrategyVo.colourW5"/></td>
+            </tr>
+            <tr>
                 <td>淡棉1:</td>
                 <td><input type="text" id="ratioStrategy.colourL1" name="ratioStrategyVo.colourL1"/></td>
                 <td>淡棉2:</td>
                 <td><input type="text" id="ratioStrategy.colourL2" name="ratioStrategyVo.colourL2"/></td>
                 <td>淡棉3:</td>
                 <td><input type="text" id="ratioStrategy.colourL3" name="ratioStrategyVo.colourL3"/></td>
+            </tr>
+            <tr>
                 <td>淡黄1:</td>
                 <td><input type="text" id="ratioStrategy.colourLy1" name="ratioStrategyVo.colourLy1"/></td>
                 <td>淡黄2:</td>
@@ -474,7 +478,7 @@
 
         </br>
 
-     <%--   <table cellspacing="3px" border="0">
+        <table cellspacing="3px" border="0">
             <tr>
                 <td>含杂区间策略</td>
             </tr>
@@ -530,7 +534,66 @@
                 <td><input type="hidden" id="type" name="rangeStrategyVoList[24].type"   value="5" /></td>
             </tr>
         </table>
---%>
+
+
+        </br>
+
+        <table cellspacing="3px" border="0">
+            <tr>
+                <td>防潮区间策略</td>
+            </tr>
+            <tr>
+                <td>区间1：</td>
+                <td>最小值:</td>
+                <td><input type="text" id="min" name="rangeStrategyVoList[25].min"/></td>
+                <td>最大值:</td>
+                <td><input type="text" id="max" name="rangeStrategyVoList[25].max"/></td>
+                <td>价格:</td>
+                <td><input type="text" id="price" name="rangeStrategyVoList[25].price"/></td>
+                <td><input type="hidden" id="type" name="rangeStrategyVoList[25].type"   value="6" /></td>
+            </tr>
+
+            <tr>
+                <td>区间2：</td>
+                <td>最小值:</td>
+                <td><input type="text" id="min" name="rangeStrategyVoList[26].min"/></td>
+                <td>最大值:</td>
+                <td><input type="text" id="max" name="rangeStrategyVoList[26].max"/></td>
+                <td>价格:</td>
+                <td><input type="text" id="price" name="rangeStrategyVoList[26].price"/></td>
+                <td><input type="hidden" id="type" name="rangeStrategyVoList[26].type"   value="6" /></td>
+            </tr>
+            <tr>
+                <td>区间3：</td>
+                <td>最小值:</td>
+                <td><input type="text" id="min" name="rangeStrategyVoList[27].min"/></td>
+                <td>最大值:</td>
+                <td><input type="text" id="max" name="rangeStrategyVoList[27].max"/></td>
+                <td>价格:</td>
+                <td><input type="text" id="price" name="rangeStrategyVoList[27].price"/></td>
+                <td><input type="hidden" id="type" name="rangeStrategyVoList[27].type"   value="6" /></td>
+            </tr>
+            <tr>
+                <td>区间4：</td>
+                <td>最小值:</td>
+                <td><input type="text" id="min" name="rangeStrategyVoList[28].min"/></td>
+                <td>最大值:</td>
+                <td><input type="text" id="max" name="rangeStrategyVoList[28].max"/></td>
+                <td>价格:</td>
+                <td><input type="text" id="price" name="rangeStrategyVoList[28].price"/></td>
+                <td><input type="hidden" id="type" name="rangeStrategyVoList[28].type"   value="6" /></td>
+            </tr>
+            <tr>
+                <td>区间5：</td>
+                <td>最小值:</td>
+                <td><input type="text" id="min" name="rangeStrategyVoList[29].min"/></td>
+                <td>最大值:</td>
+                <td><input type="text" id="max" name="rangeStrategyVoList[29].max"/></td>
+                <td>价格:</td>
+                <td><input type="text" id="price" name="rangeStrategyVoList[29].price"/></td>
+                <td><input type="hidden" id="type" name="rangeStrategyVoList[29].type"   value="6" /></td>
+            </tr>
+        </table>
 
     </form>
 

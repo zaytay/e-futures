@@ -147,6 +147,10 @@ public class ComputeController {
                     ResponseUtil.write(response, "上传批号未找到任何数据");
                 }else {
                     cottonBatchDtoList=cottonPriceService.batchComputePrice(cottonBatchDtoList,templateId);
+                    //todo write to excel
+
+
+
                     List<String> headerNameList = CottonPattern.getHeaderNames();
                     String[] headerNames=headerNameList.toArray(new String[headerNameList.size()]);
                     List<String[]> rows = new ArrayList<>(cottonBatchDtoList.size());

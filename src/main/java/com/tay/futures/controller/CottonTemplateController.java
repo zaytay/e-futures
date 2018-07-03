@@ -199,6 +199,7 @@ public class CottonTemplateController {
         List<RangeStrategy> evennessStrategies= Lists.newArrayList();
         List<RangeStrategy> strengthStrategies= Lists.newArrayList();
         List<RangeStrategy> miscellaneousStrategies= Lists.newArrayList();
+        List<RangeStrategy> huichaoStrategies= Lists.newArrayList();
         for(RangeStrategy rangeStrategy:rangeStrategies){
             if(RangeStrategyType.LENGTH.getCode().equals(rangeStrategy.getType().intValue())){
                 lengthStrategies.add(rangeStrategy);
@@ -208,8 +209,11 @@ public class CottonTemplateController {
                 evennessStrategies.add(rangeStrategy);
             }else if(RangeStrategyType.STRENGTH.getCode().equals(rangeStrategy.getType().intValue())){
                 strengthStrategies.add(rangeStrategy);
+            }else if(RangeStrategyType.MISCELLANEOUS.getCode().equals(rangeStrategy.getType().intValue())){
+                miscellaneousStrategies.add(rangeStrategy);
+            }else if(RangeStrategyType.HUICHAO.getCode().equals(rangeStrategy.getType().intValue())){
+                huichaoStrategies.add(rangeStrategy);
             }
-
 
         }
 
@@ -220,6 +224,7 @@ public class CottonTemplateController {
         model.addAttribute("evennessStrategies",evennessStrategies);
         model.addAttribute("strengthStrategies",strengthStrategies);
         model.addAttribute("miscellaneousStrategies",miscellaneousStrategies);
+        model.addAttribute("huichaoStrategies",huichaoStrategies);
         return "templateinfo";
     }
 

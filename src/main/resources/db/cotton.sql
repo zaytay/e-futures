@@ -7,6 +7,62 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
+
+CREATE TABLE `cotton_batch` (
+  `id` bigint(10) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `production_code` bigint(10) unsigned NOT NULL COMMENT '产品批号',
+  `colour_w1` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '白棉1',
+  `colour_w2` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '白棉2',
+  `colour_w3` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '白棉3',
+  `colour_w4` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '白棉4',
+  `colour_w5` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '白棉5',
+  `colour_l1` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '淡棉1',
+  `colour_l2` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '淡棉2',
+  `colour_l3` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '淡棉3',
+  `colour_ly1` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '淡黄1',
+  `colour_ly2` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '淡黄2',
+  `colour_ly3` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '淡黄3',
+  `colour_y1` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '黄染1',
+  `colour_y2` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '黄染2',
+  `ginning_p1` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '轧工  P1',
+  `ginning_p2` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '轧工  P2',
+  `ginning_p3` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '轧工  P3',
+  `avg_length` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '长度均值',
+  `avg_micronaire` double(12,5) NOT NULL DEFAULT '0.00000' COMMENT '马克隆平均值',
+  `avg_evenness` double(12,5) NOT NULL DEFAULT '0.00000' COMMENT '长整均值',
+  `strength` double(12,5) NOT NULL DEFAULT '0.00000' COMMENT '强度',
+  `miscellaneous` double(12,5) NOT NULL DEFAULT '0.00000' COMMENT '含杂',
+  `factory` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '加工厂',
+  `production_area` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '产地',
+  `warehouse` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '存放仓库',
+  `remark` varchar(200) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '备注',
+  `length_32` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '长度32',
+  `length_31` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '长度31',
+  `length_30` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '长度30',
+  `length_29` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '长度29',
+  `length_28` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '长度28',
+  `length_27` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '长度27',
+  `length_26` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '长度26',
+  `length_25` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '长度25',
+  `micronaire_c1` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '马值C1',
+  `micronaire_b1` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '马值B1',
+  `micronaire_a` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '马值A',
+  `micronaire_b2` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '马值B2',
+  `micronaire_c2` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '马值C2',
+  `huichao` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '回潮',
+  `strength_max` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '强度最大',
+  `strength_min` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '强度最小',
+  `evenness_max` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '长整均值最大',
+  `evenness_min` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '长整均值最小',
+  `weight_gross` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '毛重',
+  `weight_tare` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '皮重',
+  `weight_net` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '净重',
+  `weight_conditoned` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '公重',
+  `jiagongleixing` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '加工类型',
+  `package_num` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '包数',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=209575 DEFAULT CHARSET=utf8 COLLATE=utf8_bin
+/*
 CREATE TABLE `cotton_batch` (
   `id` bigint(10) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `production_code` bigint(10) unsigned NOT NULL COMMENT '产品批号',
@@ -36,7 +92,7 @@ CREATE TABLE `cotton_batch` (
   `warehouse` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '存放仓库',
   `remark` varchar(200) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '备注',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8 COLLATE=utf8_bin ;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8 COLLATE=utf8_bin ;*/
 
 
  CREATE TABLE `cotton_template` (
@@ -175,7 +231,7 @@ CREATE TABLE `ssm_user` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `user_name` varchar(100) NOT NULL DEFAULT '' COMMENT '登录名',
   `password` varchar(100) NOT NULL DEFAULT '' COMMENT '加密后的密码字段',
-  `role_name` varchar(20) NOT NULL DEFAULT '普通管理员' COMMENT '用户角色',
+  `role_name` varchar(20) NOT NULL DEFAULT 'common' COMMENT '用户角色',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

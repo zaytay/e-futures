@@ -1763,6 +1763,1466 @@ public class CottonBatchExample {
             addCriterion("remark not between", value1, value2, "remark");
             return (Criteria) this;
         }
+
+        public Criteria andLength32IsNull() {
+            addCriterion("length_32 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength32IsNotNull() {
+            addCriterion("length_32 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength32EqualTo(Double value) {
+            addCriterion("length_32 =", value, "length32");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength32NotEqualTo(Double value) {
+            addCriterion("length_32 <>", value, "length32");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength32GreaterThan(Double value) {
+            addCriterion("length_32 >", value, "length32");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength32GreaterThanOrEqualTo(Double value) {
+            addCriterion("length_32 >=", value, "length32");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength32LessThan(Double value) {
+            addCriterion("length_32 <", value, "length32");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength32LessThanOrEqualTo(Double value) {
+            addCriterion("length_32 <=", value, "length32");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength32In(List<Double> values) {
+            addCriterion("length_32 in", values, "length32");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength32NotIn(List<Double> values) {
+            addCriterion("length_32 not in", values, "length32");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength32Between(Double value1, Double value2) {
+            addCriterion("length_32 between", value1, value2, "length32");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength32NotBetween(Double value1, Double value2) {
+            addCriterion("length_32 not between", value1, value2, "length32");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength31IsNull() {
+            addCriterion("length_31 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength31IsNotNull() {
+            addCriterion("length_31 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength31EqualTo(Double value) {
+            addCriterion("length_31 =", value, "length31");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength31NotEqualTo(Double value) {
+            addCriterion("length_31 <>", value, "length31");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength31GreaterThan(Double value) {
+            addCriterion("length_31 >", value, "length31");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength31GreaterThanOrEqualTo(Double value) {
+            addCriterion("length_31 >=", value, "length31");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength31LessThan(Double value) {
+            addCriterion("length_31 <", value, "length31");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength31LessThanOrEqualTo(Double value) {
+            addCriterion("length_31 <=", value, "length31");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength31In(List<Double> values) {
+            addCriterion("length_31 in", values, "length31");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength31NotIn(List<Double> values) {
+            addCriterion("length_31 not in", values, "length31");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength31Between(Double value1, Double value2) {
+            addCriterion("length_31 between", value1, value2, "length31");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength31NotBetween(Double value1, Double value2) {
+            addCriterion("length_31 not between", value1, value2, "length31");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength30IsNull() {
+            addCriterion("length_30 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength30IsNotNull() {
+            addCriterion("length_30 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength30EqualTo(Double value) {
+            addCriterion("length_30 =", value, "length30");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength30NotEqualTo(Double value) {
+            addCriterion("length_30 <>", value, "length30");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength30GreaterThan(Double value) {
+            addCriterion("length_30 >", value, "length30");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength30GreaterThanOrEqualTo(Double value) {
+            addCriterion("length_30 >=", value, "length30");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength30LessThan(Double value) {
+            addCriterion("length_30 <", value, "length30");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength30LessThanOrEqualTo(Double value) {
+            addCriterion("length_30 <=", value, "length30");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength30In(List<Double> values) {
+            addCriterion("length_30 in", values, "length30");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength30NotIn(List<Double> values) {
+            addCriterion("length_30 not in", values, "length30");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength30Between(Double value1, Double value2) {
+            addCriterion("length_30 between", value1, value2, "length30");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength30NotBetween(Double value1, Double value2) {
+            addCriterion("length_30 not between", value1, value2, "length30");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength29IsNull() {
+            addCriterion("length_29 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength29IsNotNull() {
+            addCriterion("length_29 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength29EqualTo(Double value) {
+            addCriterion("length_29 =", value, "length29");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength29NotEqualTo(Double value) {
+            addCriterion("length_29 <>", value, "length29");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength29GreaterThan(Double value) {
+            addCriterion("length_29 >", value, "length29");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength29GreaterThanOrEqualTo(Double value) {
+            addCriterion("length_29 >=", value, "length29");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength29LessThan(Double value) {
+            addCriterion("length_29 <", value, "length29");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength29LessThanOrEqualTo(Double value) {
+            addCriterion("length_29 <=", value, "length29");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength29In(List<Double> values) {
+            addCriterion("length_29 in", values, "length29");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength29NotIn(List<Double> values) {
+            addCriterion("length_29 not in", values, "length29");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength29Between(Double value1, Double value2) {
+            addCriterion("length_29 between", value1, value2, "length29");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength29NotBetween(Double value1, Double value2) {
+            addCriterion("length_29 not between", value1, value2, "length29");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength28IsNull() {
+            addCriterion("length_28 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength28IsNotNull() {
+            addCriterion("length_28 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength28EqualTo(Double value) {
+            addCriterion("length_28 =", value, "length28");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength28NotEqualTo(Double value) {
+            addCriterion("length_28 <>", value, "length28");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength28GreaterThan(Double value) {
+            addCriterion("length_28 >", value, "length28");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength28GreaterThanOrEqualTo(Double value) {
+            addCriterion("length_28 >=", value, "length28");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength28LessThan(Double value) {
+            addCriterion("length_28 <", value, "length28");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength28LessThanOrEqualTo(Double value) {
+            addCriterion("length_28 <=", value, "length28");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength28In(List<Double> values) {
+            addCriterion("length_28 in", values, "length28");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength28NotIn(List<Double> values) {
+            addCriterion("length_28 not in", values, "length28");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength28Between(Double value1, Double value2) {
+            addCriterion("length_28 between", value1, value2, "length28");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength28NotBetween(Double value1, Double value2) {
+            addCriterion("length_28 not between", value1, value2, "length28");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength27IsNull() {
+            addCriterion("length_27 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength27IsNotNull() {
+            addCriterion("length_27 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength27EqualTo(Double value) {
+            addCriterion("length_27 =", value, "length27");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength27NotEqualTo(Double value) {
+            addCriterion("length_27 <>", value, "length27");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength27GreaterThan(Double value) {
+            addCriterion("length_27 >", value, "length27");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength27GreaterThanOrEqualTo(Double value) {
+            addCriterion("length_27 >=", value, "length27");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength27LessThan(Double value) {
+            addCriterion("length_27 <", value, "length27");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength27LessThanOrEqualTo(Double value) {
+            addCriterion("length_27 <=", value, "length27");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength27In(List<Double> values) {
+            addCriterion("length_27 in", values, "length27");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength27NotIn(List<Double> values) {
+            addCriterion("length_27 not in", values, "length27");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength27Between(Double value1, Double value2) {
+            addCriterion("length_27 between", value1, value2, "length27");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength27NotBetween(Double value1, Double value2) {
+            addCriterion("length_27 not between", value1, value2, "length27");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength26IsNull() {
+            addCriterion("length_26 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength26IsNotNull() {
+            addCriterion("length_26 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength26EqualTo(Double value) {
+            addCriterion("length_26 =", value, "length26");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength26NotEqualTo(Double value) {
+            addCriterion("length_26 <>", value, "length26");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength26GreaterThan(Double value) {
+            addCriterion("length_26 >", value, "length26");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength26GreaterThanOrEqualTo(Double value) {
+            addCriterion("length_26 >=", value, "length26");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength26LessThan(Double value) {
+            addCriterion("length_26 <", value, "length26");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength26LessThanOrEqualTo(Double value) {
+            addCriterion("length_26 <=", value, "length26");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength26In(List<Double> values) {
+            addCriterion("length_26 in", values, "length26");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength26NotIn(List<Double> values) {
+            addCriterion("length_26 not in", values, "length26");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength26Between(Double value1, Double value2) {
+            addCriterion("length_26 between", value1, value2, "length26");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength26NotBetween(Double value1, Double value2) {
+            addCriterion("length_26 not between", value1, value2, "length26");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength25IsNull() {
+            addCriterion("length_25 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength25IsNotNull() {
+            addCriterion("length_25 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength25EqualTo(Double value) {
+            addCriterion("length_25 =", value, "length25");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength25NotEqualTo(Double value) {
+            addCriterion("length_25 <>", value, "length25");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength25GreaterThan(Double value) {
+            addCriterion("length_25 >", value, "length25");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength25GreaterThanOrEqualTo(Double value) {
+            addCriterion("length_25 >=", value, "length25");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength25LessThan(Double value) {
+            addCriterion("length_25 <", value, "length25");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength25LessThanOrEqualTo(Double value) {
+            addCriterion("length_25 <=", value, "length25");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength25In(List<Double> values) {
+            addCriterion("length_25 in", values, "length25");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength25NotIn(List<Double> values) {
+            addCriterion("length_25 not in", values, "length25");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength25Between(Double value1, Double value2) {
+            addCriterion("length_25 between", value1, value2, "length25");
+            return (Criteria) this;
+        }
+
+        public Criteria andLength25NotBetween(Double value1, Double value2) {
+            addCriterion("length_25 not between", value1, value2, "length25");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireC1IsNull() {
+            addCriterion("micronaire_c1 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireC1IsNotNull() {
+            addCriterion("micronaire_c1 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireC1EqualTo(Double value) {
+            addCriterion("micronaire_c1 =", value, "micronaireC1");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireC1NotEqualTo(Double value) {
+            addCriterion("micronaire_c1 <>", value, "micronaireC1");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireC1GreaterThan(Double value) {
+            addCriterion("micronaire_c1 >", value, "micronaireC1");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireC1GreaterThanOrEqualTo(Double value) {
+            addCriterion("micronaire_c1 >=", value, "micronaireC1");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireC1LessThan(Double value) {
+            addCriterion("micronaire_c1 <", value, "micronaireC1");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireC1LessThanOrEqualTo(Double value) {
+            addCriterion("micronaire_c1 <=", value, "micronaireC1");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireC1In(List<Double> values) {
+            addCriterion("micronaire_c1 in", values, "micronaireC1");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireC1NotIn(List<Double> values) {
+            addCriterion("micronaire_c1 not in", values, "micronaireC1");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireC1Between(Double value1, Double value2) {
+            addCriterion("micronaire_c1 between", value1, value2, "micronaireC1");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireC1NotBetween(Double value1, Double value2) {
+            addCriterion("micronaire_c1 not between", value1, value2, "micronaireC1");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireB1IsNull() {
+            addCriterion("micronaire_b1 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireB1IsNotNull() {
+            addCriterion("micronaire_b1 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireB1EqualTo(Double value) {
+            addCriterion("micronaire_b1 =", value, "micronaireB1");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireB1NotEqualTo(Double value) {
+            addCriterion("micronaire_b1 <>", value, "micronaireB1");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireB1GreaterThan(Double value) {
+            addCriterion("micronaire_b1 >", value, "micronaireB1");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireB1GreaterThanOrEqualTo(Double value) {
+            addCriterion("micronaire_b1 >=", value, "micronaireB1");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireB1LessThan(Double value) {
+            addCriterion("micronaire_b1 <", value, "micronaireB1");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireB1LessThanOrEqualTo(Double value) {
+            addCriterion("micronaire_b1 <=", value, "micronaireB1");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireB1In(List<Double> values) {
+            addCriterion("micronaire_b1 in", values, "micronaireB1");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireB1NotIn(List<Double> values) {
+            addCriterion("micronaire_b1 not in", values, "micronaireB1");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireB1Between(Double value1, Double value2) {
+            addCriterion("micronaire_b1 between", value1, value2, "micronaireB1");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireB1NotBetween(Double value1, Double value2) {
+            addCriterion("micronaire_b1 not between", value1, value2, "micronaireB1");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireAIsNull() {
+            addCriterion("micronaire_a is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireAIsNotNull() {
+            addCriterion("micronaire_a is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireAEqualTo(Double value) {
+            addCriterion("micronaire_a =", value, "micronaireA");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireANotEqualTo(Double value) {
+            addCriterion("micronaire_a <>", value, "micronaireA");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireAGreaterThan(Double value) {
+            addCriterion("micronaire_a >", value, "micronaireA");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireAGreaterThanOrEqualTo(Double value) {
+            addCriterion("micronaire_a >=", value, "micronaireA");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireALessThan(Double value) {
+            addCriterion("micronaire_a <", value, "micronaireA");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireALessThanOrEqualTo(Double value) {
+            addCriterion("micronaire_a <=", value, "micronaireA");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireAIn(List<Double> values) {
+            addCriterion("micronaire_a in", values, "micronaireA");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireANotIn(List<Double> values) {
+            addCriterion("micronaire_a not in", values, "micronaireA");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireABetween(Double value1, Double value2) {
+            addCriterion("micronaire_a between", value1, value2, "micronaireA");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireANotBetween(Double value1, Double value2) {
+            addCriterion("micronaire_a not between", value1, value2, "micronaireA");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireB2IsNull() {
+            addCriterion("micronaire_b2 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireB2IsNotNull() {
+            addCriterion("micronaire_b2 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireB2EqualTo(Double value) {
+            addCriterion("micronaire_b2 =", value, "micronaireB2");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireB2NotEqualTo(Double value) {
+            addCriterion("micronaire_b2 <>", value, "micronaireB2");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireB2GreaterThan(Double value) {
+            addCriterion("micronaire_b2 >", value, "micronaireB2");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireB2GreaterThanOrEqualTo(Double value) {
+            addCriterion("micronaire_b2 >=", value, "micronaireB2");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireB2LessThan(Double value) {
+            addCriterion("micronaire_b2 <", value, "micronaireB2");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireB2LessThanOrEqualTo(Double value) {
+            addCriterion("micronaire_b2 <=", value, "micronaireB2");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireB2In(List<Double> values) {
+            addCriterion("micronaire_b2 in", values, "micronaireB2");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireB2NotIn(List<Double> values) {
+            addCriterion("micronaire_b2 not in", values, "micronaireB2");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireB2Between(Double value1, Double value2) {
+            addCriterion("micronaire_b2 between", value1, value2, "micronaireB2");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireB2NotBetween(Double value1, Double value2) {
+            addCriterion("micronaire_b2 not between", value1, value2, "micronaireB2");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireC2IsNull() {
+            addCriterion("micronaire_c2 is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireC2IsNotNull() {
+            addCriterion("micronaire_c2 is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireC2EqualTo(Double value) {
+            addCriterion("micronaire_c2 =", value, "micronaireC2");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireC2NotEqualTo(Double value) {
+            addCriterion("micronaire_c2 <>", value, "micronaireC2");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireC2GreaterThan(Double value) {
+            addCriterion("micronaire_c2 >", value, "micronaireC2");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireC2GreaterThanOrEqualTo(Double value) {
+            addCriterion("micronaire_c2 >=", value, "micronaireC2");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireC2LessThan(Double value) {
+            addCriterion("micronaire_c2 <", value, "micronaireC2");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireC2LessThanOrEqualTo(Double value) {
+            addCriterion("micronaire_c2 <=", value, "micronaireC2");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireC2In(List<Double> values) {
+            addCriterion("micronaire_c2 in", values, "micronaireC2");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireC2NotIn(List<Double> values) {
+            addCriterion("micronaire_c2 not in", values, "micronaireC2");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireC2Between(Double value1, Double value2) {
+            addCriterion("micronaire_c2 between", value1, value2, "micronaireC2");
+            return (Criteria) this;
+        }
+
+        public Criteria andMicronaireC2NotBetween(Double value1, Double value2) {
+            addCriterion("micronaire_c2 not between", value1, value2, "micronaireC2");
+            return (Criteria) this;
+        }
+
+        public Criteria andHuichaoIsNull() {
+            addCriterion("huichao is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andHuichaoIsNotNull() {
+            addCriterion("huichao is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andHuichaoEqualTo(Double value) {
+            addCriterion("huichao =", value, "huichao");
+            return (Criteria) this;
+        }
+
+        public Criteria andHuichaoNotEqualTo(Double value) {
+            addCriterion("huichao <>", value, "huichao");
+            return (Criteria) this;
+        }
+
+        public Criteria andHuichaoGreaterThan(Double value) {
+            addCriterion("huichao >", value, "huichao");
+            return (Criteria) this;
+        }
+
+        public Criteria andHuichaoGreaterThanOrEqualTo(Double value) {
+            addCriterion("huichao >=", value, "huichao");
+            return (Criteria) this;
+        }
+
+        public Criteria andHuichaoLessThan(Double value) {
+            addCriterion("huichao <", value, "huichao");
+            return (Criteria) this;
+        }
+
+        public Criteria andHuichaoLessThanOrEqualTo(Double value) {
+            addCriterion("huichao <=", value, "huichao");
+            return (Criteria) this;
+        }
+
+        public Criteria andHuichaoIn(List<Double> values) {
+            addCriterion("huichao in", values, "huichao");
+            return (Criteria) this;
+        }
+
+        public Criteria andHuichaoNotIn(List<Double> values) {
+            addCriterion("huichao not in", values, "huichao");
+            return (Criteria) this;
+        }
+
+        public Criteria andHuichaoBetween(Double value1, Double value2) {
+            addCriterion("huichao between", value1, value2, "huichao");
+            return (Criteria) this;
+        }
+
+        public Criteria andHuichaoNotBetween(Double value1, Double value2) {
+            addCriterion("huichao not between", value1, value2, "huichao");
+            return (Criteria) this;
+        }
+
+        public Criteria andStrengthMaxIsNull() {
+            addCriterion("strength_max is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andStrengthMaxIsNotNull() {
+            addCriterion("strength_max is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andStrengthMaxEqualTo(Double value) {
+            addCriterion("strength_max =", value, "strengthMax");
+            return (Criteria) this;
+        }
+
+        public Criteria andStrengthMaxNotEqualTo(Double value) {
+            addCriterion("strength_max <>", value, "strengthMax");
+            return (Criteria) this;
+        }
+
+        public Criteria andStrengthMaxGreaterThan(Double value) {
+            addCriterion("strength_max >", value, "strengthMax");
+            return (Criteria) this;
+        }
+
+        public Criteria andStrengthMaxGreaterThanOrEqualTo(Double value) {
+            addCriterion("strength_max >=", value, "strengthMax");
+            return (Criteria) this;
+        }
+
+        public Criteria andStrengthMaxLessThan(Double value) {
+            addCriterion("strength_max <", value, "strengthMax");
+            return (Criteria) this;
+        }
+
+        public Criteria andStrengthMaxLessThanOrEqualTo(Double value) {
+            addCriterion("strength_max <=", value, "strengthMax");
+            return (Criteria) this;
+        }
+
+        public Criteria andStrengthMaxIn(List<Double> values) {
+            addCriterion("strength_max in", values, "strengthMax");
+            return (Criteria) this;
+        }
+
+        public Criteria andStrengthMaxNotIn(List<Double> values) {
+            addCriterion("strength_max not in", values, "strengthMax");
+            return (Criteria) this;
+        }
+
+        public Criteria andStrengthMaxBetween(Double value1, Double value2) {
+            addCriterion("strength_max between", value1, value2, "strengthMax");
+            return (Criteria) this;
+        }
+
+        public Criteria andStrengthMaxNotBetween(Double value1, Double value2) {
+            addCriterion("strength_max not between", value1, value2, "strengthMax");
+            return (Criteria) this;
+        }
+
+        public Criteria andStrengthMinIsNull() {
+            addCriterion("strength_min is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andStrengthMinIsNotNull() {
+            addCriterion("strength_min is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andStrengthMinEqualTo(Double value) {
+            addCriterion("strength_min =", value, "strengthMin");
+            return (Criteria) this;
+        }
+
+        public Criteria andStrengthMinNotEqualTo(Double value) {
+            addCriterion("strength_min <>", value, "strengthMin");
+            return (Criteria) this;
+        }
+
+        public Criteria andStrengthMinGreaterThan(Double value) {
+            addCriterion("strength_min >", value, "strengthMin");
+            return (Criteria) this;
+        }
+
+        public Criteria andStrengthMinGreaterThanOrEqualTo(Double value) {
+            addCriterion("strength_min >=", value, "strengthMin");
+            return (Criteria) this;
+        }
+
+        public Criteria andStrengthMinLessThan(Double value) {
+            addCriterion("strength_min <", value, "strengthMin");
+            return (Criteria) this;
+        }
+
+        public Criteria andStrengthMinLessThanOrEqualTo(Double value) {
+            addCriterion("strength_min <=", value, "strengthMin");
+            return (Criteria) this;
+        }
+
+        public Criteria andStrengthMinIn(List<Double> values) {
+            addCriterion("strength_min in", values, "strengthMin");
+            return (Criteria) this;
+        }
+
+        public Criteria andStrengthMinNotIn(List<Double> values) {
+            addCriterion("strength_min not in", values, "strengthMin");
+            return (Criteria) this;
+        }
+
+        public Criteria andStrengthMinBetween(Double value1, Double value2) {
+            addCriterion("strength_min between", value1, value2, "strengthMin");
+            return (Criteria) this;
+        }
+
+        public Criteria andStrengthMinNotBetween(Double value1, Double value2) {
+            addCriterion("strength_min not between", value1, value2, "strengthMin");
+            return (Criteria) this;
+        }
+
+        public Criteria andEvennessMaxIsNull() {
+            addCriterion("evenness_max is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andEvennessMaxIsNotNull() {
+            addCriterion("evenness_max is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andEvennessMaxEqualTo(Double value) {
+            addCriterion("evenness_max =", value, "evennessMax");
+            return (Criteria) this;
+        }
+
+        public Criteria andEvennessMaxNotEqualTo(Double value) {
+            addCriterion("evenness_max <>", value, "evennessMax");
+            return (Criteria) this;
+        }
+
+        public Criteria andEvennessMaxGreaterThan(Double value) {
+            addCriterion("evenness_max >", value, "evennessMax");
+            return (Criteria) this;
+        }
+
+        public Criteria andEvennessMaxGreaterThanOrEqualTo(Double value) {
+            addCriterion("evenness_max >=", value, "evennessMax");
+            return (Criteria) this;
+        }
+
+        public Criteria andEvennessMaxLessThan(Double value) {
+            addCriterion("evenness_max <", value, "evennessMax");
+            return (Criteria) this;
+        }
+
+        public Criteria andEvennessMaxLessThanOrEqualTo(Double value) {
+            addCriterion("evenness_max <=", value, "evennessMax");
+            return (Criteria) this;
+        }
+
+        public Criteria andEvennessMaxIn(List<Double> values) {
+            addCriterion("evenness_max in", values, "evennessMax");
+            return (Criteria) this;
+        }
+
+        public Criteria andEvennessMaxNotIn(List<Double> values) {
+            addCriterion("evenness_max not in", values, "evennessMax");
+            return (Criteria) this;
+        }
+
+        public Criteria andEvennessMaxBetween(Double value1, Double value2) {
+            addCriterion("evenness_max between", value1, value2, "evennessMax");
+            return (Criteria) this;
+        }
+
+        public Criteria andEvennessMaxNotBetween(Double value1, Double value2) {
+            addCriterion("evenness_max not between", value1, value2, "evennessMax");
+            return (Criteria) this;
+        }
+
+        public Criteria andEvennessMinIsNull() {
+            addCriterion("evenness_min is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andEvennessMinIsNotNull() {
+            addCriterion("evenness_min is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andEvennessMinEqualTo(Double value) {
+            addCriterion("evenness_min =", value, "evennessMin");
+            return (Criteria) this;
+        }
+
+        public Criteria andEvennessMinNotEqualTo(Double value) {
+            addCriterion("evenness_min <>", value, "evennessMin");
+            return (Criteria) this;
+        }
+
+        public Criteria andEvennessMinGreaterThan(Double value) {
+            addCriterion("evenness_min >", value, "evennessMin");
+            return (Criteria) this;
+        }
+
+        public Criteria andEvennessMinGreaterThanOrEqualTo(Double value) {
+            addCriterion("evenness_min >=", value, "evennessMin");
+            return (Criteria) this;
+        }
+
+        public Criteria andEvennessMinLessThan(Double value) {
+            addCriterion("evenness_min <", value, "evennessMin");
+            return (Criteria) this;
+        }
+
+        public Criteria andEvennessMinLessThanOrEqualTo(Double value) {
+            addCriterion("evenness_min <=", value, "evennessMin");
+            return (Criteria) this;
+        }
+
+        public Criteria andEvennessMinIn(List<Double> values) {
+            addCriterion("evenness_min in", values, "evennessMin");
+            return (Criteria) this;
+        }
+
+        public Criteria andEvennessMinNotIn(List<Double> values) {
+            addCriterion("evenness_min not in", values, "evennessMin");
+            return (Criteria) this;
+        }
+
+        public Criteria andEvennessMinBetween(Double value1, Double value2) {
+            addCriterion("evenness_min between", value1, value2, "evennessMin");
+            return (Criteria) this;
+        }
+
+        public Criteria andEvennessMinNotBetween(Double value1, Double value2) {
+            addCriterion("evenness_min not between", value1, value2, "evennessMin");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightGrossIsNull() {
+            addCriterion("weight_gross is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightGrossIsNotNull() {
+            addCriterion("weight_gross is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightGrossEqualTo(Double value) {
+            addCriterion("weight_gross =", value, "weightGross");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightGrossNotEqualTo(Double value) {
+            addCriterion("weight_gross <>", value, "weightGross");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightGrossGreaterThan(Double value) {
+            addCriterion("weight_gross >", value, "weightGross");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightGrossGreaterThanOrEqualTo(Double value) {
+            addCriterion("weight_gross >=", value, "weightGross");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightGrossLessThan(Double value) {
+            addCriterion("weight_gross <", value, "weightGross");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightGrossLessThanOrEqualTo(Double value) {
+            addCriterion("weight_gross <=", value, "weightGross");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightGrossIn(List<Double> values) {
+            addCriterion("weight_gross in", values, "weightGross");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightGrossNotIn(List<Double> values) {
+            addCriterion("weight_gross not in", values, "weightGross");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightGrossBetween(Double value1, Double value2) {
+            addCriterion("weight_gross between", value1, value2, "weightGross");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightGrossNotBetween(Double value1, Double value2) {
+            addCriterion("weight_gross not between", value1, value2, "weightGross");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightTareIsNull() {
+            addCriterion("weight_tare is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightTareIsNotNull() {
+            addCriterion("weight_tare is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightTareEqualTo(Double value) {
+            addCriterion("weight_tare =", value, "weightTare");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightTareNotEqualTo(Double value) {
+            addCriterion("weight_tare <>", value, "weightTare");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightTareGreaterThan(Double value) {
+            addCriterion("weight_tare >", value, "weightTare");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightTareGreaterThanOrEqualTo(Double value) {
+            addCriterion("weight_tare >=", value, "weightTare");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightTareLessThan(Double value) {
+            addCriterion("weight_tare <", value, "weightTare");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightTareLessThanOrEqualTo(Double value) {
+            addCriterion("weight_tare <=", value, "weightTare");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightTareIn(List<Double> values) {
+            addCriterion("weight_tare in", values, "weightTare");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightTareNotIn(List<Double> values) {
+            addCriterion("weight_tare not in", values, "weightTare");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightTareBetween(Double value1, Double value2) {
+            addCriterion("weight_tare between", value1, value2, "weightTare");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightTareNotBetween(Double value1, Double value2) {
+            addCriterion("weight_tare not between", value1, value2, "weightTare");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightNetIsNull() {
+            addCriterion("weight_net is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightNetIsNotNull() {
+            addCriterion("weight_net is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightNetEqualTo(Double value) {
+            addCriterion("weight_net =", value, "weightNet");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightNetNotEqualTo(Double value) {
+            addCriterion("weight_net <>", value, "weightNet");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightNetGreaterThan(Double value) {
+            addCriterion("weight_net >", value, "weightNet");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightNetGreaterThanOrEqualTo(Double value) {
+            addCriterion("weight_net >=", value, "weightNet");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightNetLessThan(Double value) {
+            addCriterion("weight_net <", value, "weightNet");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightNetLessThanOrEqualTo(Double value) {
+            addCriterion("weight_net <=", value, "weightNet");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightNetIn(List<Double> values) {
+            addCriterion("weight_net in", values, "weightNet");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightNetNotIn(List<Double> values) {
+            addCriterion("weight_net not in", values, "weightNet");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightNetBetween(Double value1, Double value2) {
+            addCriterion("weight_net between", value1, value2, "weightNet");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightNetNotBetween(Double value1, Double value2) {
+            addCriterion("weight_net not between", value1, value2, "weightNet");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightConditonedIsNull() {
+            addCriterion("weight_conditoned is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightConditonedIsNotNull() {
+            addCriterion("weight_conditoned is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightConditonedEqualTo(Double value) {
+            addCriterion("weight_conditoned =", value, "weightConditoned");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightConditonedNotEqualTo(Double value) {
+            addCriterion("weight_conditoned <>", value, "weightConditoned");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightConditonedGreaterThan(Double value) {
+            addCriterion("weight_conditoned >", value, "weightConditoned");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightConditonedGreaterThanOrEqualTo(Double value) {
+            addCriterion("weight_conditoned >=", value, "weightConditoned");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightConditonedLessThan(Double value) {
+            addCriterion("weight_conditoned <", value, "weightConditoned");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightConditonedLessThanOrEqualTo(Double value) {
+            addCriterion("weight_conditoned <=", value, "weightConditoned");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightConditonedIn(List<Double> values) {
+            addCriterion("weight_conditoned in", values, "weightConditoned");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightConditonedNotIn(List<Double> values) {
+            addCriterion("weight_conditoned not in", values, "weightConditoned");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightConditonedBetween(Double value1, Double value2) {
+            addCriterion("weight_conditoned between", value1, value2, "weightConditoned");
+            return (Criteria) this;
+        }
+
+        public Criteria andWeightConditonedNotBetween(Double value1, Double value2) {
+            addCriterion("weight_conditoned not between", value1, value2, "weightConditoned");
+            return (Criteria) this;
+        }
+
+        public Criteria andJiagongleixingIsNull() {
+            addCriterion("jiagongleixing is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andJiagongleixingIsNotNull() {
+            addCriterion("jiagongleixing is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andJiagongleixingEqualTo(String value) {
+            addCriterion("jiagongleixing =", value, "jiagongleixing");
+            return (Criteria) this;
+        }
+
+        public Criteria andJiagongleixingNotEqualTo(String value) {
+            addCriterion("jiagongleixing <>", value, "jiagongleixing");
+            return (Criteria) this;
+        }
+
+        public Criteria andJiagongleixingGreaterThan(String value) {
+            addCriterion("jiagongleixing >", value, "jiagongleixing");
+            return (Criteria) this;
+        }
+
+        public Criteria andJiagongleixingGreaterThanOrEqualTo(String value) {
+            addCriterion("jiagongleixing >=", value, "jiagongleixing");
+            return (Criteria) this;
+        }
+
+        public Criteria andJiagongleixingLessThan(String value) {
+            addCriterion("jiagongleixing <", value, "jiagongleixing");
+            return (Criteria) this;
+        }
+
+        public Criteria andJiagongleixingLessThanOrEqualTo(String value) {
+            addCriterion("jiagongleixing <=", value, "jiagongleixing");
+            return (Criteria) this;
+        }
+
+        public Criteria andJiagongleixingLike(String value) {
+            addCriterion("jiagongleixing like", value, "jiagongleixing");
+            return (Criteria) this;
+        }
+
+        public Criteria andJiagongleixingNotLike(String value) {
+            addCriterion("jiagongleixing not like", value, "jiagongleixing");
+            return (Criteria) this;
+        }
+
+        public Criteria andJiagongleixingIn(List<String> values) {
+            addCriterion("jiagongleixing in", values, "jiagongleixing");
+            return (Criteria) this;
+        }
+
+        public Criteria andJiagongleixingNotIn(List<String> values) {
+            addCriterion("jiagongleixing not in", values, "jiagongleixing");
+            return (Criteria) this;
+        }
+
+        public Criteria andJiagongleixingBetween(String value1, String value2) {
+            addCriterion("jiagongleixing between", value1, value2, "jiagongleixing");
+            return (Criteria) this;
+        }
+
+        public Criteria andJiagongleixingNotBetween(String value1, String value2) {
+            addCriterion("jiagongleixing not between", value1, value2, "jiagongleixing");
+            return (Criteria) this;
+        }
+
+        public Criteria andPackageNumIsNull() {
+            addCriterion("package_num is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPackageNumIsNotNull() {
+            addCriterion("package_num is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andPackageNumEqualTo(String value) {
+            addCriterion("package_num =", value, "packageNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andPackageNumNotEqualTo(String value) {
+            addCriterion("package_num <>", value, "packageNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andPackageNumGreaterThan(String value) {
+            addCriterion("package_num >", value, "packageNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andPackageNumGreaterThanOrEqualTo(String value) {
+            addCriterion("package_num >=", value, "packageNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andPackageNumLessThan(String value) {
+            addCriterion("package_num <", value, "packageNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andPackageNumLessThanOrEqualTo(String value) {
+            addCriterion("package_num <=", value, "packageNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andPackageNumLike(String value) {
+            addCriterion("package_num like", value, "packageNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andPackageNumNotLike(String value) {
+            addCriterion("package_num not like", value, "packageNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andPackageNumIn(List<String> values) {
+            addCriterion("package_num in", values, "packageNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andPackageNumNotIn(List<String> values) {
+            addCriterion("package_num not in", values, "packageNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andPackageNumBetween(String value1, String value2) {
+            addCriterion("package_num between", value1, value2, "packageNum");
+            return (Criteria) this;
+        }
+
+        public Criteria andPackageNumNotBetween(String value1, String value2) {
+            addCriterion("package_num not between", value1, value2, "packageNum");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {
