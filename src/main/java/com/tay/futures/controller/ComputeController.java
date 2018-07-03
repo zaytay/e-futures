@@ -144,7 +144,7 @@ public class ComputeController {
                 List<CottonBatchDto> cottonBatchDtoList =  batchImportJustCode(originalFilename,sourceFile);
                 if(CollectionUtils.isEmpty(cottonBatchDtoList)){
                     log.info("batchImport file {} data is empty",originalFilename);
-                    ResponseUtil.write(response, "上传数据为空");
+                    ResponseUtil.write(response, "上传批号未找到任何数据");
                 }else {
                     cottonBatchDtoList=cottonPriceService.batchComputePrice(cottonBatchDtoList,templateId);
                     List<String> headerNameList = CottonPattern.getHeaderNames();

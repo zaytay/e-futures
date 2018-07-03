@@ -13,6 +13,7 @@ import com.tay.futures.exception.ErrorCode;
 import com.tay.futures.exception.ServiceException;
 import com.tay.futures.service.*;
 import com.tay.futures.thread.RecordCottonCrawler;
+import com.tay.futures.util.MoneyUtil;
 import com.tay.futures.util.PriceUtil;
 import com.tay.futures.util.ThreadService;
 import org.apache.commons.collections.CollectionUtils;
@@ -22,6 +23,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -80,6 +82,7 @@ public class CottonPriceServiceImpl implements CottonPriceService{
                 double currentValue=(Double)propsMap.get(type.getAttributeName());
                 price+=rangePriceCalculate(currentValue,rangeStrategies);
             }
+            price=MoneyUtil.fixMoney(new BigDecimal(price)).doubleValue();
             return price;
         }
 
@@ -123,6 +126,7 @@ public class CottonPriceServiceImpl implements CottonPriceService{
                 double currentValue=(Double)propsMap.get(type.getAttributeName());
                 price+=rangePriceCalculate(currentValue,rangeStrategies);
             }
+            price=MoneyUtil.fixMoney(new BigDecimal(price)).doubleValue();
             cottonBatchDto.setPrice(price);
         }
         return cottonBatchList;
