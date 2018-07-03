@@ -311,7 +311,7 @@
             <br/>
             <table border="0"   >
                 <tr>
-                    <td>防潮区间策略</td>
+                    <td>回潮区间策略</td>
                 </tr>
                 <c:set var="supplement" value="5" />
                 <c:forEach items="${huichaoStrategies}" var="item" varStatus="status">

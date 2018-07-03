@@ -207,7 +207,9 @@ public class ComputeController {
         List<Long> codeList=new ArrayList<>();
         for (int i = 0; i < objectList.size(); i++) {
             List<Object> rowObject = objectList.get(i);
-            codeList.add(Long.valueOf(rowObject.get(0).toString()));
+            if(rowObject.get(0) !=null && StringUtils.isNotEmpty(rowObject.get(0).toString())){
+                codeList.add(Long.valueOf(rowObject.get(0).toString()));
+            }
         }
         List<CottonBatch> cottonBatches =  cottonBatchService.getCottonBatchListByCodes(codeList);
         List<Long> codeInDbList=new ArrayList<>();
@@ -312,7 +314,8 @@ public class ComputeController {
             row[41] =dto.getWeightTare() == null ? "": dto.getWeightTare().toString();
             row[42] =dto.getWeightNet() == null ? "": dto.getWeightNet().toString();
             row[43] =dto.getWeightConditoned() == null ? "": dto.getWeightConditoned().toString();
-            row[45] =dto.getHuichao() == null ? "": dto.getHuichao().toString();
+            row[44] =dto.getHuichao() == null ? "": dto.getHuichao().toString();
+            row[45] =dto.getMiscellaneous() == null ? "": dto.getMiscellaneous().toString();
             row[46] =dto.getProductionArea() == null ? "": dto.getProductionArea().toString();
             row[47] =dto.getJiagongleixing() == null ? "": dto.getJiagongleixing().toString();
             row[48] =dto.getFactory() == null ? "": dto.getFactory().toString();

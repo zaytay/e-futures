@@ -104,7 +104,7 @@
         </div>
         <div title="用户管理" data-options="iconCls:'icon-item'"
              style="padding:10px;border:none;">
-            <c:if test="${userName == 'admin'}">
+            <c:if test="${roleName == 'admin'}">
                 <a href="javascript:openTab(' 管理员列表','userManage.jsp','icon-lxr')"
                    class="easyui-linkbutton"
                    data-options="plain:true,iconCls:'icon-lxr'" style="width: 150px;">

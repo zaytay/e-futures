@@ -540,7 +540,7 @@
 
         <table cellspacing="3px" border="0">
             <tr>
-                <td>防潮区间策略</td>
+                <td>回潮区间策略</td>
             </tr>
             <tr>
                 <td>区间1：</td>

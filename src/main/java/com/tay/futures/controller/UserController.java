@@ -81,7 +81,7 @@ public class UserController {
             model.addAttribute("page",pageBean);*/
             List<CottonTemplate> cottonTemplateList=cottonTemplateService.getAllCottonTemplateByUid(resultUser.getId());
             model.addAttribute("cottonTemplateList",cottonTemplateList);
-            model.addAttribute("userName",user.getUserName());
+            model.addAttribute("roleName",resultUser.getRoleName());
             return "main";
         }
     }
