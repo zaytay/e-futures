@@ -41,6 +41,9 @@ public class CottonCrawlerServiceImpl implements CottonCrawlerService{
     public void addBatchCottonCrawler(List<Long> productionCodeList){
         CottonCrawlerExample cottonCrawlerExample=new CottonCrawlerExample();
         cottonCrawlerExample.createCriteria().andProductionCodeIn(productionCodeList);
+        if(CollectionUtils.isEmpty(productionCodeList)){
+            return;
+        }
         List<CottonCrawler> cottonCrawlers= cottonCrawlerMapper.selectByExample(cottonCrawlerExample);
         Set<Long> productionCodeInDb=new HashSet<>();
         for(CottonCrawler cottonCrawler:cottonCrawlers){

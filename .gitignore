@@ -1,3 +1,4 @@
-.idea
-target
+.idea/*
+.idea/workspace.xml
+/target
 *.iml

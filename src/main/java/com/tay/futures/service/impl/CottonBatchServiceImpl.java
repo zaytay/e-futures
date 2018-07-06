@@ -18,7 +18,7 @@ import java.util.List;
 @Service("cottonBatchService")
 public class CottonBatchServiceImpl implements CottonBatchService {
 
-    public static final Integer BATCH_SIZE=1000;
+    public static final Integer BATCH_SIZE=500;
 
     private static final Logger log = Logger
             .getLogger(CottonBatchServiceImpl.class);// 日志文件

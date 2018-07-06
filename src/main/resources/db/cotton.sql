@@ -60,7 +60,8 @@ CREATE TABLE `cotton_batch` (
   `weight_conditoned` double(12,5) unsigned NOT NULL DEFAULT '0.00000' COMMENT '公重',
   `jiagongleixing` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '加工类型',
   `package_num` varchar(50) COLLATE utf8_bin NOT NULL DEFAULT '' COMMENT '包数',
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `ix_production_code` (`production_code`)
 ) ENGINE=InnoDB AUTO_INCREMENT=209575 DEFAULT CHARSET=utf8 COLLATE=utf8_bin
 /*
 CREATE TABLE `cotton_batch` (

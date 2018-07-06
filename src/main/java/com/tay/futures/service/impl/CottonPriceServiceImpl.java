@@ -51,7 +51,8 @@ public class CottonPriceServiceImpl implements CottonPriceService{
 
     @Override
     public Double computePrice(Long productionCode,Long templateId) throws BusinessException, ServiceException {
-
+        Assert.notNull(productionCode);
+        Assert.notNull(templateId);
         CottonBatch cottonBatch=cottonBatchService.getCottonBatchByCode(productionCode);
         Double price=0.00;
         if(cottonBatch == null){
