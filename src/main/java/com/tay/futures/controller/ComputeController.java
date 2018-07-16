@@ -211,6 +211,7 @@ public class ComputeController {
                 codeList.add(Long.valueOf(rowObject.get(0).toString()));
             }
         }
+        log.info("upload size:{}",codeList.size());
         List<CottonBatch> cottonBatches =  cottonBatchService.getCottonBatchListByCodes(codeList);
         List<Long> codeInDbList=new ArrayList<>();
         for(CottonBatch cottonBatch: cottonBatches){

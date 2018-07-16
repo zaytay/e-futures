@@ -97,7 +97,7 @@
                 <tr>
                     <td>长度区间策略</td>
                 </tr>
-                <c:set var="supplement" value="5" />
+                <c:set var="supplement" value="10" />
                 <c:forEach items="${lengthStrategies}" var="item" varStatus="status">
                     <tr>
                         <td>区间:</td>
@@ -141,7 +141,7 @@
                 <tr>
                     <td>马克隆区间策略</td>
                 </tr>
-                <c:set var="supplement" value="5" />
+                <c:set var="supplement" value="10" />
                 <c:forEach items="${micronaireStrategies}" var="item" varStatus="status">
                     <tr>
                         <td>区间:</td>
@@ -184,7 +184,7 @@
                 <tr>
                     <td>长整区间策略</td>
                 </tr>
-                <c:set var="supplement" value="5" />
+                <c:set var="supplement" value="10" />
                 <c:forEach items="${evennessStrategies}" var="item" varStatus="status">
                     <tr>
                         <td>区间:</td>
@@ -227,7 +227,7 @@
                 <tr>
                     <td>强度区间策略</td>
                 </tr>
-                <c:set var="supplement" value="5" />
+                <c:set var="supplement" value="10" />
                 <c:forEach items="${strengthStrategies}" var="item" varStatus="status">
                     <tr>
                         <td>区间:</td>
@@ -270,7 +270,7 @@
                 <tr>
                     <td>含杂区间策略</td>
                 </tr>
-                <c:set var="supplement" value="5" />
+                <c:set var="supplement" value="10" />
                 <c:forEach items="${miscellaneousStrategies}" var="item" varStatus="status">
                     <tr>
                         <td>区间:</td>
@@ -313,7 +313,7 @@
                 <tr>
                     <td>回潮区间策略</td>
                 </tr>
-                <c:set var="supplement" value="5" />
+                <c:set var="supplement" value="10" />
                 <c:forEach items="${huichaoStrategies}" var="item" varStatus="status">
                     <tr>
                         <td>区间:</td>

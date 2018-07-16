@@ -1,5 +1,6 @@
 package service;
 
+import com.google.common.collect.Lists;
 import com.tay.futures.constants.RangeStrategyType;
 import com.tay.futures.entity.CottonBatch;
 import com.tay.futures.entity.CottonTemplate;
@@ -67,6 +68,13 @@ public class ServiceTest {
     public void computePrice() throws Exception {
         Double price=cottonPriceService.computePrice(65001171040L,4L);
         System.out.println(price);
+    }
+
+    @Test
+    public void testBatchGetCottonBatches(){
+        List<Long> codes= Lists.newArrayList(12345L,123L,23456L);
+        List<CottonBatch> cottonBatchList =cottonBatchService.getCottonBatchListByCodes(codes);
+        System.out.println(cottonBatchList);
     }
 
 

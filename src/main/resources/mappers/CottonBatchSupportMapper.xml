@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tay.futures.dao.CottonBatchSupportMapper">
+    <resultMap id="BaseResultMap" type="com.tay.futures.entity.CottonBatch" >
+        <id column="id" property="id" jdbcType="BIGINT" />
+        <result column="production_code" property="productionCode" jdbcType="BIGINT" />
+        <result column="colour_w1" property="colourW1" jdbcType="DOUBLE" />
+        <result column="colour_w2" property="colourW2" jdbcType="DOUBLE" />
+        <result column="colour_w3" property="colourW3" jdbcType="DOUBLE" />
+        <result column="colour_w4" property="colourW4" jdbcType="DOUBLE" />
+        <result column="colour_w5" property="colourW5" jdbcType="DOUBLE" />
+        <result column="colour_l1" property="colourL1" jdbcType="DOUBLE" />
+        <result column="colour_l2" property="colourL2" jdbcType="DOUBLE" />
+        <result column="colour_l3" property="colourL3" jdbcType="DOUBLE" />
+        <result column="colour_ly1" property="colourLy1" jdbcType="DOUBLE" />
+        <result column="colour_ly2" property="colourLy2" jdbcType="DOUBLE" />
+        <result column="colour_ly3" property="colourLy3" jdbcType="DOUBLE" />
+        <result column="colour_y1" property="colourY1" jdbcType="DOUBLE" />
+        <result column="colour_y2" property="colourY2" jdbcType="DOUBLE" />
+        <result column="ginning_p1" property="ginningP1" jdbcType="DOUBLE" />
+        <result column="ginning_p2" property="ginningP2" jdbcType="DOUBLE" />
+        <result column="ginning_p3" property="ginningP3" jdbcType="DOUBLE" />
+        <result column="avg_length" property="avgLength" jdbcType="DOUBLE" />
+        <result column="avg_micronaire" property="avgMicronaire" jdbcType="DOUBLE" />
+        <result column="avg_evenness" property="avgEvenness" jdbcType="DOUBLE" />
+        <result column="strength" property="strength" jdbcType="DOUBLE" />
+        <result column="miscellaneous" property="miscellaneous" jdbcType="DOUBLE" />
+        <result column="factory" property="factory" jdbcType="VARCHAR" />
+        <result column="production_area" property="productionArea" jdbcType="VARCHAR" />
+        <result column="warehouse" property="warehouse" jdbcType="VARCHAR" />
+        <result column="remark" property="remark" jdbcType="VARCHAR" />
+        <result column="length_32" property="length32" jdbcType="DOUBLE" />
+        <result column="length_31" property="length31" jdbcType="DOUBLE" />
+        <result column="length_30" property="length30" jdbcType="DOUBLE" />
+        <result column="length_29" property="length29" jdbcType="DOUBLE" />
+        <result column="length_28" property="length28" jdbcType="DOUBLE" />
+        <result column="length_27" property="length27" jdbcType="DOUBLE" />
+        <result column="length_26" property="length26" jdbcType="DOUBLE" />
+        <result column="length_25" property="length25" jdbcType="DOUBLE" />
+        <result column="micronaire_c1" property="micronaireC1" jdbcType="DOUBLE" />
+        <result column="micronaire_b1" property="micronaireB1" jdbcType="DOUBLE" />
+        <result column="micronaire_a" property="micronaireA" jdbcType="DOUBLE" />
+        <result column="micronaire_b2" property="micronaireB2" jdbcType="DOUBLE" />
+        <result column="micronaire_c2" property="micronaireC2" jdbcType="DOUBLE" />
+        <result column="huichao" property="huichao" jdbcType="DOUBLE" />
+        <result column="strength_max" property="strengthMax" jdbcType="DOUBLE" />
+        <result column="strength_min" property="strengthMin" jdbcType="DOUBLE" />
+        <result column="evenness_max" property="evennessMax" jdbcType="DOUBLE" />
+        <result column="evenness_min" property="evennessMin" jdbcType="DOUBLE" />
+        <result column="weight_gross" property="weightGross" jdbcType="DOUBLE" />
+        <result column="weight_tare" property="weightTare" jdbcType="DOUBLE" />
+        <result column="weight_net" property="weightNet" jdbcType="DOUBLE" />
+        <result column="weight_conditoned" property="weightConditoned" jdbcType="DOUBLE" />
+        <result column="jiagongleixing" property="jiagongleixing" jdbcType="VARCHAR" />
+        <result column="package_num" property="packageNum" jdbcType="VARCHAR" />
+    </resultMap>
+
+
+    <select id="selectByCodes" parameterType="map" resultMap="BaseResultMap">
+        select * from cotton_batch
+        <if test="codeList">
+            WHERE production_code IN
+            <foreach collection="codeList" item="code" open="(" separator="," close=")">
+                #{code}
+            </foreach>
+            ORDER  BY field(production_code,
+            <foreach collection="codeList" item="code" separator=",">
+                #{code}
+            </foreach>
+            )
+        </if>
+    </select>
+
+
+</mapper> 

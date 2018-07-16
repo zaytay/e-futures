@@ -2,6 +2,7 @@ package com.tay.futures.service.impl;
 
 import com.google.common.collect.Lists;
 import com.tay.futures.dao.CottonBatchMapper;
+import com.tay.futures.dao.CottonBatchSupportMapper;
 import com.tay.futures.entity.CottonBatch;
 import com.tay.futures.entity.CottonBatchExample;
 import com.tay.futures.service.CottonBatchService;
@@ -25,6 +26,9 @@ public class CottonBatchServiceImpl implements CottonBatchService {
 
     @Autowired
     private CottonBatchMapper cottonBatchMapper;
+
+    @Autowired
+    private CottonBatchSupportMapper cottonBatchSupportMapper;
 
 
     public PageInfo<CottonBatch>  getCottonBatchByPage(Integer pageNo,Integer pageSize){
@@ -61,14 +65,15 @@ public class CottonBatchServiceImpl implements CottonBatchService {
 
 
     public List<CottonBatch> getCottonBatchListByCodes(List<Long> codeList){
-        CottonBatchExample cottonBatchExample=new CottonBatchExample();
+        /*CottonBatchExample cottonBatchExample=new CottonBatchExample();*/
         List<List<Long>> codesList = Lists.partition(codeList,BATCH_SIZE);
         List<CottonBatch> cottonBatchList=new ArrayList<>();
 
         for(List<Long> codes : codesList){
-            cottonBatchExample.createCriteria().andProductionCodeIn(codes);
+            /*cottonBatchExample.createCriteria().andProductionCodeIn(codes);
             List<CottonBatch> cottonBatches=cottonBatchMapper.selectByExample(cottonBatchExample);
-            cottonBatchExample.clear();
+            cottonBatchExample.clear();*/
+            List<CottonBatch> cottonBatches=cottonBatchSupportMapper.selectByCodes(codes);
             cottonBatchList.addAll(cottonBatches);
         }
         return  cottonBatchList;

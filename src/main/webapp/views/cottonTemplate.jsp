@@ -1,4 +1,4 @@
-<%@ taglib prefix="C" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
@@ -188,6 +188,8 @@
                 <td><input type="text" id="ratioStrategy.colourW2" name="ratioStrategyVo.colourW2"/></td>
                 <td>白棉3:</td>
                 <td><input type="text" id="ratioStrategy.colourW3" name="ratioStrategyVo.colourW3"/></td>
+            </tr>
+            <tr>
                 <td>白棉4:</td>
                 <td><input type="text" id="ratioStrategy.colourW4" name="ratioStrategyVo.colourW4"/></td>
                 <td>白棉5:</td>
@@ -208,6 +210,8 @@
                 <td><input type="text" id="ratioStrategy.colourLy2" name="ratioStrategyVo.colourLy2"/></td>
                 <td>淡黄3:</td>
                 <td><input type="text" id="ratioStrategy.colourLy3" name="ratioStrategyVo.colourLy3"/></td>
+            </tr>
+            <tr>
                 <td>黄染1:</td>
                 <td><input type="text" id="ratioStrategy.colourY1" name="ratioStrategyVo.colourY1"/></td>
                 <td>黄染2:</td>
@@ -231,65 +235,26 @@
         </table>
         </br>
 
+
+        <c:set var="allIndex" value="0" />
+
         <table cellspacing="3px" border="0">
             <tr>
                 <td>长度区间策略</td>
             </tr>
-            <tr>
-                <td>区间1：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[0].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[0].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[0].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[0].type"   value="1" /></td>
-            </tr>
-
-
-
-
-
-            <tr>
-                <td>区间2：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[1].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[1].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[1].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[1].type"   value="1" /></td>
-            </tr>
-            <tr>
-                <td>区间3：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[2].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[2].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[2].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[2].type"   value="1" /></td>
-            </tr>
-            <tr>
-                <td>区间4：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[3].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[3].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[3].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[3].type"   value="1" /></td>
-            </tr>
-            <tr>
-                <td>区间5：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[4].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[4].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[4].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[4].type"   value="1" /></td>
-            </tr>
+            <c:forEach begin="1" end="10" step="1" var="i">
+                <tr>
+                    <td>区间${i}：</td>
+                    <td>最小值:</td>
+                    <td><input type="text" id="min" name="rangeStrategyVoList[${allIndex}].min"/></td>
+                    <td>最大值:</td>
+                    <td><input type="text" id="max" name="rangeStrategyVoList[${allIndex}].max"/></td>
+                    <td>价格:</td>
+                    <td><input type="text" id="price" name="rangeStrategyVoList[${allIndex}].price"/></td>
+                    <td><input type="hidden" id="type" name="rangeStrategyVoList[${allIndex}].type"   value="1" /></td>
+                </tr>
+                <c:set var="allIndex" value="${allIndex+1}" />
+            </c:forEach>
         </table>
 
         </br>
@@ -298,61 +263,19 @@
             <tr>
                 <td>马克隆区间策略</td>
             </tr>
-            <tr>
-                <td>区间1：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[5].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[5].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[5].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[5].type"   value="2" /></td>
-            </tr>
-
-
-
-
-
-            <tr>
-                <td>区间2：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[6].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[6].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[6].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[6].type"   value="2" /></td>
-            </tr>
-            <tr>
-                <td>区间3：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[7].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[7].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[7].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[7].type"   value="2" /></td>
-            </tr>
-            <tr>
-                <td>区间4：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[8].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[8].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[8].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[8].type"   value="2" /></td>
-            </tr>
-            <tr>
-                <td>区间5：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[9].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[9].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[9].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[9].type"   value="2" /></td>
-            </tr>
+            <c:forEach begin="1" end="10" step="1" var="i">
+                <tr>
+                    <td>区间${i}：</td>
+                    <td>最小值:</td>
+                    <td><input type="text" id="min" name="rangeStrategyVoList[${allIndex}].min"/></td>
+                    <td>最大值:</td>
+                    <td><input type="text" id="max" name="rangeStrategyVoList[${allIndex}].max"/></td>
+                    <td>价格:</td>
+                    <td><input type="text" id="price" name="rangeStrategyVoList[${allIndex}].price"/></td>
+                    <td><input type="hidden" id="type" name="rangeStrategyVoList[${allIndex}].type"   value="2" /></td>
+                </tr>
+                <c:set var="allIndex" value="${allIndex+1}" />
+            </c:forEach>
         </table>
 
         </br>
@@ -361,57 +284,19 @@
             <tr>
                 <td>长整区间策略</td>
             </tr>
-            <tr>
-                <td>区间1：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[10].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[10].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[10].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[10].type"   value="3" /></td>
-            </tr>
-
-            <tr>
-                <td>区间2：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[11].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[11].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[11].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[11].type"   value="3" /></td>
-            </tr>
-            <tr>
-                <td>区间3：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[12].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[12].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[12].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[12].type"   value="3" /></td>
-            </tr>
-            <tr>
-                <td>区间4：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[13].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[13].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[13].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[13].type"   value="3" /></td>
-            </tr>
-            <tr>
-                <td>区间5：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[14].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[14].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[14].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[14].type"   value="3" /></td>
-            </tr>
+            <c:forEach begin="1" end="10" step="1" var="i">
+                <tr>
+                    <td>区间${i}：</td>
+                    <td>最小值:</td>
+                    <td><input type="text" id="min" name="rangeStrategyVoList[${allIndex}].min"/></td>
+                    <td>最大值:</td>
+                    <td><input type="text" id="max" name="rangeStrategyVoList[${allIndex}].max"/></td>
+                    <td>价格:</td>
+                    <td><input type="text" id="price" name="rangeStrategyVoList[${allIndex}].price"/></td>
+                    <td><input type="hidden" id="type" name="rangeStrategyVoList[${allIndex}].type"   value="3" /></td>
+                </tr>
+                <c:set var="allIndex" value="${allIndex+1}" />
+            </c:forEach>
         </table>
 
 
@@ -421,57 +306,19 @@
             <tr>
                 <td>强度区间策略</td>
             </tr>
-            <tr>
-                <td>区间1：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[15].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[15].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[15].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[15].type"   value="4" /></td>
-            </tr>
-
-            <tr>
-                <td>区间2：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[16].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[16].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[16].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[16].type"   value="4" /></td>
-            </tr>
-            <tr>
-                <td>区间3：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[17].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[17].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[17].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[17].type"   value="4" /></td>
-            </tr>
-            <tr>
-                <td>区间4：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[18].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[18].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[18].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[18].type"   value="4" /></td>
-            </tr>
-            <tr>
-                <td>区间5：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[19].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[19].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[19].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[19].type"   value="4" /></td>
-            </tr>
+            <c:forEach begin="1" end="10" step="1" var="i">
+                <tr>
+                    <td>区间${i}：</td>
+                    <td>最小值:</td>
+                    <td><input type="text" id="min" name="rangeStrategyVoList[${allIndex}].min"/></td>
+                    <td>最大值:</td>
+                    <td><input type="text" id="max" name="rangeStrategyVoList[${allIndex}].max"/></td>
+                    <td>价格:</td>
+                    <td><input type="text" id="price" name="rangeStrategyVoList[${allIndex}].price"/></td>
+                    <td><input type="hidden" id="type" name="rangeStrategyVoList[${allIndex}].type"   value="4" /></td>
+                </tr>
+                <c:set var="allIndex" value="${allIndex+1}" />
+            </c:forEach>
         </table>
 
 
@@ -482,57 +329,19 @@
             <tr>
                 <td>含杂区间策略</td>
             </tr>
-            <tr>
-                <td>区间1：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[20].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[20].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[20].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[20].type"   value="5" /></td>
-            </tr>
-
-            <tr>
-                <td>区间2：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[21].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[21].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[21].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[21].type"   value="5" /></td>
-            </tr>
-            <tr>
-                <td>区间3：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[22].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[22].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[22].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[22].type"   value="5" /></td>
-            </tr>
-            <tr>
-                <td>区间4：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[23].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[23].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[23].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[23].type"   value="5" /></td>
-            </tr>
-            <tr>
-                <td>区间5：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[24].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[24].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[24].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[24].type"   value="5" /></td>
-            </tr>
+            <c:forEach begin="1" end="10" step="1" var="i">
+                <tr>
+                    <td>区间${i}：</td>
+                    <td>最小值:</td>
+                    <td><input type="text" id="min" name="rangeStrategyVoList[${allIndex}].min"/></td>
+                    <td>最大值:</td>
+                    <td><input type="text" id="max" name="rangeStrategyVoList[${allIndex}].max"/></td>
+                    <td>价格:</td>
+                    <td><input type="text" id="price" name="rangeStrategyVoList[${allIndex}].price"/></td>
+                    <td><input type="hidden" id="type" name="rangeStrategyVoList[${allIndex}].type"   value="5" /></td>
+                </tr>
+                <c:set var="allIndex" value="${allIndex+1}" />
+            </c:forEach>
         </table>
 
 
@@ -542,57 +351,19 @@
             <tr>
                 <td>回潮区间策略</td>
             </tr>
-            <tr>
-                <td>区间1：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[25].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[25].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[25].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[25].type"   value="6" /></td>
-            </tr>
-
-            <tr>
-                <td>区间2：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[26].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[26].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[26].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[26].type"   value="6" /></td>
-            </tr>
-            <tr>
-                <td>区间3：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[27].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[27].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[27].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[27].type"   value="6" /></td>
-            </tr>
-            <tr>
-                <td>区间4：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[28].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[28].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[28].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[28].type"   value="6" /></td>
-            </tr>
-            <tr>
-                <td>区间5：</td>
-                <td>最小值:</td>
-                <td><input type="text" id="min" name="rangeStrategyVoList[29].min"/></td>
-                <td>最大值:</td>
-                <td><input type="text" id="max" name="rangeStrategyVoList[29].max"/></td>
-                <td>价格:</td>
-                <td><input type="text" id="price" name="rangeStrategyVoList[29].price"/></td>
-                <td><input type="hidden" id="type" name="rangeStrategyVoList[29].type"   value="6" /></td>
-            </tr>
+            <c:forEach begin="1" end="10" step="1" var="i">
+                <tr>
+                    <td>区间${i}：</td>
+                    <td>最小值:</td>
+                    <td><input type="text" id="min" name="rangeStrategyVoList[${allIndex}].min"/></td>
+                    <td>最大值:</td>
+                    <td><input type="text" id="max" name="rangeStrategyVoList[${allIndex}].max"/></td>
+                    <td>价格:</td>
+                    <td><input type="text" id="price" name="rangeStrategyVoList[${allIndex}].price"/></td>
+                    <td><input type="hidden" id="type" name="rangeStrategyVoList[${allIndex}].type"   value="6" /></td>
+                </tr>
+                <c:set var="allIndex" value="${allIndex+1}" />
+            </c:forEach>
         </table>
 
     </form>
